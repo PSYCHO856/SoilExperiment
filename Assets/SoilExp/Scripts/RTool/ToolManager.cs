@@ -36,6 +36,7 @@ public class ToolManager : SingletonBaseComponent<ToolManager>
     /// <param name="time"></param>
     public void SetHighlightOn(Transform t, float time = 0)
     {
+        SetHighlightOff();
         UserHelper.SetHighlightOn(t);
         if (time != 0)
         {

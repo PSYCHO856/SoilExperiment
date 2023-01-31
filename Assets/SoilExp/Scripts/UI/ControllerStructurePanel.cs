@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,11 +16,13 @@ public class ControllerStructurePanel : MonoBehaviour
     public Text structureText;
     private StringBuilder structureTextString = new StringBuilder();
     private int currentStepsIndex = -1;
+    public GameObject expFinishObj;
     
     private void Awake()
     {
         Messenger.AddListener(GameEvent.ON_STEPS_UPDATE, UpdateSteps);
         Init();
+        expFinishObj.SetActive(false);
     }
 
     void Init()
@@ -31,14 +34,26 @@ public class ControllerStructurePanel : MonoBehaviour
         }
     }
 
+    public RectTransform contentRect;
+    public Scrollbar scrollbar;
     void UpdateSteps()
     {
-        if (currentStepsIndex < structureSteps.Count)
+        if (ControllerExperiment.Instance.stepsIndex < structureSteps.Count)
         {
-            if (currentStepsIndex == ControllerExperiment.Instance.stepsIndex) return;
             currentStepsIndex = ControllerExperiment.Instance.stepsIndex;
-            structureTextString.Append(structureSteps[currentStepsIndex] + "\n");
-            structureText.text = structureTextString.ToString();
+            // structureTextString.Append(structureSteps[currentStepsIndex] + "\n");
+            // structureText.text = structureTextString.ToString();
+            structureText.text = structureSteps[currentStepsIndex];
+
         }
+        else if (ControllerExperiment.Instance.stepsIndex == structureSteps.Count)
+        {
+            expFinishObj.SetActive(true);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Messenger.RemoveListener(GameEvent.ON_STEPS_UPDATE, UpdateSteps);
     }
 }
