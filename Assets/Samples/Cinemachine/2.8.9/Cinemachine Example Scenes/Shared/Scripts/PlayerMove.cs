@@ -19,7 +19,6 @@ public class PlayerMove : MonoBehaviour
     Vector3 m_currentVleocity;
     float m_currentJumpSpeed;
     float m_restY;
-    private Rigidbody rig;
 
     private void Reset()
     {
@@ -31,7 +30,7 @@ public class PlayerMove : MonoBehaviour
         JumpTime = 1;
         m_currentJumpSpeed = 0;
         
-        rig = transform.GetComponent<Rigidbody>();
+
     }
 
     private void OnEnable()
@@ -40,6 +39,7 @@ public class PlayerMove : MonoBehaviour
         m_restY = transform.position.y;
         // SpaceAction -= Jump;
         // SpaceAction += Jump;
+        
     }
 
     private Vector3 input;
@@ -97,8 +97,4 @@ public class PlayerMove : MonoBehaviour
 
     // public void Jump() { m_currentJumpSpeed += 10 * JumpTime * 0.5f; }
 
-    public void OnCollisionEnter(Collision other)
-    {
-        rig.velocity = Vector3.zero;
-    }
 }

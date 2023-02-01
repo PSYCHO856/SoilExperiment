@@ -8,7 +8,9 @@ using UnityEngine.UI;
 public class ExperimentPage : UIBasePage
 {
     public GameObject equipmentInstruction;
-    public Text equipmentInstructionText;
+    private CanvasGroup equipmentInstructionCG;
+    // public Text equipmentInstructionText;
+    public TypeWriter equipmentInstructionTypeWriter;
 
     public Button testBtn;
     public Button instructionCloseBtn;
@@ -31,6 +33,7 @@ public class ExperimentPage : UIBasePage
     private void Awake()
     {
         equipmentInstruction = transform.Find("EquipmentInstruction").gameObject;
+        equipmentInstructionCG = equipmentInstruction.GetComponent<CanvasGroup>();
         //设备介绍和操作按钮显示
         Messenger<string>.AddListener(GameEvent.ON_INSTRUCTION_UPDATE, ShowInstruction);
         Messenger<Vector3,string,Action>.AddListener(GameEvent.ON_OPERATE_UPDATE, SetOperateUIPos);
@@ -47,9 +50,9 @@ public class ExperimentPage : UIBasePage
         quitBtnConfirm.onClick.AddListener(OnQuitBtnConfirm);
         quitBtnCancel.onClick.AddListener(OnQuitBtnCancel);
 
-        operateBtnImage = operateBtn.transform.GetComponent<Image>();
-        operateBtnImage.color = new Color(operateBtnImage.color.r, operateBtnImage.color.g, operateBtnImage.color.b, 0);
-        operateBtnText = operateBtn.transform.GetChild(0).GetComponent<Text>();
+        operateBtnTextTypeWriter = operateBtn.transform.GetChild(0).GetComponent<TypeWriter>();
+        operateBtnCG = operateBtn.transform.GetComponent<CanvasGroup>();
+        operateBtnCG.alpha = 0;
     }
 
     private void OnDestroy()
@@ -61,8 +64,8 @@ public class ExperimentPage : UIBasePage
     public override void OnOpen()
     {
         base.OnOpen();
-        equipmentInstruction.SetActive(false);
-        equipmentInstructionText.text = "";
+        equipmentInstructionCG.alpha = 0;
+        equipmentInstructionTypeWriter.Run("", equipmentInstructionTypeWriter.text);
 
         PanelsInit();
         SetBackScene(new MainSceneState());
@@ -79,8 +82,8 @@ public class ExperimentPage : UIBasePage
 
     void ShowInstruction(string instruction)
     {
-        equipmentInstruction.SetActive(true);
-        equipmentInstructionText.text = instruction;
+        equipmentInstructionCG.DOFade(1, 1f);
+        equipmentInstructionTypeWriter.Run(instruction, equipmentInstructionTypeWriter.text);
     }
 
     void OnTest()
@@ -90,7 +93,7 @@ public class ExperimentPage : UIBasePage
     
     void OnInstructionClose()
     {
-        equipmentInstruction.SetActive(false);
+        equipmentInstructionCG.DOFade(0, 1f);
     }
 
     private Action refreshAction;
@@ -107,29 +110,30 @@ public class ExperimentPage : UIBasePage
         //屏幕坐标转UI坐标 out返回
         RectTransformUtility.ScreenPointToLocalPointInRectangle(GetComponent<RectTransform>(), equipmentScreenPos,
             ControllerExperiment.Instance.uiCam, out var equipmentLocalPos);
-        operateBtn.GetComponent<RectTransform>().anchoredPosition = equipmentLocalPos + new Vector2(-100, 100);
+        operateBtn.GetComponent<RectTransform>().anchoredPosition = equipmentLocalPos + new Vector2(-150, 200);
         
         ShowOperateBtn();
-        operateBtnText.text = operateTextContent;
+        operateBtnTextTypeWriter.Run(operateTextContent, operateBtnTextTypeWriter.text);
         
         refreshAction = null;
         refreshAction += refreshNextStep;
     }
 
-    private Image operateBtnImage;
-    private Text operateBtnText;
+    private TypeWriter operateBtnTextTypeWriter;
+    private CanvasGroup operateBtnCG;
     void ShowOperateBtn()
     {
-        operateBtnImage.DOColor(new Color(operateBtnImage.color.r,operateBtnImage.color.g,operateBtnImage.color.b,1), 1f);
-        operateBtnText.DOColor(new Color(operateBtnText.color.r, operateBtnText.color.g, operateBtnText.color.b, 1),
-            1f);
+        operateBtnCG.alpha = 0;
+        
+        operateBtn.enabled = true;
+        operateBtnCG.DOFade(1, 1f);
     }
     
     void HideOperateBtn()
     {
-        operateBtnImage.DOColor(new Color(operateBtnImage.color.r,operateBtnImage.color.g,operateBtnImage.color.b,0), 1f);
-        operateBtnText.DOColor(new Color(operateBtnText.color.r, operateBtnText.color.g, operateBtnText.color.b, 0),
-            1f);
+        operateBtn.enabled = false;
+        
+        operateBtnCG.DOFade(0, 1f);
     }
 
 

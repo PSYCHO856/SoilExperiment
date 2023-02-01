@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,12 +18,16 @@ public class ControllerStructurePanel : MonoBehaviour
     private StringBuilder structureTextString = new StringBuilder();
     private int currentStepsIndex = -1;
     public GameObject expFinishObj;
+    private CanvasGroup expFinishObjCG;
+    
+    [SerializeField] private TypeWriter typeWriter;
     
     private void Awake()
     {
         Messenger.AddListener(GameEvent.ON_STEPS_UPDATE, UpdateSteps);
         Init();
-        expFinishObj.SetActive(false);
+        expFinishObjCG = expFinishObj.GetComponent<CanvasGroup>();
+        expFinishObjCG.alpha = 0;
     }
 
     void Init()
@@ -43,17 +48,24 @@ public class ControllerStructurePanel : MonoBehaviour
             currentStepsIndex = ControllerExperiment.Instance.stepsIndex;
             // structureTextString.Append(structureSteps[currentStepsIndex] + "\n");
             // structureText.text = structureTextString.ToString();
-            structureText.text = structureSteps[currentStepsIndex];
+            // structureText.text = structureSteps[currentStepsIndex];
+            if (ControllerExperiment.Instance.stepsIndex < 11)
+            {
+                typeWriter.Run(structureSteps[currentStepsIndex], typeWriter.text);
+            }
+
 
         }
         else if (ControllerExperiment.Instance.stepsIndex == structureSteps.Count)
         {
-            expFinishObj.SetActive(true);
+            expFinishObjCG.DOFade(1, 1f);
+            UserHelper.SetHighlightOff();
         }
     }
 
     private void OnDestroy()
     {
         Messenger.RemoveListener(GameEvent.ON_STEPS_UPDATE, UpdateSteps);
+        typeWriter.RecycleOnClose();
     }
 }

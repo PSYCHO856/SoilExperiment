@@ -1,154 +1,106 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-
+using Cinemachine.Utility;
 using UnityEngine;
 
-namespace Cinemachine.Examples
-{
-
-[AddComponentMenu("")] // Don't display in add component menu
 public class MyCharacterMove : MonoBehaviour
 {
-    public bool useCharacterForward = false;
-    public bool lockToCameraForward = false;
-    public float turnSpeed = 10f;
-    public KeyCode sprintJoystick = KeyCode.JoystickButton2;
-    public KeyCode sprintKeyboard = KeyCode.Space;
+    public float Speed;
+    public float VelocityDamping;
+    public float JumpTime;
 
-    private float turnSpeedMultiplier;
-    private float speed = 0f;
-    private float direction = 0f;
-    private bool isSprinting = false;
-    private Animator anim;
-    private Vector3 targetDirection;
-    private Vector2 input;
-    private Quaternion freeRotation;
-    private Camera mainCamera;
-    private float velocity;
+    public enum ForwardMode { Camera, Player, World };
+    public ForwardMode InputForward;
 
-	// Use this for initialization
-	void Start ()
-	{
-	    anim = GetComponent<Animator>();
-	    mainCamera = Camera.main;
-	}
+    public bool RotatePlayer = true;
 
-	// Update is called once per frame
-	void FixedUpdate ()
-	{
-	    input.x = Input.GetAxis("Horizontal");
-	    input.y = Input.GetAxis("Vertical");
+    public Action SpaceAction;
+    public Action EnterAction;
 
-		// set speed to both vertical and horizontal inputs
-        if (useCharacterForward)
-            speed = Mathf.Abs(input.x) + input.y;
-        else
-            speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
+    Vector3 m_currentVleocity;
+    float m_currentJumpSpeed;
+    float m_restY;
+    private Rigidbody rig;
 
-        speed = Mathf.Clamp(speed, 0f, 1f);
-        speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
-        anim.SetFloat("Speed", speed);
-
-	    if (input.y < 0f && useCharacterForward)
-            direction = input.y;
-	    else
-            direction = 0f;
-
-        anim.SetFloat("Direction", direction);
-
-        // set sprinting
-	    isSprinting = ((Input.GetKey(sprintJoystick) || Input.GetKey(sprintKeyboard)) && input != Vector2.zero && direction >= 0f);
-        anim.SetBool("isSprinting", isSprinting);
-
-        // Update target direction relative to the camera view (or not if the Keep Direction option is checked)
-        UpdateTargetDirection();
-        if (input != Vector2.zero && targetDirection.magnitude > 0.1f)
-        {
-            Vector3 lookDirection = targetDirection.normalized;
-            freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
-            var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
-            var eulerY = transform.eulerAngles.y;
-
-            if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
-            var euler = new Vector3(0, eulerY, 0);
-
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * turnSpeedMultiplier * Time.deltaTime);
-        }
-	}
-
-    public virtual void UpdateTargetDirection()
+    private void Reset()
     {
-        if (!useCharacterForward)
-        {
-            turnSpeedMultiplier = 1f;
-            var forward = mainCamera.transform.TransformDirection(Vector3.forward);
-            forward.y = 0;
+        Speed = 5;
+        InputForward = ForwardMode.Camera;
+        RotatePlayer = true;
+        VelocityDamping = 0.5f;
+        m_currentVleocity = Vector3.zero;
+        JumpTime = 1;
+        m_currentJumpSpeed = 0;
+        
 
-            //get the right-facing direction of the referenceTransform
-            var right = mainCamera.transform.TransformDirection(Vector3.right);
-
-            // determine the direction the player will face based on input and the referenceTransform's right and forward directions
-            targetDirection = input.x * right + input.y * forward;
-        }
-        else
-        {
-            turnSpeedMultiplier = 0.2f;
-            var forward = transform.TransformDirection(Vector3.forward);
-            forward.y = 0;
-
-            //get the right-facing direction of the referenceTransform
-            var right = transform.TransformDirection(Vector3.right);
-            targetDirection = input.x * right + Mathf.Abs(input.y) * forward;
-        }
     }
 
-    private void Update()
+    private void OnEnable()
     {
-	    VisualMove();
+        m_currentJumpSpeed = 0;
+        m_restY = transform.position.y;
+        // SpaceAction -= Jump;
+        // SpaceAction += Jump;
+        
+        rig = transform.GetComponent<Rigidbody>();
     }
-    
-    
-    
-    float rotationX = 0;
-    float rotationY = 0;
-    public float lookSpeed = 15f;//视角旋转速度
-    
-    public float m_minimumY = -45f;
-    public float m_maximumY = 45f;
-    
-    private void VisualMove()
+
+    private Vector3 input;
+    void Update()
     {
-	    if (Input.GetMouseButtonDown(1))
-	    {
-		    if (transform.localEulerAngles.y > 0)
-		    {
-			    rotationX = transform.localEulerAngles.y;
-		    }
-		    else
-		    {
-			    rotationX = transform.localEulerAngles.y - 360;
-		    }
-		    if (transform.localEulerAngles.x>180)
-		    {
-			    rotationY = 360-transform.localEulerAngles.x;
-		    }
-		    else
-		    {
-			    rotationY = -transform.localEulerAngles.x;
-		    }
-	    }
-	    if (Input.GetMouseButton(1))
-	    {
-		    rotationX += Input.GetAxis("Mouse X") * lookSpeed;
-		    rotationY += Input.GetAxis("Mouse Y") * lookSpeed;
-		    rotationY = Mathf.Clamp(rotationY, m_minimumY, m_maximumY);
+        Vector3 fwd;
+        switch (InputForward)
+        {
+            case ForwardMode.Camera: fwd = Camera.main.transform.forward; break;
+            case ForwardMode.Player: fwd = transform.forward; break;
+            case ForwardMode.World: default: fwd = Vector3.forward; break;
+        }
 
-		    transform.localRotation = Quaternion.AngleAxis(rotationX, Vector3.up);
-		    transform.localRotation *= Quaternion.AngleAxis(rotationY, Vector3.left);
-	    }
+        fwd.y = 0;
+        fwd = fwd.normalized;
+        if (fwd.sqrMagnitude < 0.01f)
+            return;
+
+        Quaternion inputFrame = Quaternion.LookRotation(fwd, Vector3.up);
+        input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        input = inputFrame * input;
+
+        var dt = Time.deltaTime;
+        var desiredVelocity = input * Speed;
+        var deltaVel = desiredVelocity - m_currentVleocity;
+        m_currentVleocity += Damper.Damp(deltaVel, VelocityDamping, dt);
+
+        transform.position += m_currentVleocity * dt;
+        if (RotatePlayer && m_currentVleocity.sqrMagnitude > 0.01f)
+        {
+            var qA = transform.rotation;
+            var qB = Quaternion.LookRotation(
+                (InputForward == ForwardMode.Player && Vector3.Dot(fwd, m_currentVleocity) < 0) 
+                    ? -m_currentVleocity : m_currentVleocity);
+            transform.rotation = Quaternion.Slerp(qA, qB, Damper.Damp(1, VelocityDamping, dt));
+        }
+
+        // Process jump
+        if (m_currentJumpSpeed != 0)
+            m_currentJumpSpeed -= 10 * dt;
+        var p = transform.position;
+        p.y += m_currentJumpSpeed * dt;
+        if (p.y < m_restY)
+        {
+            p.y = m_restY;
+            m_currentJumpSpeed = 0;
+        }
+        transform.position = p;
+
+        if (Input.GetKeyDown(KeyCode.Space) && SpaceAction != null)
+            SpaceAction();
+        if (Input.GetKeyDown(KeyCode.Return) && EnterAction != null)
+            EnterAction();
     }
-    
-}
 
+    // public void Jump() { m_currentJumpSpeed += 10 * JumpTime * 0.5f; }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        rig.velocity = Vector3.zero;
+    }
 }

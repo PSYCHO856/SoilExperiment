@@ -5,7 +5,7 @@ using DG.Tweening;
 using UnityEngine;
 
 
-public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
+public partial class ControllerExperiment : preProject.Singleton<ControllerExperiment>
 {
     public string QId1= "42101";
     public string QId2= "44201";
@@ -57,11 +57,19 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
             CheckStep(testStepIndex);
         }
         
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
             ray1 = GetMyRay();
             if (Physics.Raycast(ray1, out hit1))
             {
+                //点击高亮实现 实验器具的说明 操作ui
+                if (hit1.collider.gameObject.CompareTag("ExpObject"))
+                {
+                    // Debug.Log("设置高亮"+ hit1.collider.gameObject.name);
+                    ToolManager.Instance.SetHighlightOn(hit1.collider.gameObject.transform, 20f);
+                }                
+                
+                
                 //限定当前步骤的可点设备 限定先后点击顺序
                 if (!isSceneEquipmentObjects(hit1.collider.gameObject)) return;
 
@@ -71,27 +79,27 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
                 {
                     isSelect = true;
                     selectedTrans = hit1.collider.transform;
+                    RefreshSuggestGobj(currentStepEquipment[1]);
                 }
                 //当前步骤中两个物体 选中第二个时
-                
                 else if(currentStepEquipment.Count == 2 &&
                         hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                         isSelect)
                 {
-                    if (stepsIndex == 3)
+                    if (stepsIndex == 3 || stepsIndex == 11 )
                     {
                         //第三步 环刀刷凡士林 有特殊动画
                         BrushCircleKnife(selectedTrans, hit1.collider.transform);
                     }
-                    else if (stepsIndex == 4)
+                    else if (stepsIndex == 4 || stepsIndex == 12 )
                     {
                         MoveCircleKnifeToSoil(selectedTrans, hit1.collider.transform);
                     }
-                    else if (stepsIndex == 6)
+                    else if (stepsIndex == 6 || stepsIndex == 14 )
                     {
                         MoveXIAOKnifeToSoil(selectedTrans, hit1.collider.transform);
                     }
-                    else if (stepsIndex == 7)
+                    else if (stepsIndex == 7 || stepsIndex == 15)
                     {
                         MoveGUAKnifeToSoil(selectedTrans, hit1.collider.transform);
                     }
@@ -105,11 +113,19 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
                 //当前步骤中只有一个物体 选中时
                 else if(!isSelect && currentStepEquipment.Count == 1 && hit1.collider.gameObject.name.Equals(currentStepEquipment[0].name))
                 {
-                    if (stepsIndex == 5)
+                    //清理环刀
+                    if (stepsIndex == 10)
+                    {
+                        circleKnifeTrans.GetChild(1).gameObject.SetActive(false);
+                    }
+                    
+                    if (stepsIndex == 5 || stepsIndex == 13)
                     {
                         //第五步 环刀插进土里
                         MoveCircleKnifeInSoil(selectedTrans);
                     }
+
+
                     //若出现需要点击确认的交互操作 ui点击消失后再读取下一步的信息
                     else if (!nowBtnText.Equals(""))
                     {
@@ -121,12 +137,8 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
                     }
                 }
 
-                //点击高亮实现 实验器具的说明 操作ui
                 if (hit1.collider.gameObject.CompareTag("ExpObject"))
                 {
-                    // Debug.Log("设置高亮"+ hit1.collider.gameObject.name);
-                    ToolManager.Instance.SetHighlightOn(hit1.collider.gameObject.transform, 3);
-
                     //获取实验器具的说明
                     if (!CheckEquipment(hit1.collider.gameObject.name))
                     {
@@ -139,33 +151,16 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
                         if (instructionString == "") return;
                         Messenger<string>.Broadcast(GameEvent.ON_INSTRUCTION_UPDATE,instructionString);
                         
-
-                        
                     }
+                }    
 
-                    
-                }
 
             }
         }
         
     }
 
-    void OpenTIANPING(Transform tianping)
-    {
-        Renderer[] renderers;
-        renderers = tianping.GetComponents<Renderer>();
-        for (int i = 0; i < renderers.Length; i++)
-        {
-            for (int j = 0; j < renderers[i].materials.Length; j++)
-            {
-                if (renderers[i].materials[j].name.Equals("Material #42 (Instance)"))
-                {
-                    renderers[i].materials[j].DOColor(Color.white, 1.5f);
-                }
-            }
-        }
-    }
+
     
     public Ray GetMyRay()
     {
@@ -198,8 +193,16 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
                 currentStepEquipment.Clear();
                 if(objectInStepConfigInfoData.Value.Name1!="")currentStepEquipment.Add(FindObjectInScene(objectInStepConfigInfoData.Value.Name1));
                 if(objectInStepConfigInfoData.Value.Name2!="")currentStepEquipment.Add(FindObjectInScene(objectInStepConfigInfoData.Value.Name2));
+                RefreshSuggestGobj(currentStepEquipment[0]);
             }
         }
+    }
+
+    void RefreshSuggestGobj(GameObject suggestGobj)
+    {
+        Debug.Log("refresh suggest");
+        if (ControllerExperiment.Instance.stepsIndex >= 11) return;
+        ToolManager.Instance.SetHighlightOnSuggest(suggestGobj.transform);
     }
 
     //编辑器内赋值 当前场景与实验操作有关的物体
@@ -260,134 +263,30 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
         float moveDuration = 0.4f;
         DOTween.Sequence() // 返回一个新的Sequence
             .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z), moveDuration)) // 添加动画到队列中
+            .AppendInterval(0.2f)
             .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
+            
             .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + (selectedTransHeight + targetTransHeight)/2, position1.z), moveDuration))
+            .AppendInterval(0.1f)
             .AppendCallback(MoveEquipmentCallback);
         
         //(selectedTransHeight + targetTransHeight)/2
     }
     
-    void MoveCircleKnifeToSoil(Transform selecteTrans, Transform targetTrans)
-    {
-        if (!selecteTrans) return;
 
-        var position = selecteTrans.position;
-        var position1 = targetTrans.position;
-        float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
-        float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y;
-        float moveDuration = 0.4f;
-        DOTween.Sequence() // 返回一个新的Sequence
-            .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.4f, position.z), moveDuration)) // 添加动画到队列中
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.4f, position1.z), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(180, 0, 0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + (selectedTransHeight + targetTransHeight)/2, position1.z), moveDuration))
-            .AppendCallback(MoveEquipmentCallback);
-    }
     
-    void MoveCircleKnifeInSoil(Transform selecteTrans)
-    {
-        var position = selecteTrans.position;
-        float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
-        float moveDuration = 0.4f;
-        DOTween.Sequence() // 返回一个新的Sequence
-            .Append(selecteTrans.DOMove(new Vector3(position.x, position.y - 0.01f, position.z), moveDuration)) // 添加动画到队列中
-            .AppendInterval(moveDuration) // 添加时间间隔
-            .AppendCallback(MoveEquipmentCallback);
-        
-        //(selectedTransHeight + targetTransHeight)/2
-    }
+
 
     public float xiaoKnifeMoveOffsetX = -0.1f;
     public float xiaoKnifeMoveDistanceZ = 0.2f;
     public float xiaoKnifeMoveOffsetZ = -0.1f;
     public Transform circleKnifeTrans;
     public GameObject soilObj;
-    void MoveXIAOKnifeToSoil(Transform selecteTrans, Transform targetTrans)
-    {
-        if (!selecteTrans) return;
-        
-        var position = selecteTrans.position;
-        var position1 = targetTrans.position;
-        float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
-        float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y / 2;
-
-        float targetTransRadius = targetTrans.GetComponent<BoxCollider>().size.z * targetTrans.localScale.z / 2;
-        
-        
-        float moveDuration = 0.5f;
-        DOTween.Sequence() // 返回一个新的Sequence
-            .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z),
-                moveDuration)) // 添加动画到队列中
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(45, 90, 0), moveDuration))
-
-            .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
-                position1.y + targetTransHeight + 0.01f, position1.z + targetTransRadius), moveDuration))
-            .AppendInterval(0.5f)
-            .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
-                position1.y + targetTransHeight - 0.01f, position1.z + targetTransRadius), moveDuration))
-            .AppendCallback(XIAOKnifeCallback)
-            .Append(circleKnifeTrans.DOMove(
-                new Vector3(circleKnifeTrans.position.x, circleKnifeTrans.position.y - 0.05f,
-                    circleKnifeTrans.position.z), moveDuration))
-            ;
-        
-        ReturnOriginPos(selecteTrans.gameObject, 3.5f);
-    }
+    public GameObject soilObj2;
+    
     
     public float guaKnifeMoveDistanceZ = 0.1f;
-    void MoveGUAKnifeToSoil(Transform selecteTrans, Transform targetTrans)
-    {
-        if (!selecteTrans) return;
-        
-        var position = selecteTrans.position;
-        var position1 = targetTrans.position;
-        float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.z * selecteTrans.localScale.z;
-        float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y;
-        float targetTransRadis = targetTrans.GetComponent<BoxCollider>().size.x * targetTrans.localScale.x / 2;
-        float heightOffset = targetTransHeight / 2 + selectedTransHeight / 2;
-        
-        float moveDuration = 0.5f;
-        DOTween.Sequence() // 返回一个新的Sequence
-            .Append(selecteTrans.DOMove(new Vector3(position.x, position1.y + heightOffset, position.z), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-90,0,0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + heightOffset, position1.z + targetTransRadis * 1.3f), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-60,0,0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + heightOffset, position1.z + targetTransRadis * 0.5f), moveDuration))
-            
-            
-            //向前移动 左边对齐
-            .Append(selecteTrans.DOMove(new Vector3(position1.x - targetTransRadis, 
-                position1.y + heightOffset, position1.z + targetTransRadis), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-80,-45,0), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-60,-45,0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x - targetTransRadis * 0.5f, 
-                position1.y + heightOffset, position1.z + targetTransRadis * 0.5f), moveDuration))
-            
-            .Append(selecteTrans.DOMove(new Vector3(position1.x - targetTransRadis, 
-                position1.y + heightOffset, position1.z + targetTransRadis), moveDuration))
-            //环刀翻转
-            .Append(targetTrans.DORotate(new Vector3(0, 0, 0), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-80,-45,0), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-60,-45,0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x - targetTransRadis * 0.5f, 
-                position1.y + heightOffset, position1.z + targetTransRadis * 0.5f), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-90,0,0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + heightOffset, position1.z + targetTransRadis * 1.3f), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(-60,0,0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + heightOffset, position1.z + targetTransRadis * 0.5f), moveDuration))
-
-            ;
-        
-        ReturnOriginPos(selecteTrans.gameObject, moveDuration * 18);
-    }
     
-    
-    void XIAOKnifeCallback()
-    {
-        soilObj.SetActive(false);
-        circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
-    }
 
     void MoveEquipmentCallbackWithUIOption()
     {
@@ -411,39 +310,7 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
     }
 
     float brushMoveHeight = 0.55f;
-    //涂抹凡士林
-    void BrushCircleKnife(Transform selecteTrans, Transform targetTrans)
-    {
-        if (!selecteTrans) return;
-        var position = selecteTrans.position;
-        var position1 = targetTrans.position;
-
-        float moveDuration = 0.5f;
-        DOTween.Sequence() // 返回一个新的Sequence
-            .Append(
-                selecteTrans.DOMove(new Vector3(position.x, position.y + brushMoveHeight, position.z),
-                    moveDuration)) // 添加动画到队列中
-            .Append(targetTrans.DOMove(new Vector3(position1.x, position.y + 0.4f, position1.z), moveDuration))
-            .Append(
-                selecteTrans.DOMove(new Vector3(position1.x, position.y + brushMoveHeight, position1.z),
-                    moveDuration))
-            
-            .Append(
-                selecteTrans.DOMove(new Vector3(position1.x, position.y + brushMoveHeight - 0.05f, position1.z), moveDuration))
-            
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + brushMoveHeight - 0.05f, position1.z + 0.05f), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + brushMoveHeight - 0.05f, position1.z - 0.02f), moveDuration))
-            .Append(
-                selecteTrans.DOMove(new Vector3(position1.x, position.y + brushMoveHeight, position1.z), moveDuration))
-            .Append(
-                selecteTrans.DOMove(new Vector3(position.x, position.y + brushMoveHeight, position.z), moveDuration))
-            .Append(
-                selecteTrans.DOMove(new Vector3(position.x, position.y, position.z), moveDuration))
-            // .Append(targetTrans.DOMove(new Vector3(position1.x, position1.y, position1.z), moveDuration))
-            ;
-        ReturnOriginPos(targetTrans.gameObject,4.5f);
-        
-    }
+    
     
     void RefreshSteps()
     {
@@ -463,7 +330,7 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
         }
     }
     
-    void ReturnOriginPos(GameObject gObj,float duration)
+    void ReturnOriginPos(GameObject gObj,float duration,bool isRotated)
     {
         Vector3 oriPos = Vector3.zero;
         foreach (var varable in equipmentOriginPos)
@@ -478,15 +345,29 @@ public class ControllerExperiment : preProject.Singleton<ControllerExperiment>
 
         Transform gTrans = gObj.transform;
         float moveDuration = 0.5f;
-        DOTween.Sequence() // 返回一个新的Sequence
-            .AppendInterval(duration)
-            
-            .Append(
-                gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
-                    moveDuration)) // 添加动画到队列中
-            .Append(gTrans.DORotate(Vector3.zero,moveDuration))
-            .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
-            .AppendCallback(MoveEquipmentCallback);
+
+        if (isRotated)
+        {
+            DOTween.Sequence() 
+                .AppendInterval(duration)
+                .Append(
+                    gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
+                        moveDuration)) // 添加动画到队列中
+                .Append(gTrans.DORotate(Vector3.zero,moveDuration))
+                .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
+                .AppendCallback(MoveEquipmentCallback);
+        }
+        else
+        {
+            DOTween.Sequence() 
+                .AppendInterval(duration)
+                .Append(
+                    gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
+                        moveDuration)) // 添加动画到队列中
+                .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
+                .AppendCallback(MoveEquipmentCallback);
+        }
+
     }
     
     

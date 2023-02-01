@@ -37,7 +37,7 @@ public class ToolManager : SingletonBaseComponent<ToolManager>
     public void SetHighlightOn(Transform t, float time = 0)
     {
         SetHighlightOff();
-        UserHelper.SetHighlightOn(t);
+        UserHelper.SetHighlightOn(t, Color.red);
         if (time != 0)
         {
             CancelInvoke("SetHighlightOff");
@@ -45,6 +45,14 @@ public class ToolManager : SingletonBaseComponent<ToolManager>
         }
             
     }
+    
+    public void SetHighlightOnSuggest(Transform t)
+    {
+        SetHighlightOff();
+        UserHelper.SetHighlightOn(t, Color.yellow);
+            
+    }
+    
     private void SetHighlightOff()
     {
         UserHelper.SetHighlightOff();
