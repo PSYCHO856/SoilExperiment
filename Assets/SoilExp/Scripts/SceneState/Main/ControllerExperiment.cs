@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-
+using System.Linq;
+using Cinemachine;
 
 public partial class ControllerExperiment : preProject.Singleton<ControllerExperiment>
 {
@@ -19,6 +20,8 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
     public int stepsIndex;
 
     public List<List<GameObject>> objectsInSteps;
+
+    public CinemachineVirtualCamera _virtualCamera;
     
     /// <summary>
     /// 步骤中要操作的设备存储在config里
@@ -57,14 +60,17 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
             CheckStep(testStepIndex);
         }
         
-        if(Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
+        if(Input.GetMouseButtonDown(0) /*&& !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()*/)
         {
+            
             ray1 = GetMyRay();
             if (Physics.Raycast(ray1, out hit1))
             {
+                
                 //点击高亮实现 实验器具的说明 操作ui
                 if (hit1.collider.gameObject.CompareTag("ExpObject"))
                 {
+                    _virtualCamera.LookAt = hit1.collider.gameObject.transform;
                     // Debug.Log("设置高亮"+ hit1.collider.gameObject.name);
                     ToolManager.Instance.SetHighlightOn(hit1.collider.gameObject.transform, 20f);
                 }                
@@ -73,69 +79,9 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
                 //限定当前步骤的可点设备 限定先后点击顺序
                 if (!isSceneEquipmentObjects(hit1.collider.gameObject)) return;
 
-                //当前步骤中两个物体 选中了第一个时
-                if (hit1.collider.gameObject.name.Equals(currentStepEquipment[0].name) &&
-                    currentStepEquipment.Count == 2)
-                {
-                    isSelect = true;
-                    selectedTrans = hit1.collider.transform;
-                    RefreshSuggestGobj(currentStepEquipment[1]);
-                }
-                //当前步骤中两个物体 选中第二个时
-                else if(currentStepEquipment.Count == 2 &&
-                        hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
-                        isSelect)
-                {
-                    if (stepsIndex == 3 || stepsIndex == 11 )
-                    {
-                        //第三步 环刀刷凡士林 有特殊动画
-                        BrushCircleKnife(selectedTrans, hit1.collider.transform);
-                    }
-                    else if (stepsIndex == 4 || stepsIndex == 12 )
-                    {
-                        MoveCircleKnifeToSoil(selectedTrans, hit1.collider.transform);
-                    }
-                    else if (stepsIndex == 6 || stepsIndex == 14 )
-                    {
-                        MoveXIAOKnifeToSoil(selectedTrans, hit1.collider.transform);
-                    }
-                    else if (stepsIndex == 7 || stepsIndex == 15)
-                    {
-                        MoveGUAKnifeToSoil(selectedTrans, hit1.collider.transform);
-                    }
-                    else
-                    {
-                        MoveEquipment(selectedTrans, hit1.collider.transform);
-                    }
-                    
-                    isSelect = false;
-                }
-                //当前步骤中只有一个物体 选中时
-                else if(!isSelect && currentStepEquipment.Count == 1 && hit1.collider.gameObject.name.Equals(currentStepEquipment[0].name))
-                {
-                    //清理环刀
-                    if (stepsIndex == 10)
-                    {
-                        circleKnifeTrans.GetChild(1).gameObject.SetActive(false);
-                    }
-                    
-                    if (stepsIndex == 5 || stepsIndex == 13)
-                    {
-                        //第五步 环刀插进土里
-                        MoveCircleKnifeInSoil(selectedTrans);
-                    }
-
-
-                    //若出现需要点击确认的交互操作 ui点击消失后再读取下一步的信息
-                    else if (!nowBtnText.Equals(""))
-                    {
-                        MoveEquipmentCallbackWithUIOption();
-                    }
-                    else
-                    {
-                        MoveEquipmentCallback();
-                    }
-                }
+                if (ToolManager.Instance.sceneNumber == 0) DensityStepsJudge();
+                if (ToolManager.Instance.sceneNumber == 1) MoistureStepsJudge();
+                
 
                 if (hit1.collider.gameObject.CompareTag("ExpObject"))
                 {
@@ -158,6 +104,9 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
             }
         }
         
+        
+        
+        
     }
 
 
@@ -167,15 +116,42 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         return mainCam.ScreenPointToRay(Input.mousePosition);
     }
 
-    private List<GameObject> currentStepEquipment;
+    public List<GameObject> currentStepEquipment;
 
     private string nowBtnText;
 
+
+    public Dictionary<string,ExperimentInstructionConfig> GetCurrentExpInstructionConfig()
+    {
+        string _searchID = "";
+        if (ToolManager.Instance.sceneNumber == 0)
+        {
+            _searchID="10";
+        }
+        else if (ToolManager.Instance.sceneNumber == 1)
+        {
+            _searchID="20";
+        }
+        else if (ToolManager.Instance.sceneNumber == 2)
+        {
+            _searchID="30";
+        }
+        
+        var ansList =
+            ExperimentInstructionConfigInfo.Datas.Where(c =>
+                c.Value.Id.Substring(0, _searchID.Length) == _searchID);
+
+        return ansList.ToDictionary(k => k.Key, 
+            v => v.Value);
+
+    }
+    
     //获取与当前操作有关的物体
     void GetCurrentStepEquipment()
     {
+        
         int objectInStepId = -1;
-        foreach (var experimentInstructionConfigInfoData in ExperimentInstructionConfigInfo.Datas)
+        foreach (var experimentInstructionConfigInfoData in GetCurrentExpInstructionConfig())
         {
             if (experimentInstructionConfigInfoData.Value.StepIndex.Equals(stepsIndex.ToString()))
             {
@@ -187,7 +163,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         if (objectInStepId == -1) return;
         currentStepEquipment = new List<GameObject>();
         foreach (var objectInStepConfigInfoData in ObjectInStepConfigInfo.Datas)
-        {
+        {  
             if (objectInStepConfigInfoData.Value.Id.Equals(objectInStepId.ToString()))
             {
                 currentStepEquipment.Clear();
@@ -200,9 +176,8 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
 
     void RefreshSuggestGobj(GameObject suggestGobj)
     {
-        Debug.Log("refresh suggest");
-        if (ControllerExperiment.Instance.stepsIndex >= 11) return;
-        ToolManager.Instance.SetHighlightOnSuggest(suggestGobj.transform);
+        if (ControllerExperiment.Instance.stepsIndex >= 11 && ToolManager.Instance.sceneNumber==0) return;
+        // ToolManager.Instance.SetHighlightOnSuggest(suggestGobj.transform);
     }
 
     //编辑器内赋值 当前场景与实验操作有关的物体

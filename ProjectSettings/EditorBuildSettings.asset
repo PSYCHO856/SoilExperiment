@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DensityExperimentScene.unity
     guid: d2ac6f445930d2d4cb91683e7c951530
+  - enabled: 1
+    path: Assets/Scenes/MoistureContentExperimentScene.unity
+    guid: ad62222dbd3fd4d468d663d3d0e8f7d8
+  - enabled: 1
+    path: Assets/Scenes/BorderMoistureContentExperimentScene.unity
+    guid: f5a20521d65867b4eb15c0ced9880380
   m_configObjects: {}

@@ -130,6 +130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnDensity: {fileID: 2917450613489353865}
+  btnMoisture: {fileID: 7010500480192904342}
+  btnBorderMoisture: {fileID: 6531196485999134621}
 --- !u!1 &2466955423834402107
 GameObject:
   m_ObjectHideFlags: 0

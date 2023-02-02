@@ -93,7 +93,7 @@ public class ExperimentPage : UIBasePage
     
     void OnInstructionClose()
     {
-        equipmentInstructionCG.DOFade(0, 1f);
+        equipmentInstructionCG.DOFade(0, 0.5f);
     }
 
     private Action refreshAction;
@@ -126,14 +126,14 @@ public class ExperimentPage : UIBasePage
         operateBtnCG.alpha = 0;
         
         operateBtn.enabled = true;
-        operateBtnCG.DOFade(1, 1f);
+        operateBtnCG.DOFade(1, 0.5f);
     }
     
     void HideOperateBtn()
     {
         operateBtn.enabled = false;
         
-        operateBtnCG.DOFade(0, 1f);
+        operateBtnCG.DOFade(0, 0.5f);
     }
 
 

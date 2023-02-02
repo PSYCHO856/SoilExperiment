@@ -7,7 +7,7 @@ public enum UIPageId
 {
     LoadingPage,
     MainPage,
-    DensityExperimentPage
+    ExperimentPage
 }
 
 public class UIController : preProject.Singleton<UIController>
@@ -45,7 +45,7 @@ public class UIController : preProject.Singleton<UIController>
         if (MainPage)
             pages.TryAdd(UIPageId.MainPage, Instantiate(MainPage, transform));
         if (ExperimentPage)
-            pages.TryAdd(UIPageId.DensityExperimentPage, Instantiate(ExperimentPage, transform));
+            pages.TryAdd(UIPageId.ExperimentPage, Instantiate(ExperimentPage, transform));
         
         foreach (var page in pages)
         {
