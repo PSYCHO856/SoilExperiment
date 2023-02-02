@@ -227,7 +227,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         return "";
     }
 
-    void MoveEquipment(Transform selecteTrans, Transform targetTrans)
+    void MoveEquipment(Transform selecteTrans, Transform targetTrans, TweenCallback callback = null)
     {
         if (!selecteTrans) return;
 
@@ -243,7 +243,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
             
             .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + (selectedTransHeight + targetTransHeight)/2, position1.z), moveDuration))
             .AppendInterval(0.1f)
-            .AppendCallback(MoveEquipmentCallback);
+            .AppendCallback(callback);
         
         //(selectedTransHeight + targetTransHeight)/2
     }
@@ -304,8 +304,8 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
             equipmentOriginPos.Add(equipment,equipment.transform.position);
         }
     }
-    
-    void ReturnOriginPos(GameObject gObj,float duration,bool isRotated)
+
+    void ReturnOriginPos(GameObject gObj, float duration, bool isRotated, bool isCallback = true)
     {
         Vector3 oriPos = Vector3.zero;
         foreach (var varable in equipmentOriginPos)
@@ -321,26 +321,51 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         Transform gTrans = gObj.transform;
         float moveDuration = 0.5f;
 
-        if (isRotated)
+        if (isCallback)
         {
-            DOTween.Sequence() 
-                .AppendInterval(duration)
-                .Append(
-                    gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
-                        moveDuration)) // 添加动画到队列中
-                .Append(gTrans.DORotate(Vector3.zero,moveDuration))
-                .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
-                .AppendCallback(MoveEquipmentCallback);
+            if (isRotated)
+            {
+                DOTween.Sequence() 
+                    .AppendInterval(duration)
+                    .Append(
+                        gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
+                            moveDuration)) // 添加动画到队列中
+                    .Append(gTrans.DORotate(Vector3.zero,moveDuration))
+                    .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
+                    .AppendCallback(MoveEquipmentCallback);
+            }
+            else
+            {
+                DOTween.Sequence() 
+                    .AppendInterval(duration)
+                    .Append(
+                        gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
+                            moveDuration)) // 添加动画到队列中
+                    .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
+                    .AppendCallback(MoveEquipmentCallback);
+            }
         }
         else
         {
-            DOTween.Sequence() 
-                .AppendInterval(duration)
-                .Append(
-                    gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
-                        moveDuration)) // 添加动画到队列中
-                .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration))
-                .AppendCallback(MoveEquipmentCallback);
+            if (isRotated)
+            {
+                DOTween.Sequence()
+                    .AppendInterval(duration)
+                    .Append(
+                        gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
+                            moveDuration)) // 添加动画到队列中
+                    .Append(gTrans.DORotate(Vector3.zero, moveDuration))
+                    .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration));
+            }
+            else
+            {
+                DOTween.Sequence()
+                    .AppendInterval(duration)
+                    .Append(
+                        gTrans.DOMove(new Vector3(oriPos.x, oriPos.y + 0.2f, oriPos.z),
+                            moveDuration)) // 添加动画到队列中
+                    .Append(gTrans.DOMove(new Vector3(oriPos.x, oriPos.y, oriPos.z), moveDuration));
+            }
         }
 
     }

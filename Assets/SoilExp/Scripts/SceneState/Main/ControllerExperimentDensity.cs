@@ -222,7 +222,7 @@ public partial class ControllerExperiment
             }
             else
             {
-                MoveEquipment(selectedTrans, hit1.collider.transform);
+                MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
 
             isSelect = false;

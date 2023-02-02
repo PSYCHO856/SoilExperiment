@@ -21,14 +21,19 @@ public partial class ControllerExperiment
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                  isSelect)
         {
-            if (stepsIndex == 3 || stepsIndex == 11)
+            if (stepsIndex == 1 || stepsIndex == 2)
             {
-                //第三步 环刀刷凡士林 有特殊动画
-                BrushCircleKnife(selectedTrans, hit1.collider.transform);
+                //第二步 称重显示ui
+                //显示交互按钮的流程？ 
+                MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOptionAndEquipmentReturn);
+            }
+            else if (stepsIndex == 2)
+            {
+                MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOption);
             }
             else
             {
-                MoveEquipment(selectedTrans, hit1.collider.transform);
+                MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
 
             isSelect = false;
@@ -54,5 +59,13 @@ public partial class ControllerExperiment
                 MoveEquipmentCallback();
             }
         }
+    }
+    
+    void MoveEquipmentCallbackWithUIOptionAndEquipmentReturn()
+    {
+        Messenger<Vector3,string,Action>.Broadcast(GameEvent.ON_OPERATE_UPDATE, hit1.collider.transform.position,nowBtnText,MoveEquipmentCallback);
+
+        ReturnOriginPos(selectedTrans.gameObject, 1.5f, true, false);
+
     }
 }

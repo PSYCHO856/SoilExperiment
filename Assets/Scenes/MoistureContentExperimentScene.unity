@@ -1656,7 +1656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bed5dd27b70a478458b08e5891bf8883, type: 3}
       propertyPath: m_Name
-      value: "\u98CE\u5E72\u571F\u58E4"
+      value: "\u571F\u76D8"
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bed5dd27b70a478458b08e5891bf8883, type: 3}
       propertyPath: m_TagString
@@ -1944,7 +1944,7 @@ MonoBehaviour:
   mainCam: {fileID: 4011160484370746261}
   uiCam: {fileID: 57956155}
   stepsIndex: 0
-  _virtualCamera: {fileID: 0}
+  _virtualCamera: {fileID: 507038229}
   currentStepEquipment: []
   sceneEquipmentObjects:
   - {fileID: 497224367}
@@ -1952,6 +1952,7 @@ MonoBehaviour:
   - {fileID: 2049167254}
   - {fileID: 919132147671159282}
   - {fileID: 279535198}
+  - {fileID: 846477497}
   xiaoKnifeMoveOffsetX: -0.06
   xiaoKnifeMoveDistanceZ: 0.1
   xiaoKnifeMoveOffsetZ: -0.05
@@ -1959,11 +1960,10 @@ MonoBehaviour:
   soilObj: {fileID: 1297878622}
   soilObj2: {fileID: 2144752493}
   guaKnifeMoveDistanceZ: 0.1
-  testStepIndex: 6
+  testStepIndex: 11
   equipments:
-  - {fileID: 1169990218}
-  - {fileID: 1578454286}
-  - {fileID: 1819710109}
+  - {fileID: 497224367}
+  - {fileID: 463278890}
 --- !u!4 &1018493564
 Transform:
   m_ObjectHideFlags: 0
@@ -3740,6 +3740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450651861224264}
+  - component: {fileID: 919132147671159283}
   m_Layer: 0
   m_Name: "\u70D8\u7BB1"
   m_TagString: ExpObject
@@ -3747,6 +3748,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &919132147671159283
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147671159282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.56, y: 1.44, z: 1.3}
+  m_Center: {x: 0, y: -0.12, z: -0.36}
 --- !u!4 &924564882368756597
 Transform:
   m_ObjectHideFlags: 0
@@ -4175,7 +4189,7 @@ BoxCollider:
   m_GameObject: {fileID: 7545663466416620702}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.6103816, y: 1.1968808, z: 0.1568732}
   m_Center: {x: -0.00000011920929, y: 0.5459362, z: 0.07733666}
