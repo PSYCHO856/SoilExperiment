@@ -81,6 +81,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
 
                 if (ToolManager.Instance.sceneNumber == 0) DensityStepsJudge();
                 if (ToolManager.Instance.sceneNumber == 1) MoistureStepsJudge();
+                if (ToolManager.Instance.sceneNumber == 2) BorderMoistureStepsJudge();
                 
 
                 if (hit1.collider.gameObject.CompareTag("ExpObject"))

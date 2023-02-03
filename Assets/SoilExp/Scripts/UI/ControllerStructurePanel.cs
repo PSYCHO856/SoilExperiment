@@ -57,9 +57,27 @@ public class ControllerStructurePanel : MonoBehaviour
             // structureTextString.Append(structureSteps[currentStepsIndex] + "\n");
             // structureText.text = structureTextString.ToString();
             // structureText.text = structureSteps[currentStepsIndex];
-            if (ControllerExperiment.Instance.stepsIndex < 11)
+
+            switch (ToolManager.Instance.sceneNumber)
             {
-                typeWriter.Run(structureSteps[currentStepsIndex], typeWriter.text);
+                case 0:
+                    if (ControllerExperiment.Instance.stepsIndex < 11)
+                    {
+                        typeWriter.Run(structureSteps[currentStepsIndex], typeWriter.text);
+                    }
+                    break;
+                        
+                case 1:
+                    typeWriter.Run(structureSteps[currentStepsIndex], typeWriter.text);
+                    break;
+                
+                case 2:
+                    typeWriter.Run(structureSteps[currentStepsIndex], typeWriter.text);
+                    break;
+                    
+                default: 
+                    typeWriter.Run(structureSteps[currentStepsIndex], typeWriter.text);
+                    break;
             }
             
         }

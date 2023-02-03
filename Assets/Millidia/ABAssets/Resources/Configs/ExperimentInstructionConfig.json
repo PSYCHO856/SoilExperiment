@@ -170,7 +170,7 @@
     {
         "Id": "2004",
         "StepIndex": "3",
-        "Instruction": "3\u3001\u53D6\u571F\u6837\u653E\u5165\u79F0\u91CF\u76D21\u4E2D",
+        "Instruction": "3\u3001\u53D6\u571F\u6837\u653E\u5165\u79F0\u91CF\u76D21\u4E2D\uFF0C\u7ACB\u5373\u76D6\u4E0A\u79F0\u91CF\u76D2\u76D6",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "3004"
@@ -178,7 +178,7 @@
     {
         "Id": "2005",
         "StepIndex": "4",
-        "Instruction": "4\u3001\u53D6\u571F\u6837\u653E\u5165\u79F0\u91CF\u76D22\u4E2D",
+        "Instruction": "4\u3001\u53D6\u571F\u6837\u653E\u5165\u79F0\u91CF\u76D22\u4E2D\uFF0C\u7ACB\u5373\u76D6\u4E0A\u79F0\u91CF\u76D2\u76D6",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "3005"
@@ -186,34 +186,34 @@
     {
         "Id": "2006",
         "StepIndex": "5",
-        "Instruction": "4\u3001\u76D6\u4E0A\u79F0\u91CF\u76D2\u76D6",
-        "TextOnButton": "",
-        "isFinish": false,
-        "ObjectInStepId": "3006"
-    },
-    {
-        "Id": "2007",
-        "StepIndex": "6",
         "Instruction": "5\u3001\u518D\u6B21\u79E4\u53D6\u79F0\u91CF\u76D2\u8D28\u91CF",
         "TextOnButton": "\u8D28\u91CF\u4E3AA\uFF08\u7CBE\u786E\u52300.01g\uFF09",
         "isFinish": false,
         "ObjectInStepId": "3002"
     },
     {
-        "Id": "2008",
-        "StepIndex": "7",
+        "Id": "2007",
+        "StepIndex": "6",
         "Instruction": "5\u3001\u518D\u6B21\u79E4\u53D6\u79F0\u91CF\u76D2\u8D28\u91CF",
         "TextOnButton": "\u8D28\u91CF\u4E3AB\uFF08\u7CBE\u786E\u52300.01g\uFF09",
         "isFinish": false,
         "ObjectInStepId": "3003"
     },
     {
-        "Id": "2009",
-        "StepIndex": "8",
-        "Instruction": "6\u3001\u6253\u5F00\u79F0\u91CF\u76D2\u76D6",
+        "Id": "2008",
+        "StepIndex": "7",
+        "Instruction": "6\u3001\u5C06\u4E24\u4E2A\u79F0\u91CF\u76D2\u76D6\u6253\u5F00",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "3006"
+    },
+    {
+        "Id": "2009",
+        "StepIndex": "8",
+        "Instruction": "7\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u70D8\u7BB1",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "3007"
     },
     {
         "Id": "2010",
@@ -221,20 +221,20 @@
         "Instruction": "7\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u70D8\u7BB1",
         "TextOnButton": "",
         "isFinish": false,
-        "ObjectInStepId": "3007"
+        "ObjectInStepId": "3008"
     },
     {
         "Id": "2011",
         "StepIndex": "10",
-        "Instruction": "7\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u70D8\u7BB1",
+        "Instruction": "8\u3001\u8C03\u6574\u6E29\u5EA6\u548C\u65F6\u95F4\u3002\uFF08105-110\u00B0C\u6052\u6E29\uFF0C\u7EC6\u7C92\u571F\u4E0D\u5C11\u4E8E8h\uFF0C\u7802\u7C7B\u571F\u4E0D\u5F97\u5C11\u4E8E6h\u3002\u5BF9\u542B\u6709\u673A\u8D28\u8D85\u8FC75%\u7684\u571F\u6216\u542B\u77F3\u818F\u7684\u571F\uFF0C\u5E94\u5C06\u6E29\u5EA6\n\u63A7\u5236\u572860~70\u00B0C\u7684\u6052\u6E29\u4E0B\uFF0C\u5E72\u71E512 ~ 15h\u3002\uFF09\u5173\u95ED\u70D8\u7BB1",
         "TextOnButton": "",
         "isFinish": false,
-        "ObjectInStepId": "3008"
+        "ObjectInStepId": "3009"
     },
     {
         "Id": "2012",
         "StepIndex": "11",
-        "Instruction": "8\u3001\u5173\u95ED\u70D8\u7BB1\uFF0C\u8C03\u6574\u6E29\u5EA6\u548C\u65F6\u95F4\u3002\uFF08105-110\u00B0C\u6052\u6E29\uFF0C\u70D8\u5E72\u65F6\u95F4:\u7EC6\u7C92\u571F\u4E0D\u5C11\u4E8E8h\uFF0C\u7802\u7C7B\u571F\u4E0D\u5F97\u5C11\u4E8E6h\u3002\u5BF9\u542B\u6709\u673A\u8D28\u8D85\u8FC75%\u7684\u571F\u6216\u542B\u77F3\u818F\u7684\u571F\uFF0C\u5E94\u5C06\u6E29\u5EA6\n\u63A7\u5236\u572860~70\u00B0C\u7684\u6052\u6E29\u4E0B\uFF0C\u5E72\u71E512 ~ 15h\u3002\uFF09",
+        "Instruction": "9\u3001\u6253\u5F00\u70D8\u7BB1",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "3009"
@@ -242,31 +242,31 @@
     {
         "Id": "2013",
         "StepIndex": "12",
-        "Instruction": "9\u3001\u6253\u5F00\u70D8\u7BB1",
-        "TextOnButton": "",
-        "isFinish": false,
-        "ObjectInStepId": "3009"
-    },
-    {
-        "Id": "2014",
-        "StepIndex": "13",
-        "Instruction": "10\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u5E72\u71E5\u5668\u4E2D",
+        "Instruction": "10\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u5E72\u71E5\u5668\u4E2D\uFF0C\u51B7\u53740. 5~1h",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "3010"
     },
     {
-        "Id": "2015",
-        "StepIndex": "14",
-        "Instruction": "10\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u5E72\u71E5\u5668\u4E2D",
+        "Id": "2014",
+        "StepIndex": "13",
+        "Instruction": "10\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5165\u5E72\u71E5\u5668\u4E2D\uFF0C\u51B7\u53740. 5~1h",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "4001"
     },
     {
+        "Id": "2015",
+        "StepIndex": "14",
+        "Instruction": "12\u3001\u6253\u5F00\u5E72\u71E5\u5668\u76D6\u5B50",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "4002"
+    },
+    {
         "Id": "2016",
         "StepIndex": "15",
-        "Instruction": "11\u3001\u6253\u5F00\u79F0\u91CF\u76D2\u76D6\uFF0C\u51B7\u53740. 5~1h",
+        "Instruction": "13\u3001\u76D6\u4E0A\u79F0\u91CF\u76D2\u76D6",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "3006"
@@ -274,33 +274,105 @@
     {
         "Id": "2017",
         "StepIndex": "16",
-        "Instruction": "12\u3001\u6253\u5F00\u5E72\u71E5\u5668\u76D6\u5B50",
-        "TextOnButton": "",
-        "isFinish": false,
-        "ObjectInStepId": "4002"
-    },
-    {
-        "Id": "2018",
-        "StepIndex": "17",
-        "Instruction": "13\u3001\u76D6\u4E0A\u79F0\u91CF\u76D2\u76D6",
-        "TextOnButton": "",
-        "isFinish": false,
-        "ObjectInStepId": "3006"
-    },
-    {
-        "Id": "2019",
-        "StepIndex": "18",
         "Instruction": "14\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5230\u7535\u5B50\u79E4\u4E0A\u79F0\u91CD",
-        "TextOnButton": "\u8D28\u91CF\u4E3AX\uFF08\u7CBE\u786E\u52300.00g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3AX\uFF08\u7CBE\u786E\u52300.01g\uFF09",
         "isFinish": false,
         "ObjectInStepId": "3002"
     },
     {
-        "Id": "2020",
-        "StepIndex": "19",
+        "Id": "2018",
+        "StepIndex": "17",
         "Instruction": "14\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5230\u7535\u5B50\u79E4\u4E0A\u79F0\u91CD",
         "TextOnButton": "\u8D28\u91CF\u4E3AY\uFF08\u7CBE\u786E\u52300.01g\uFF09",
         "isFinish": false,
         "ObjectInStepId": "3003"
+    },
+    {
+        "Id": "3001",
+        "StepIndex": "0",
+        "Instruction": "1\u3001\u53D6\u98CE\u5E72\u571F\u6837\uFF0C\u8FC70.5mm\u7684\u7B5B200g",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5001"
+    },
+    {
+        "Id": "3002",
+        "StepIndex": "1",
+        "Instruction": "2\u3001\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5002"
+    },
+    {
+        "Id": "3003",
+        "StepIndex": "2",
+        "Instruction": "2\u3001\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5003"
+    },
+    {
+        "Id": "3004",
+        "StepIndex": "3",
+        "Instruction": "2\u3001\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5004"
+    },
+    {
+        "Id": "3005",
+        "StepIndex": "4",
+        "Instruction": "3\u3001\u4F9D\u636E\u7ECF\u9A8C\uFF0C\u6DFB\u52A0\u4E0D\u540C\u7684\u6C34\uFF0C\u4F7F\u5176\u8FBE\u5230\u8BD5\u9A8C\u6240\u9700\u542B\u6C34\u91CF",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5005"
+    },
+    {
+        "Id": "3006",
+        "StepIndex": "5",
+        "Instruction": "4\u3001\u7528\u8C03\u571F\u5200\u8C03\u5300\uFF0C\u76D6\u4E0A\u6E7F\u5E03\u653E\u7F6E18h\u4EE5\u4E0A",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5006"
+    },
+    {
+        "Id": "3007",
+        "StepIndex": "6",
+        "Instruction": "5\u3001\u5C06\u5236\u5907\u597D\u7684\u571F\u6837\u5145\u5206\u6405\u62CC\u5747\u5300",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5007"
+    },
+    {
+        "Id": "3008",
+        "StepIndex": "7",
+        "Instruction": "6\u3001\u5C06\u5236\u5907\u597D\u7684\u571F\u6837\u5206\u5C42\u88C5\u5165\u76DB\u571F\u676F\uFF0C\u7528\u529B\u538B\u5BC6\uFF0C\u4F7F\u7A7A\u6C14\u9038\u51FA\u3002\u8BD5\u676F\u88C5\u6EE1\u540E,\u522E\u6210\u4E0E\u676F\u8FB9\u9F50\u5E73",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5008"
+    },
+    {
+        "Id": "3009",
+        "StepIndex": "8",
+        "Instruction": "6\u3001\u5C06\u76DB\u571F\u676F\u653E\u5165\u8054\u5408\u6D4B\u5B9A\u4EEA\u4E0A",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5009"
+    },
+    {
+        "Id": "3010",
+        "StepIndex": "9",
+        "Instruction": "7\u3001\u8F6C\u52A8\u5E73\u53F0\u5347\u964D\u87BA\u6BCD\uFF0C\u5F53\u9525\u5C16\u521A\u4E0E\u571F\u9762\u63A5\u89E6\u65F6\u6307\u793A\u7BA1\u4EAE",
+        "TextOnButton": "",
+        "isFinish": false,
+        "ObjectInStepId": "5010"
+    },
+    {
+        "Id": "3011",
+        "StepIndex": "10",
+        "Instruction": "8\u3001\u70B9\u52A8\u6D4B\u91CF\u6309\u94AE\uFF0C\u5706\u9525\u81EA\u7531\u843D\u4E0B\uFF0C\u5EF6\u65F65s\uFF0C\u8BFB\u6570\u6307\u793A\u7BA1\uFF0C\u5373\u53EF\u8BFB\u6570",
+        "TextOnButton": "20mm",
+        "isFinish": false,
+        "ObjectInStepId": "5010"
     }
 ]

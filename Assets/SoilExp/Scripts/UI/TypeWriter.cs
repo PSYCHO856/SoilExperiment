@@ -18,6 +18,8 @@ public class TypeWriter : MonoBehaviour
     }
     public void Run(string textToType, Text textLabel)
     {
+        StopAllCoroutines();
+        text.text = "";
         
         typeText = TypeText(textToType, textLabel);
         StartCoroutine(typeText);
