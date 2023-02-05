@@ -1,0 +1,11 @@
+[
+    {
+        "Id": "50000",
+        "Name": "EXP",
+        "Desc": "\u7ECF\u9A8C",
+        "Type": 2,
+        "Icon": "icon_good_exp",
+        "MaxNum": 999,
+        "Grade": 0
+    }
+]

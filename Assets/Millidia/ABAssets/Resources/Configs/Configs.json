@@ -1,0 +1,14 @@
+﻿[
+    {
+        "Id": "1",
+        "ClassName": "PlayerConfig",
+        "Path": "ConfigsProxy",
+        "Container": "Players"
+    },
+    {
+        "Id": "2",
+        "ClassName": "GoodsConfig",
+        "Path": "ConfigsProxy",
+        "Container": "Goods"
+    }
+]
