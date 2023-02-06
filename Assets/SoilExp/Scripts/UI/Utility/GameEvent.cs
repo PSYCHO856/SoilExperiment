@@ -16,4 +16,7 @@
     public const string ON_STEPS_UPDATE = "OnStepsUpdate";
     public const string ON_INSTRUCTION_UPDATE = "OnInstructionShow";
     public const string ON_OPERATE_UPDATE = "OnOperateUpdate";
+    
+    public const string INPUTFIELD_RECORD = "InPutField_Record";
+    public const string INPUTFIELD_WITHDRAW = "InputField_Withdraw";
 }

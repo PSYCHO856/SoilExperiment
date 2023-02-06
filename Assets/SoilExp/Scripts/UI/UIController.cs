@@ -7,7 +7,8 @@ public enum UIPageId
 {
     LoadingPage,
     MainPage,
-    ExperimentPage
+    ExperimentPage,
+    CardPage
 }
 
 public class UIController : preProject.Singleton<UIController>
@@ -20,11 +21,14 @@ public class UIController : preProject.Singleton<UIController>
     [SerializeField] private UIBasePage LoadingPage;
     [SerializeField] private UIBasePage MainPage;
     [SerializeField] private UIBasePage ExperimentPage;
+    [SerializeField] private UIBasePage CardPage;
 
     [SerializeField] private SpriteAtlas spriteAtlas;
     //[SerializeField] private UIDefine uiDefine;
     //public static UIDefine UIDefine { get; set; }
 
+    public static Camera _camera;
+    
     private static Dictionary<UIPageId, UIBasePage> pages { get; } = new();
 
     private void Awake()
@@ -36,6 +40,9 @@ public class UIController : preProject.Singleton<UIController>
 
         SpriteAtlas = spriteAtlas;
         //UIDefine = uiDefine;
+        
+        // _camera = GameObject.Find("UICamera").GetComponent<Camera>();
+        _camera = uiCanvas.worldCamera;
     }
 
     void PagesInit()
@@ -46,6 +53,8 @@ public class UIController : preProject.Singleton<UIController>
             pages.TryAdd(UIPageId.MainPage, Instantiate(MainPage, transform));
         if (ExperimentPage)
             pages.TryAdd(UIPageId.ExperimentPage, Instantiate(ExperimentPage, transform));
+        if (CardPage)
+            pages.TryAdd(UIPageId.CardPage, Instantiate(CardPage, transform));
         
         foreach (var page in pages)
         {

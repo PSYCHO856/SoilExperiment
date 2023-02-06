@@ -18,6 +18,7 @@ public class ExperimentPage : UIBasePage
     
     public Button homeBtn;
     public Button settingsBtn;
+    public Button outputFormBtn;
     public Button helpBtn;
     public Button quitBtn;
     
@@ -43,6 +44,10 @@ public class ExperimentPage : UIBasePage
         
         homeBtn.onClick.AddListener(OnHome);
         settingsBtn.onClick.AddListener(OnSettings);
+        outputFormBtn.onClick.AddListener(() =>
+        {
+            UIController.Open(UIPageId.CardPage);
+        });
         helpBtn.onClick.AddListener(OnHelp);
         quitBtn.onClick.AddListener(OnQuit);
         closeBtnHelp.onClick.AddListener(OnCloseBtnHelp);

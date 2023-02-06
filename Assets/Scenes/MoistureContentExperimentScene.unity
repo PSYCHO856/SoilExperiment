@@ -3651,6 +3651,7 @@ MonoBehaviour:
   LoadingPage: {fileID: 0}
   MainPage: {fileID: 0}
   ExperimentPage: {fileID: 7867763349553667470, guid: 7cc517c598042814484a9784967adc0f, type: 3}
+  CardPage: {fileID: 6300706114366425526, guid: ca9252ec820ffb044b2ddc21455781ef, type: 3}
   spriteAtlas: {fileID: 0}
 --- !u!1 &2049167254
 GameObject:

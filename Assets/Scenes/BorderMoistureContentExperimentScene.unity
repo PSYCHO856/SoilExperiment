@@ -2462,7 +2462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9179faf459c458e4a897dd131e0689f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.401
+      value: -4.294
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9179faf459c458e4a897dd131e0689f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4082,6 +4082,7 @@ MonoBehaviour:
   LoadingPage: {fileID: 0}
   MainPage: {fileID: 0}
   ExperimentPage: {fileID: 7867763349553667470, guid: 7cc517c598042814484a9784967adc0f, type: 3}
+  CardPage: {fileID: 6300706114366425526, guid: ca9252ec820ffb044b2ddc21455781ef, type: 3}
   spriteAtlas: {fileID: 0}
 --- !u!1 &1975078823
 GameObject:
