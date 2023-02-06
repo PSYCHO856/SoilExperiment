@@ -96,10 +96,10 @@ public class IOTool
         //doc.Range.Replace("&Image2&", "", findReplaceOptions3);
 
         //插入图片
-        WriteImage(doc, imgReplaceDic);
+        // WriteImage(doc, imgReplaceDic);
 
         //插入复选框
-        ChangeCheckBox(doc, toggleReplaceDic);
+        // ChangeCheckBox(doc, toggleReplaceDic);
 
         //--另存为
         doc.Save(outPath);

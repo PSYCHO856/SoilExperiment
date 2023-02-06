@@ -1333,7 +1333,7 @@ MonoBehaviour:
   cardPageMenu: {fileID: 520761103024032481}
   iptName: 
   toggleName: 
-  cardName: 
+  cardName: "\u571F\u7684\u5BC6\u5EA6\u8BD5\u9A8C\u62A5\u544A"
   isFirstOpen: 1
   BtnCard: {fileID: 416034551656113298}
   bg: {fileID: 2693394898816221927}
