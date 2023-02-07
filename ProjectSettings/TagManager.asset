@@ -3,11 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Canvas
-  - ExpObject
-  - ExpMovableObject
-  - CircleKnife
+  tags: []
   layers:
   - Default
   - TransparentFX

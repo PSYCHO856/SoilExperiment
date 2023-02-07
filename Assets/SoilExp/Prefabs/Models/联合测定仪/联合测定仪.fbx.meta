@@ -60,7 +60,7 @@ ModelImporter:
       name: zhuiti
     second: {fileID: 2100000, guid: a879fab80f976a04da9f619a64b4c1c1, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1

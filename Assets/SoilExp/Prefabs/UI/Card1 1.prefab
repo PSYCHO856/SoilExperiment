@@ -1331,7 +1331,7 @@ MonoBehaviour:
   Inputs: {fileID: 883089719614067150}
   Panel: {fileID: 883089720322906679}
   cardPageMenu: {fileID: 520761103024032481}
-  iptName: 
+  iptName: IF
   toggleName: 
   cardName: "\u571F\u7684\u5BC6\u5EA6\u8BD5\u9A8C\u62A5\u544A"
   isFirstOpen: 1
