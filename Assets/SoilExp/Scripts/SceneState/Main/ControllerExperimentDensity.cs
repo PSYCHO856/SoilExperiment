@@ -177,12 +177,14 @@ public partial class ControllerExperiment
     {
         if (stepsIndex == 6)
         {
-            soilObj.SetActive(false);
+            soilObj.GetComponent<ControlDissolve>().StartDisSolve();
+            // soilObj.SetActive(false);
             circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
         }
         else
         {
-            soilObj2.SetActive(false);
+            // soilObj2.SetActive(false);
+            soilObj2.GetComponent<ControlDissolve>().StartDisSolve();
             circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
         }
     }
