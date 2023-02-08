@@ -21,7 +21,7 @@ public partial class ControllerExperiment
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                  isSelect)
         {
-if (stepsIndex == 0)
+            if (stepsIndex == 0)
             {
                 MoveShovelToSieve(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
@@ -117,29 +117,31 @@ if (stepsIndex == 0)
                 moveDuration)) // 添加动画到队列中
 
             .Append(sieveTop.DOMove(new Vector3(position1.x, position1.y + 0.3f, position1.z), moveDuration))
-            .AppendCallback(SieveCallback1)
             .Append(shovel.DOMove(new Vector3(position1.x, position1.y + 0.2f, position1.z - 0.1f), moveDuration))
             .Append(shovel.DORotate(new Vector3(0, 90, 60), moveDuration))
             .Append(shovel.DOMove(new Vector3(position1.x, position1.y + 0.05f, position1.z - 0.1f), moveDuration)
             .OnComplete(() =>
             {
-                shovel.gameObject.SetActive(false);
+                shovel.gameObject.GetComponent<ControlDissolve>().StartDisSolve();
+                // shovel.gameObject.SetActive(false);
             }))
             // .Append(boxTop.DOMove(new Vector3(position1.x, position1.y, position1.z), moveDuration))
-            .AppendCallback(SieveCallback2)
+            .AppendCallback(SieveCallback)
+            .AppendInterval(1.5f).OnComplete(()=>
+        {
+            sieveBottom.GetChild(1).gameObject.SetActive(true);
+        })
             .AppendCallback(callback);
     }
 
-    void SieveCallback1()
-    {
-        sieveTop.gameObject.SetActive(false);
-    }
     
-    void SieveCallback2()
+    void SieveCallback()
     {
-        sieveMiddle.gameObject.SetActive(false);
+        sieveTop.GetComponent<ControlDissolve>().StartDisSolve();
+        sieveMiddle.GetComponent<ControlDissolve>().StartDisSolve();
+        // sieveMiddle.gameObject.SetActive(false);
         sieveBottom.GetChild(0).gameObject.SetActive(true);
-        sieveBottom.GetChild(1).gameObject.SetActive(true);
+        
     }
 
     Transform shovel2;
@@ -162,10 +164,16 @@ if (stepsIndex == 0)
             .Append(shovel2.DOMove(new Vector3(position1.x, position1.y + 0.05f, position1.z - 0.06f), moveDuration)
                 .OnComplete(() =>
                 {
-                    shovel2.position = position;
-                    shovel2.rotation = shovelRotation;
-                    plateSoil.gameObject.SetActive(true);
+                    shovel2.GetComponent<ControlDissolve>().StartDisSolve();
+                    plateSoil.GetComponent<ControlDissolve>().BackNormal();
+                    // plateSoil.gameObject.SetActive(true);
                 }))
+            .AppendInterval(1.5f).OnComplete(()=>
+            {
+            shovel2.position = position;
+            shovel2.rotation = shovelRotation;
+            shovel2.GetComponent<ControlDissolve>().SetActive();
+            })
             
             .AppendCallback(callback);
     }
@@ -234,6 +242,7 @@ if (stepsIndex == 0)
             .Append(selecteTrans.DOMove(new Vector3(position2.x, position2.y + 0.15f, position2.z - plateRadius), moveDuration)
                 .OnComplete(() =>
                 {
+                    // plate1.GetChild(2).GetComponent<ControlDissolve>().BackNormal();//布
                     plate1.GetChild(2).gameObject.SetActive(true);//布
                 }))
             .Append(selecteTrans.DOMove(new Vector3(position2.x, position2.y + plateHeight, position2.z - plateRadius), moveDuration))
@@ -245,7 +254,8 @@ if (stepsIndex == 0)
             .Append(selecteTrans.DOMove(new Vector3(position3.x, position3.y + 0.15f, position3.z - plateRadius), moveDuration)
                 .OnComplete(() =>
                 {
-                    plate2.GetChild(2).gameObject.SetActive(true);
+                    // plate2.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
+                    plate2.GetChild(2).gameObject.SetActive(true);//布
                 }))
             .Append(selecteTrans.DOMove(new Vector3(position3.x, position3.y + plateHeight, position3.z - plateRadius), moveDuration))
             
@@ -254,7 +264,8 @@ if (stepsIndex == 0)
             .Append(selecteTrans.DOMove(new Vector3(position3.x, position3.y + 0.15f, position3.z - plateRadius), moveDuration)
                 .OnComplete(() =>
                 {
-                    plate3.GetChild(2).gameObject.SetActive(true);
+                    // plate3.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
+                    plate3.GetChild(2).gameObject.SetActive(true);//布
                 }))//布
             .Append(selecteTrans.DORotate(Vector3.zero, moveDuration))
             .Append(selecteTrans.DOMove(position, moveDuration))
@@ -297,7 +308,7 @@ if (stepsIndex == 0)
             var position = selecteTrans.position;
             var position1 = targetTrans.position;
         
-            float plateRadius = 0.055f;
+            float plateRadius = 0.04f;
             float plateHeight = 0.02f;
         
             float moveDuration = 0.5f;
@@ -307,13 +318,14 @@ if (stepsIndex == 0)
 
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + 0.1f, position1.z - plateRadius), moveDuration))
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius), moveDuration))
-                .Append(selecteTrans.DORotate(new Vector3(-20, -70, -60), moveDuration))
+                .Append(selecteTrans.DORotate(new Vector3(-20, -70, -70), moveDuration))
                 //搅拌
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius/2), moveDuration/2))
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius), moveDuration/2)
                     .OnComplete(() =>
                     {
-                        targetTrans.GetChild(1).gameObject.SetActive(true);
+                        targetTrans.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
+                        // targetTrans.GetChild(1).gameObject.SetActive(true);
                         selecteTrans.GetChild(2).gameObject.SetActive(false);
                     }))
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + 0.2f, position1.z - plateRadius), moveDuration))
@@ -351,6 +363,7 @@ if (stepsIndex == 0)
                     .OnComplete(() =>
                     {
                         // light
+                        selecteTrans.GetChild(1).GetChild(0).GetComponent<Renderer>().material.color = Color.red;
                     })) // 添加动画到队列中
                 .AppendCallback(callback);
         }

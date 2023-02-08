@@ -18,7 +18,8 @@ public partial class ControllerExperiment
 
             if (stepsIndex == 7)
             {
-                hit1.collider.transform.GetChild(1).gameObject.SetActive(false);
+                // hit1.collider.transform.GetChild(1).gameObject.SetActive(false);
+                hit1.collider.transform.GetChild(1).GetComponent<ControlDissolve>().StartDisSolve();
             }
             else if (stepsIndex == 15)
             {
@@ -42,7 +43,8 @@ public partial class ControllerExperiment
             }
             else if(stepsIndex == 7)
             {
-                hit1.collider.transform.GetChild(1).gameObject.SetActive(false);
+                // hit1.collider.transform.GetChild(1).gameObject.SetActive(false);
+                hit1.collider.transform.GetChild(1).GetComponent<ControlDissolve>().StartDisSolve();
                 MoveEquipmentCallback();
             }
             else if (stepsIndex == 15)
@@ -129,7 +131,8 @@ public partial class ControllerExperiment
             .Append(shovel.DOMove(new Vector3(position1.x, position1.y + 0.05f, position1.z + 0.05f), moveDuration)
             .OnComplete(() =>
             {
-                targetTrans.GetChild(2).gameObject.SetActive(true);
+                targetTrans.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
+                // targetTrans.GetChild(2).gameObject.SetActive(true);
                 shovel.GetChild(2).gameObject.SetActive(false);
             }))
 

@@ -85,7 +85,7 @@ public class CardPage : UIBasePage
 
     public virtual void PageInit()
     {
-        Panel.SetActive(false);
+        // Panel.SetActive(false);
         // AppendixPanel.SetActive(false);
         //bg.SetActive(false);
         inputorderList.Clear();
@@ -252,7 +252,9 @@ public class CardPage : UIBasePage
 
         });
   
-        cardPageMenu.BtnSave.onClick.AddListener(delegate {
+        cardPageMenu.BtnSave.onClick.AddListener(delegate
+        {
+            UIController.Open(UIPageId.InfoPage);
             Save(cardName);
             UnityEngine.Debug.Log("btnsave clicked.");
             // PanelManager.Instance.ToolPanelManager.Hide_DisplayMessagePanel("保存表格数据到桌面？", delegate { Save(cardName); });
@@ -380,9 +382,10 @@ public class CardPage : UIBasePage
 
     void PanelClose()
     {
-        Panel.SetActive(false);
+        base.OnClose();
+        // Panel.SetActive(false);
         // toolPanel.SetActive(true);
-        BtnCard.gameObject.SetActive(true);
+        // BtnCard.gameObject.SetActive(true);
         SmallSceneControl();
     }
 

@@ -179,13 +179,15 @@ public partial class ControllerExperiment
         {
             soilObj.GetComponent<ControlDissolve>().StartDisSolve();
             // soilObj.SetActive(false);
-            circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
+            // circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
+            circleKnifeTrans.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
         }
         else
         {
             // soilObj2.SetActive(false);
             soilObj2.GetComponent<ControlDissolve>().StartDisSolve();
-            circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
+            circleKnifeTrans.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
+            // circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
         }
     }
 
@@ -236,7 +238,8 @@ public partial class ControllerExperiment
             //清理环刀
             if (stepsIndex == 10)
             {
-                circleKnifeTrans.GetChild(1).gameObject.SetActive(false);
+                circleKnifeTrans.GetChild(1).GetComponent<ControlDissolve>().StartDisSolve();
+                // circleKnifeTrans.GetChild(1).gameObject.SetActive(false);
             }
 
             if (stepsIndex == 5 || stepsIndex == 13)
