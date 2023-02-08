@@ -833,7 +833,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507038227}
-  m_LocalRotation: {x: 0.18818986, y: 0.6679375, z: -0.18032083, w: 0.6970857}
+  m_LocalRotation: {x: 0.18818985, y: 0.6679375, z: -0.18032084, w: 0.69708574}
   m_LocalPosition: {x: -5.444, y: 1.416, z: 0.222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3562,6 +3562,8 @@ MonoBehaviour:
     type: 3}
   CardPage: {fileID: 5435612062065861406, guid: ca9252ec820ffb044b2ddc21455781ef,
     type: 3}
+  InfoPage: {fileID: 2257625698047871997, guid: c39204786f05a5841b72a436c398138b,
+    type: 3}
   spriteAtlas: {fileID: 0}
 --- !u!1001 &1970193664
 PrefabInstance:
@@ -4264,7 +4266,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4011160484370746264}
-  m_LocalRotation: {x: 0.18818986, y: 0.6679375, z: -0.18032083, w: 0.6970857}
+  m_LocalRotation: {x: 0.18818985, y: 0.6679375, z: -0.18032084, w: 0.69708574}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

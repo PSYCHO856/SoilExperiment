@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 883089719505745437}
   - component: {fileID: 1165301306602242609}
+  - component: {fileID: 2257625698047871997}
   m_Layer: 5
   m_Name: InfoPage
   m_TagString: Untagged
@@ -52,6 +53,19 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &2257625698047871997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883089719505745436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208450341a4098b458871cae99a6824c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnClose: {fileID: 0}
 --- !u!1 &883089720070222957
 GameObject:
   m_ObjectHideFlags: 0

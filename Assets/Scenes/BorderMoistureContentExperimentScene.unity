@@ -4248,6 +4248,8 @@ MonoBehaviour:
     type: 3}
   CardPage: {fileID: 6300706114366425526, guid: ca9252ec820ffb044b2ddc21455781ef,
     type: 3}
+  InfoPage: {fileID: 2257625698047871997, guid: c39204786f05a5841b72a436c398138b,
+    type: 3}
   spriteAtlas: {fileID: 0}
 --- !u!1 &1975078823
 GameObject:

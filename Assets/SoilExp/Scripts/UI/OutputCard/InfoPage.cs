@@ -11,6 +11,6 @@ public class InfoPage : UIBasePage
 
     private void Awake()
     {
-        btnClose.onClick.AddListener((() => base.OnClose()));
+        btnClose.onClick.AddListener(() => base.OnClose());
     }
 }

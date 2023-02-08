@@ -254,8 +254,9 @@ public class CardPage : UIBasePage
   
         cardPageMenu.BtnSave.onClick.AddListener(delegate
         {
-            UIController.Open(UIPageId.InfoPage);
-            Save(cardName);
+            // UIController.Open(UIPageId.InfoPage);
+            UIController.Open(UIPageId.InfoPage,delegate { Save(cardName);});
+            // Save(cardName);
             UnityEngine.Debug.Log("btnsave clicked.");
             // PanelManager.Instance.ToolPanelManager.Hide_DisplayMessagePanel("保存表格数据到桌面？", delegate { Save(cardName); });
         });

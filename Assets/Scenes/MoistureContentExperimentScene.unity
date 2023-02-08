@@ -3251,8 +3251,9 @@ MonoBehaviour:
   MainPage: {fileID: 0}
   ExperimentPage: {fileID: 7867763349553667470, guid: 7cc517c598042814484a9784967adc0f,
     type: 3}
-  CardPage: {fileID: 6300706114366425526, guid: ca9252ec820ffb044b2ddc21455781ef,
+  CardPage: {fileID: 2257625698047871997, guid: c39204786f05a5841b72a436c398138b,
     type: 3}
+  InfoPage: {fileID: 0}
   spriteAtlas: {fileID: 0}
 --- !u!1001 &2003909994
 PrefabInstance:
