@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -878,6 +878,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadingPage: {fileID: 0}
-  MainPage: {fileID: 6248501735667237838, guid: 404fa423d5f07614db35950a1397d17c, type: 3}
-  DensityExperimentPage: {fileID: 0}
+  MainPage: {fileID: 6248501735667237838, guid: 404fa423d5f07614db35950a1397d17c,
+    type: 3}
+  ExperimentPage: {fileID: 0}
+  CardPage: {fileID: 0}
+  InfoPage: {fileID: 0}
+  LoginPage: {fileID: 6129468343654557671, guid: a7d418350c4a5b84495a537d1c263883,
+    type: 3}
   spriteAtlas: {fileID: 0}

@@ -1,15 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="91f64cb8-e7e1-477c-8dee-37475bf8865f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlus/Demo/Demo2_SelectionExample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HighlightPlus/Demo/Demo2_SelectionExample.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlus/Demo/Profiles/Selected.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HighlightPlus/Demo/Profiles/Selected.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlus/Demo/Profiles/SelectedAndHighlighted.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HighlightPlus/Demo/Profiles/SelectedAndHighlighted.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card1 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/InfoPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/InfoPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/RTool/ToolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/RTool/ToolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MainSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MainSceneState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/InfoPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/InfoPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIBasePage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIBasePage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Sprites/UI/LUI/4.帮助/help panel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Sprites/UI/LUI/4.帮助/help panel.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Sprites/UI/LUI/5.答题/answer panel_1_btn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Sprites/UI/LUI/5.答题/answer panel_1_btn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +51,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/LoginPage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/Panels/ToolPanel/ToolPanelManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/InfoPage.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -38,10 +63,16 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIBasePage.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/InfoPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIBasePage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/RTool/ToolManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/LoginPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MainSceneState.cs" />
+      <option value="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2LMumgjdIKdBEe7jPUI92g1yuEo" />
@@ -88,7 +119,9 @@
       <updated>1675693435697</updated>
       <workItem from="1675693472785" duration="842000" />
       <workItem from="1675782832382" duration="3898000" />
-      <workItem from="1675817232888" duration="12330000" />
+      <workItem from="1675817232888" duration="12407000" />
+      <workItem from="1675902164468" duration="7231000" />
+      <workItem from="1675913546054" duration="9692000" />
     </task>
     <servers />
   </component>
@@ -107,6 +140,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

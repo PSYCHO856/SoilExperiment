@@ -10,7 +10,8 @@ public enum UIPageId
     MainPage,
     ExperimentPage,
     CardPage,
-    InfoPage
+    InfoPage,
+    LoginPage
 }
 
 public class UIController : preProject.Singleton<UIController>
@@ -25,6 +26,7 @@ public class UIController : preProject.Singleton<UIController>
     [SerializeField] private UIBasePage ExperimentPage;
     [SerializeField] private UIBasePage CardPage;
     [SerializeField] private UIBasePage InfoPage;
+    [SerializeField] private UIBasePage LoginPage;
 
     [SerializeField] private SpriteAtlas spriteAtlas;
     //[SerializeField] private UIDefine uiDefine;
@@ -60,6 +62,8 @@ public class UIController : preProject.Singleton<UIController>
             pages.TryAdd(UIPageId.CardPage, Instantiate(CardPage, transform));
         if (InfoPage)
             pages.TryAdd(UIPageId.InfoPage, Instantiate(InfoPage, transform));
+        if (LoginPage)
+            pages.TryAdd(UIPageId.LoginPage, Instantiate(LoginPage, transform));
         
         foreach (var page in pages)
         {
@@ -94,7 +98,7 @@ public class UIController : preProject.Singleton<UIController>
 
         return null;
     }
-    
+
     public static UIBasePage Open(UIPageId id,Action action)
     {
         if (pages.TryGetValue(id, out var page))
@@ -102,7 +106,8 @@ public class UIController : preProject.Singleton<UIController>
 
             if (page.gameObject != null) 
                 page.gameObject.SetActive(true);
-            page.OnOpen();
+            page.OnOpen(action);
+            
             return page;
         }
 

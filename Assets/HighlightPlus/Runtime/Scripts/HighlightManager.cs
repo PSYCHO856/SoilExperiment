@@ -323,20 +323,31 @@ namespace HighlightPlus {
             }
             if (selectOnClick || currentEffect.isSelected) {
                 if (currentEffect.isSelected) {
-                    if (state && selectedAndHighlightedProfile != null) {
+                    if (state && selectedAndHighlightedProfile != null) 
+                    {
                         selectedAndHighlightedProfile.Load(currentEffect);
-                    } else if (selectedProfile != null) {
+                    } 
+                    else if (selectedProfile != null) 
+                    {
                         selectedProfile.Load(currentEffect);
-                    } else {
+                    } 
+                    else 
+                    {
                         currentEffect.previousSettings.Load(currentEffect);
                     }
-                    if (currentEffect.highlighted) {
+                    
+                    if (currentEffect.highlighted) 
+                    {
                         currentEffect.UpdateMaterialProperties();
-                    } else {
+                    } 
+                    else 
+                    {
                         currentEffect.SetHighlighted(true);
                     }
                     return;
-                } else if (!highlightOnHover) {
+                } 
+                else if (!highlightOnHover) 
+                {
                     currentEffect.SetHighlighted(false);
                     return;
                 }

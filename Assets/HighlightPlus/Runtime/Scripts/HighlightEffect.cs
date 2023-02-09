@@ -1609,19 +1609,24 @@ namespace HighlightPlus {
                 }
                 SendMessage("HighlightStart", null, SendMessageOptions.DontRequireReceiver);
                 highlightStartTime = targetFxStartTime = now;
-                if (fadeInDuration > 0) {
-                    if (fading == FadingState.FadingOut) {
+                if (fadeInDuration > 0) 
+                {
+                    if (fading == FadingState.FadingOut) 
+                    {
                         float remaining = fadeOutDuration - (now - fadeStartTime);
                         fadeStartTime = now - remaining;
                         fadeStartTime = Mathf.Min(fadeStartTime, now);
                     }
                     fading = FadingState.FadingIn;
-                } else {
+                } 
+                else 
+                {
                     fading = FadingState.NoFading;
                 }
                 _highlighted = true;
                 requireUpdateMaterial = true;
-            } else if (_highlighted) {
+            } 
+            else if (_highlighted) {
                 if (fadeOutDuration > 0) {
                     if (fading == FadingState.FadingIn) {
                         float elapsed = now - fadeStartTime;
@@ -1629,7 +1634,8 @@ namespace HighlightPlus {
                         fadeStartTime = Mathf.Min(fadeStartTime, now);
                     }
                     fading = FadingState.FadingOut; // when fade out ends, highlighted will be set to false in OnRenderObject
-                } else {
+                } 
+                else {
                     fading = FadingState.NoFading;
                     ImmediateFadeOut();
                     requireUpdateMaterial = true;

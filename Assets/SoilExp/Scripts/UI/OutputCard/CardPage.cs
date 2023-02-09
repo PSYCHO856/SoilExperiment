@@ -68,6 +68,9 @@ public class CardPage : UIBasePage
 
     [SerializeField] protected Vector3 disasterPos;
     [SerializeField] protected Vector3 disasterAngle;
+    
+    [SerializeField] protected InputField ipf1;
+    [SerializeField] protected InputField ipf2;
     private void Awake()
     {
         PageInit();
@@ -81,6 +84,9 @@ public class CardPage : UIBasePage
     {
         base.OnOpen();
         cardPageMenu.MenuInit();
+        
+        ipf1.text = ToolManager.Instance.stuName;
+        ipf2.text = ToolManager.Instance.stuNumber;
     }
 
     public virtual void PageInit()
@@ -108,7 +114,8 @@ public class CardPage : UIBasePage
         Messenger.AddListener(GameEvent.INPUTFIELD_WITHDRAW, SelectedInputFieldWithdraw);
 
         // myPlayerBehavior = GameObject.Find("Player").GetComponent<PlayerBehavior>();
-
+        // ipf1.text = ToolManager.Instance.stuName;
+        // ipf2.text = ToolManager.Instance.stuNumber;
 
 
     }

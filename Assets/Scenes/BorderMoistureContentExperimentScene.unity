@@ -4246,10 +4246,11 @@ MonoBehaviour:
   MainPage: {fileID: 0}
   ExperimentPage: {fileID: 7867763349553667470, guid: 7cc517c598042814484a9784967adc0f,
     type: 3}
-  CardPage: {fileID: 6300706114366425526, guid: ca9252ec820ffb044b2ddc21455781ef,
+  CardPage: {fileID: 5435612062065861406, guid: 30c11fe3e42b31d459f620288f052b59,
     type: 3}
   InfoPage: {fileID: 2257625698047871997, guid: c39204786f05a5841b72a436c398138b,
     type: 3}
+  LoginPage: {fileID: 0}
   spriteAtlas: {fileID: 0}
 --- !u!1 &1975078823
 GameObject:
@@ -4635,7 +4636,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.75
+  m_Intensity: 0.82
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

@@ -13,6 +13,9 @@ public class ToolManager : SingletonBaseComponent<ToolManager>
     public bool isDialogueOpen;
     public bool isPackPanelDisplay;
     public int sceneNumber = 0;
+    public string stuName = "";
+    public string stuNumber = "";
+    public bool isLogin;
 
     protected override void OnAwake()
     {

@@ -585,6 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16029ff990790204db1894df1ef0d422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeDuration: 0.5
   equipmentInstruction: {fileID: 521578470234469848}
   equipmentInstructionTypeWriter: {fileID: 5652389689562087610}
   testBtn: {fileID: 2917450613489353865}
@@ -2260,7 +2261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

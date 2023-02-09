@@ -20,7 +20,15 @@ public class MainSceneState : ISceneState
 
         // PanelManager.Instance.CommonPanelManager.Hide_DisplayTotalPanel();
 
-        UIController.Open(UIPageId.MainPage);
+        if (ToolManager.Instance.isLogin)
+        {
+            UIController.Open(UIPageId.MainPage);
+        }
+        else
+        {
+            UIController.Open(UIPageId.LoginPage);
+
+        }
     }
 
     public override void StateUpdate()

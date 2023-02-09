@@ -27,6 +27,7 @@ public class ControllerStructurePanel : MonoBehaviour
     {
         Messenger.AddListener(GameEvent.ON_STEPS_UPDATE, UpdateSteps);
         Init();
+        expFinishObj.SetActive(false);
         expFinishObjCG = expFinishObj.GetComponent<CanvasGroup>();
         expFinishObjCG.alpha = 0;
     }
@@ -85,6 +86,7 @@ public class ControllerStructurePanel : MonoBehaviour
         }
         else if (ControllerExperiment.Instance.stepsIndex == structureSteps.Count)
         {
+            expFinishObj.SetActive(true);
             expFinishObjCG.DOFade(1, 0.5f);
             UserHelper.SetHighlightOff();
         }
