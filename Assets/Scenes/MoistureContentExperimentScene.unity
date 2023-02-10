@@ -365,7 +365,7 @@ MonoBehaviour:
     type: 2}
   singleSelection: 1
   toggle: 0
-  keepSelection: 1
+  keepSelection: 0
 --- !u!114 &67234129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ MonoBehaviour:
     alpha: 0.4
     color: {r: 0.64, g: 1, b: 0, a: 1}
   glowIgnoreMask: 0
-  innerGlow: 0.5
+  innerGlow: 0.27
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
   innerGlowVisibility: 0
@@ -2784,6 +2784,7 @@ MonoBehaviour:
   uiCam: {fileID: 57956155}
   stepsIndex: 0
   _virtualCamera: {fileID: 507038229}
+  playerObj: {fileID: 0}
   currentStepEquipment: []
   sceneEquipmentObjects:
   - {fileID: 497224367}

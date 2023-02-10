@@ -87,6 +87,7 @@ public class CardPage : UIBasePage
         
         ipf1.text = ToolManager.Instance.stuName;
         ipf2.text = ToolManager.Instance.stuNumber;
+        PageOpenInit();
     }
 
     public virtual void PageInit()
@@ -116,10 +117,12 @@ public class CardPage : UIBasePage
         // myPlayerBehavior = GameObject.Find("Player").GetComponent<PlayerBehavior>();
         // ipf1.text = ToolManager.Instance.stuName;
         // ipf2.text = ToolManager.Instance.stuNumber;
-
-
     }
 
+    public virtual void PageOpenInit()
+    {
+        
+    }
 
     /// <summary>
     /// 面板数据初始化
@@ -388,7 +391,7 @@ public class CardPage : UIBasePage
         // PanelManager.Instance.ToolPanelManager.PackPanel.ClearLines();
     }
 
-    void PanelClose()
+    public virtual void PanelClose()
     {
         base.OnClose();
         // Panel.SetActive(false);

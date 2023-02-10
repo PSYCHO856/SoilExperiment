@@ -1327,6 +1327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f31d508d45b3fe48af7027c71f4e252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeDuration: 0.5
   BtnClose: {fileID: 4914693411418467720}
   Chooses: {fileID: 883089718486802437}
   Inputs: {fileID: 883089719614067150}

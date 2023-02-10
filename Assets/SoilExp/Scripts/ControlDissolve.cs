@@ -34,7 +34,7 @@ public class ControlDissolve : MonoBehaviour
 
     public void StartDisSolve()
     {
-        StartCoroutine(Dissolve());
+        if(gameObject.activeSelf) StartCoroutine(Dissolve());
     }
 
     private IEnumerator Dissolve()
@@ -47,6 +47,8 @@ public class ControlDissolve : MonoBehaviour
             SetDissloveRate(time/DissolveTime);
             yield return null;
         }
+
+        gameObject.SetActive(false);
     }
 
     private void SetDissloveRate(float value)
@@ -69,11 +71,13 @@ public class ControlDissolve : MonoBehaviour
 
     public void BackNormal()
     {
+        gameObject.SetActive(true);
         StartCoroutine(Display());
     }
     
     private IEnumerator Display()
     {
+        
         SetDissloveRate(1);
         float time = 0f;
         while (time < DissolveTime)
@@ -82,10 +86,13 @@ public class ControlDissolve : MonoBehaviour
             SetDissloveRate((1 - time) / DissolveTime);
             yield return null;
         }
+        
+
     }
 
     public void SetActive()
     {
         SetDissloveRate(0);
     }
+
 }

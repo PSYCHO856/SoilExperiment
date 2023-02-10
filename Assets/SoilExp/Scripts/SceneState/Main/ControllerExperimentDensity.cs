@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using HighlightPlus;
 using UnityEngine;
 
 public partial class ControllerExperiment
@@ -116,6 +117,7 @@ public partial class ControllerExperiment
             .Append(circleKnifeTrans.DOMove(
                 new Vector3(circleKnifeTrans.position.x, circleKnifeTrans.position.y - 0.05f,
                     circleKnifeTrans.position.z), moveDuration))
+
             ;
 
         ReturnOriginPos(selecteTrans.gameObject, 3.5f, true);
@@ -230,6 +232,7 @@ public partial class ControllerExperiment
             }
 
             isSelect = false;
+            Invoke("DeselectAllGobj",0.5f);
         }
         //当前步骤中只有一个物体 选中时
         else if (!isSelect && currentStepEquipment.Count == 1 &&
@@ -257,6 +260,7 @@ public partial class ControllerExperiment
             {
                 MoveEquipmentCallback();
             }
+            Invoke("DeselectAllGobj",0.5f);
         }
     }
 }

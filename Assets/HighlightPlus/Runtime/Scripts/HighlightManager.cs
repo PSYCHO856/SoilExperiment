@@ -159,6 +159,13 @@ namespace HighlightPlus {
                     return;
                 }
 #endif
+                // if (!GetFirstPickGameObject(InputProxy.mousePosition))
+                // {
+                //     Debug.Log(GetFirstPickGameObject(InputProxy.mousePosition));
+                // }
+
+                
+                
                 ray = raycastCamera.ScreenPointToRay(InputProxy.mousePosition);
             } else {
                 ray = new Ray(raycastCamera.transform.position, raycastCamera.transform.forward);
@@ -191,7 +198,29 @@ namespace HighlightPlus {
             SwitchesCollider (null);
 		}
 
+        //为啥没用啊
+        public void DeselectAllGobj()
+        {
+            if (selectOnClick && !keepSelection && lastTriggerFrame < Time.frameCount) {
+                internal_DeselectAll();
+            }
+            SwitchesCollider (null);
+        }
 
+
+        // public GameObject GetFirstPickGameObject(Vector2 position)
+        // {
+        //     EventSystem eventSystem = EventSystem.current;
+        //     PointerEventData pointerEventData = new PointerEventData(eventSystem);
+        //     pointerEventData.position = position;
+        //     //射线检测ui
+        //     List<RaycastResult> uiRaycastResultCache = new List<RaycastResult>();
+        //     eventSystem.RaycastAll(pointerEventData, uiRaycastResultCache);
+        //     if (uiRaycastResultCache.Count > 0)
+        //         return uiRaycastResultCache[0].gameObject;
+        //     return null;
+        // }
+        
 #if ENABLE_INPUT_SYSTEM
         EventSystem CreateEventSystem() {
             GameObject eo = new GameObject("Event System created by Highlight Plus", typeof(EventSystem), typeof(UnityEngine.InputSystem.UI.InputSystemUIInputModule));
@@ -200,7 +229,7 @@ namespace HighlightPlus {
 #endif
 
 
-		void SwitchesCollider (Transform newObject) {
+		public void SwitchesCollider (Transform newObject) {
             if (currentEffect != null) {
                 if (highlightOnHover) {
                     Highlight(false);
@@ -363,7 +392,7 @@ namespace HighlightPlus {
             return raycastCamera;
         }
 
-        void internal_DeselectAll() {
+        public void internal_DeselectAll() {
             foreach (HighlightEffect hb in selectedObjects) {
                 if (hb != null && hb.gameObject != null) {
                     if (OnObjectUnSelected != null) {

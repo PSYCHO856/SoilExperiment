@@ -68,6 +68,7 @@ public partial class ControllerExperiment
             }
 
             isSelect = false;
+            Invoke("DeselectAllGobj",0.5f);
         }
         
         
@@ -94,6 +95,7 @@ public partial class ControllerExperiment
             {
                 MoveEquipmentCallback();
             }
+            Invoke("DeselectAllGobj",0.5f);
         }
     }
     

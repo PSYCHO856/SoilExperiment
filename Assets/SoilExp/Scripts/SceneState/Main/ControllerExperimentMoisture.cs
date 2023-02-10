@@ -23,7 +23,8 @@ public partial class ControllerExperiment
             }
             else if (stepsIndex == 15)
             {
-                hit1.collider.transform.GetChild(1).gameObject.SetActive(true);
+                // hit1.collider.transform.GetChild(1).gameObject.SetActive(true);
+                hit1.collider.transform.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
             }
         }
         //当前步骤中两个物体 选中第二个时
@@ -49,7 +50,8 @@ public partial class ControllerExperiment
             }
             else if (stepsIndex == 15)
             {
-                hit1.collider.transform.GetChild(1).gameObject.SetActive(true);
+                hit1.collider.transform.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
+                // hit1.collider.transform.GetChild(1).gameObject.SetActive(true);
                 MoveEquipmentCallback();
             }
             else if(stepsIndex == 8 || stepsIndex == 9)
@@ -71,6 +73,7 @@ public partial class ControllerExperiment
             }
 
             isSelect = false;
+            Invoke("DeselectAllGobj",0.5f);
         }
         //当前步骤中只有一个物体 选中时
         else if (!isSelect && currentStepEquipment.Count == 1 &&
@@ -100,6 +103,7 @@ public partial class ControllerExperiment
             {
                 MoveEquipmentCallback();
             }
+            Invoke("DeselectAllGobj",0.5f);
         }
     }
     

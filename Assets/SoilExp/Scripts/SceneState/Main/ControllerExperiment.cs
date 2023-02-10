@@ -5,6 +5,8 @@ using DG.Tweening;
 using UnityEngine;
 using System.Linq;
 using Cinemachine;
+using HighlightPlus;
+using UnityEngine.EventSystems;
 
 public partial class ControllerExperiment : preProject.Singleton<ControllerExperiment>
 {
@@ -22,7 +24,8 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
     public List<List<GameObject>> objectsInSteps;
 
     public CinemachineVirtualCamera _virtualCamera;
-    
+
+    public GameObject playerObj;
     /// <summary>
     /// 步骤中要操作的设备存储在config里
     /// 判定操作完成后stepsIndex++
@@ -62,7 +65,10 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         
         if(Input.GetMouseButtonDown(0) /*&& !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()*/)
         {
-            
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
             ray1 = GetMyRay();
             if (Physics.Raycast(ray1, out hit1))
             {
@@ -105,7 +111,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
             }
         }
         
-        
+
         
         
     }
@@ -370,6 +376,10 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         }
 
     }
-    
-    
+
+    void DeselectAllGobj()
+    {
+        HighlightManager.instance.internal_DeselectAll();
+        HighlightManager.instance.SwitchesCollider (null);
+    }
 }
