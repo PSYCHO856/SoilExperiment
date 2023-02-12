@@ -88,6 +88,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
                 if (ToolManager.Instance.sceneNumber == 0) DensityStepsJudge();
                 if (ToolManager.Instance.sceneNumber == 1) MoistureStepsJudge();
                 if (ToolManager.Instance.sceneNumber == 2) BorderMoistureStepsJudge();
+                if (ToolManager.Instance.sceneNumber == 3) BorderPlasticStepsJudge();
                 
 
                 if (hit1.collider.gameObject.CompareTag("ExpObject"))
@@ -131,18 +132,23 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
     public Dictionary<string,ExperimentInstructionConfig> GetCurrentExpInstructionConfig()
     {
         string _searchID = "";
-        if (ToolManager.Instance.sceneNumber == 0)
-        {
-            _searchID="10";
-        }
-        else if (ToolManager.Instance.sceneNumber == 1)
-        {
-            _searchID="20";
-        }
-        else if (ToolManager.Instance.sceneNumber == 2)
-        {
-            _searchID="30";
-        }
+        _searchID = (ToolManager.Instance.sceneNumber + 1).ToString() + 0;
+        // if (ToolManager.Instance.sceneNumber == 0)
+        // {
+        //     _searchID="10";
+        // }
+        // else if (ToolManager.Instance.sceneNumber == 1)
+        // {
+        //     _searchID="20";
+        // }
+        // else if (ToolManager.Instance.sceneNumber == 2)
+        // {
+        //     _searchID="30";
+        // }
+        // else if (ToolManager.Instance.sceneNumber == 3)
+        // {
+        //     _searchID="40";
+        // }
         
         var ansList =
             ExperimentInstructionConfigInfo.Datas.Where(c =>
@@ -158,6 +164,8 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
     {
         
         int objectInStepId = -1;
+        
+
         foreach (var experimentInstructionConfigInfoData in GetCurrentExpInstructionConfig())
         {
             if (experimentInstructionConfigInfoData.Value.StepIndex.Equals(stepsIndex.ToString()))
@@ -166,11 +174,11 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
                 nowBtnText = experimentInstructionConfigInfoData.Value.TextOnButton;
             }
         }
-
         if (objectInStepId == -1) return;
         currentStepEquipment = new List<GameObject>();
         foreach (var objectInStepConfigInfoData in ObjectInStepConfigInfo.Datas)
         {  
+            
             if (objectInStepConfigInfoData.Value.Id.Equals(objectInStepId.ToString()))
             {
                 currentStepEquipment.Clear();

@@ -8,6 +8,7 @@ public class MainPage : UIBasePage
     public Button btnDensity;
     public Button btnMoisture;
     public Button btnBorderMoisture;
+    public Button btnBorderPlastic;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,12 @@ public class MainPage : UIBasePage
         {
             SceneStateController.Instance.SetState(new BorderMoistureExperimentSceneState());
             ToolManager.Instance.sceneNumber = 2;
+        });
+        
+        btnBorderPlastic.onClick.AddListener(() =>
+        {
+            SceneStateController.Instance.SetState(new BorderPlasticExperimentSceneState());
+            ToolManager.Instance.sceneNumber = 3;
         });
     }
 

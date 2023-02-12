@@ -25,7 +25,10 @@ public class ControlDissolve : MonoBehaviour
                 myMaterials.Add(material);
             }
         }
+        if(needInitVanish) gameObject.SetActive(false);
     }
+
+    public bool needInitVanish = false;
     
     void Update()
     {
@@ -90,6 +93,7 @@ public class ControlDissolve : MonoBehaviour
 
     }
 
+    //先让gobj显示 再设溶解度 逐渐显示物体
     public void SetActive()
     {
         SetDissloveRate(0);

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232807703453215651}
   - component: {fileID: 232807703453215650}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: "\u76DB\u571F\u76BF1"
   m_TagString: ExpObject
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 20761754891076030}
   - component: {fileID: 5871489341437019677}
   - component: {fileID: 8695050946891021140}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: "\u5706\u67F1\u4F53"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

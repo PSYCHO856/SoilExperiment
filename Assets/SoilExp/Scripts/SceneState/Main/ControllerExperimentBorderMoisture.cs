@@ -167,6 +167,7 @@ public partial class ControllerExperiment
                 .OnComplete(() =>
                 {
                     shovel2.GetComponent<ControlDissolve>().StartDisSolve();
+                    plateSoil.gameObject.SetActive(true);
                     plateSoil.GetComponent<ControlDissolve>().BackNormal();
                     // plateSoil.gameObject.SetActive(true);
                 }))
@@ -174,6 +175,7 @@ public partial class ControllerExperiment
             {
             shovel2.position = position;
             shovel2.rotation = shovelRotation;
+            shovel2.gameObject.SetActive(true);
             shovel2.GetComponent<ControlDissolve>().SetActive();
             })
             
@@ -315,12 +317,13 @@ public partial class ControllerExperiment
         
             float moveDuration = 0.5f;
             DOTween.Sequence() // 返回一个新的Sequence
-                .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.1f, position.z),
+                .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.13f, position.z),
                     moveDuration)) // 添加动画到队列中
 
-                .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + 0.1f, position1.z - plateRadius), moveDuration))
-                .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius), moveDuration))
+                .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + 0.13f, position1.z - plateRadius), moveDuration))
                 .Append(selecteTrans.DORotate(new Vector3(-20, -70, -70), moveDuration))
+                .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius), moveDuration))
+                
                 //搅拌
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius/2), moveDuration/2))
                 .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + plateHeight, position1.z - plateRadius), moveDuration/2)
