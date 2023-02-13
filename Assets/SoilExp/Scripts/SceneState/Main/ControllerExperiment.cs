@@ -255,11 +255,10 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
         float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y;
         //为0则用默认值
-        if (Mathf.Abs(endHeighOffset - 1) < 0.01f)
+        if (Mathf.Abs(endHeighOffset) < 0.01f)
         {
             endHeighOffset = (selectedTransHeight + targetTransHeight) / 2;
         }
-        
         float moveDuration = 0.4f;
         DOTween.Sequence() // 返回一个新的Sequence
             .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z), moveDuration)) // 添加动画到队列中
