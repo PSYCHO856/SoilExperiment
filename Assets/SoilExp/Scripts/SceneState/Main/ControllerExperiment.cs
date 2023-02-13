@@ -58,10 +58,10 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
     //移动分解
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            CheckStep(testStepIndex);
-        }
+        // if (Input.GetMouseButtonDown(1))
+        // {
+        //     CheckStep(testStepIndex);
+        // }
         
         if(Input.GetMouseButtonDown(0) /*&& !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()*/)
         {
@@ -94,6 +94,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
                 if (hit1.collider.gameObject.CompareTag("ExpObject"))
                 {
                     //获取实验器具的说明
+                    Messenger.Broadcast(GameEvent.ON_INSTRUCTION_FADE);
                     if (!CheckEquipment(hit1.collider.gameObject.name))
                     {
                         if (hit1.collider.gameObject.name.Equals("电子秤"))
@@ -102,7 +103,9 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
                         }
                         
                         instructionString = GetEquipmentInstruction(hit1.collider.gameObject.name);
+
                         if (instructionString == "") return;
+                        
                         Messenger<string>.Broadcast(GameEvent.ON_INSTRUCTION_UPDATE,instructionString);
                         
                     }
@@ -242,7 +245,8 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         return "";
     }
 
-    void MoveEquipment(Transform selecteTrans, Transform targetTrans, TweenCallback callback = null)
+    void MoveEquipment(Transform selecteTrans, Transform targetTrans, TweenCallback callback = null,
+        float endHeighOffset = 0)
     {
         if (!selecteTrans) return;
 
@@ -250,13 +254,19 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         var position1 = targetTrans.position;
         float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
         float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y;
+        //为0则用默认值
+        if (Mathf.Abs(endHeighOffset - 1) < 0.01f)
+        {
+            endHeighOffset = (selectedTransHeight + targetTransHeight) / 2;
+        }
+        
         float moveDuration = 0.4f;
         DOTween.Sequence() // 返回一个新的Sequence
             .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z), moveDuration)) // 添加动画到队列中
             .AppendInterval(0.2f)
             .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
             
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + (selectedTransHeight + targetTransHeight)/2, position1.z), moveDuration))
+            .Append(selecteTrans.DOMove(new Vector3(position1.x, position1.y + endHeighOffset, position1.z), moveDuration))
             .AppendInterval(0.1f)
             .AppendCallback(callback);
         
@@ -299,7 +309,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
         GetCurrentStepEquipment();
     }
 
-    float brushMoveHeight = 0.55f;
+    float brushMoveHeight = 0.35f;
     
     
     void RefreshSteps()

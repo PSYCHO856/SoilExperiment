@@ -147,7 +147,6 @@ public class CardPage : UIBasePage
         //导出的替换后的文档路径
         //string outpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "地质灾害调查报告.docx");
         string outpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), docName + ".docx");
-
         //文本字典
         wordReplaceDic.Clear();
         //添加相应字段到字典 Inputs.transform.childCount
@@ -157,7 +156,6 @@ public class CardPage : UIBasePage
             string value = Inputs.transform.GetChild(i).GetComponent<InputField>().text;
             wordReplaceDic.Add(key, value);
         }
-
         //图片字典
         //imgReplaceDic.Clear();
         //imgReplaceDic.Add("{Image1}", Application.streamingAssetsPath + "/5.jpg");
@@ -174,7 +172,6 @@ public class CardPage : UIBasePage
                 toggleReplaceDic.Add(key, value);
             }
         }
-
 
         IOTool.ReplaceToWord(path, outpath, wordReplaceDic, imgReplaceDic, toggleReplaceDic);
 
@@ -201,7 +198,7 @@ public class CardPage : UIBasePage
         //初始化InputField
         for (int i = 0; i < Inputs.transform.childCount; i++)
         {
-            Inputs.transform.GetChild(i).GetComponent<InputField>().text = "";
+            // Inputs.transform.GetChild(i).GetComponent<InputField>().text = "";
             Inputs.transform.GetChild(i).gameObject.name = iptName + n.ToString();
             n++;
         }

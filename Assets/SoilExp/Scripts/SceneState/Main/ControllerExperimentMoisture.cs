@@ -32,10 +32,14 @@ public partial class ControllerExperiment
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                  isSelect)
         {
-            if (stepsIndex == 1 || stepsIndex == 2 || stepsIndex == 5 || stepsIndex == 6 || stepsIndex == 16 || stepsIndex == 17 )
+            if (stepsIndex == 1 || stepsIndex == 2)
             {
                 //第二步 称重显示ui
-                //显示交互按钮的流程？ 
+                MoveBoxToBalanceEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOptionAndEquipmentReturn
+                ,BoxToBalanceEndHeighOffset);
+            }
+            else if (stepsIndex == 5 || stepsIndex == 6 || stepsIndex == 16 || stepsIndex == 17 )
+            {
                 MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOptionAndEquipmentReturn);
             }
             else if (stepsIndex == 3 || stepsIndex == 4)
@@ -223,4 +227,12 @@ public partial class ControllerExperiment
     {
         dryBoxAnimator.SetTrigger("closeTop");
     }
+
+    public float BoxToBalanceEndHeighOffset = 0;
+    void MoveBoxToBalanceEquipment(Transform selecteTrans, Transform targetTrans, TweenCallback callback = null,
+        float endHeighOffset = 0)
+    {
+        MoveEquipment(selecteTrans, targetTrans, callback, endHeighOffset);
+    }
+    
 }

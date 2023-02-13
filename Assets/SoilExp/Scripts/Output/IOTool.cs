@@ -71,7 +71,7 @@ public class IOTool
             return;
 
         Document doc = new Document(path);
-        
+
         //替换文字
         foreach (var v in wordReplaceDic)
         {
@@ -81,6 +81,7 @@ public class IOTool
             //doc.Range.Replace("&工程名称&", "安筑", findReplaceOptions);
             doc.Range.Replace(v.Key, v.Value, new FindReplaceOptions(FindReplaceDirection.Forward));
         }
+
 
 
         //这里只是展示了  Regex 和string  两个参数的用法，并非是一定要用某个
@@ -101,9 +102,9 @@ public class IOTool
         //插入复选框
         // ChangeCheckBox(doc, toggleReplaceDic);
 
+
         //--另存为
         doc.Save(outPath);
-
         Debug.Log("保存成功！");
     }
 

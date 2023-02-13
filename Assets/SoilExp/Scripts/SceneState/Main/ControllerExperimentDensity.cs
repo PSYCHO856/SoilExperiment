@@ -35,7 +35,7 @@ public partial class ControllerExperiment
             .Append(
                 selecteTrans.DOMove(new Vector3(position.x, position.y + brushMoveHeight, position.z),
                     moveDuration)) // 添加动画到队列中
-            .Append(targetTrans.DOMove(new Vector3(position1.x, position.y + 0.4f, position1.z), moveDuration))
+            .Append(targetTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
             .Append(
                 selecteTrans.DOMove(new Vector3(position1.x, position.y + brushMoveHeight, position1.z),
                     moveDuration))

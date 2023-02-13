@@ -44,6 +44,7 @@ public class DebuggerWindow : MonoBehaviour
         // enabled = GameController.GameDefine.Debug;
         _windowRect = new Rect(100, 10, 100, _shrinkHeight);
         if (_allowDebugging) Application.logMessageReceived += LogHandler;
+        DontDestroyOnLoad(this);
     }
 
     private void Update()

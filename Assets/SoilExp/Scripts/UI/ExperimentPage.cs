@@ -38,6 +38,7 @@ public class ExperimentPage : UIBasePage
         //设备介绍和操作按钮显示
         Messenger<string>.AddListener(GameEvent.ON_INSTRUCTION_UPDATE, ShowInstruction);
         Messenger<Vector3,string,Action>.AddListener(GameEvent.ON_OPERATE_UPDATE, SetOperateUIPos);
+        Messenger.AddListener(GameEvent.ON_INSTRUCTION_FADE, OnInstructionClose);
         testBtn.onClick.AddListener(OnTest);
         instructionCloseBtn.onClick.AddListener(OnInstructionClose);
         operateBtn.onClick.AddListener(OnOperate);
@@ -64,6 +65,7 @@ public class ExperimentPage : UIBasePage
     {
         Messenger<string>.RemoveListener(GameEvent.ON_INSTRUCTION_UPDATE, ShowInstruction);
         Messenger<Vector3,string,Action>.RemoveListener(GameEvent.ON_OPERATE_UPDATE, SetOperateUIPos);
+        Messenger.RemoveListener(GameEvent.ON_INSTRUCTION_FADE, OnInstructionClose);
     }
 
     public override void OnOpen()
@@ -87,6 +89,7 @@ public class ExperimentPage : UIBasePage
 
     void ShowInstruction(string instruction)
     {
+        
         equipmentInstructionCG.DOFade(1, 1f);
         equipmentInstructionTypeWriter.Run(instruction, equipmentInstructionTypeWriter.text);
     }

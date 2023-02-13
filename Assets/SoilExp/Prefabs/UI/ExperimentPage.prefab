@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00039673, y: 0.056992}
-  m_SizeDelta: {x: 660.56, y: 200.11}
+  m_AnchoredPosition: {x: 0.00051116943, y: -3.0793}
+  m_SizeDelta: {x: 357.16, y: 420.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8944295125776659135
 CanvasRenderer:
@@ -161,8 +161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000029564, y: 339}
-  m_SizeDelta: {x: 660.5615, y: 200}
+  m_AnchoredPosition: {x: 781.42, y: -72.903}
+  m_SizeDelta: {x: 357.1622, y: 426.4932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &385380008738140053
 CanvasRenderer:
@@ -729,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228.69623, y: 75.513695}
+  m_AnchoredPosition: {x: -77, y: 189}
   m_SizeDelta: {x: 187.2075, y: 36.1725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6423884875141282568
@@ -1754,7 +1754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 737.08, y: 471}
+  m_AnchoredPosition: {x: 719, y: 461}
   m_SizeDelta: {x: 445.8422, y: 113.7132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2624200508493765010
@@ -1812,10 +1812,10 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 2
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 70, y: 70}
   m_Spacing: {x: 11.01, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -4572,7 +4572,12 @@ PrefabInstance:
     - target: {fileID: 4691216429105980892, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 24
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691216429105980892, guid: c02d48e24340a8c48aafd68e67c485ee,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7415024202240866204, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
@@ -4617,12 +4622,12 @@ PrefabInstance:
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 659.74
+      value: 334.93
       objectReference: {fileID: 0}
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 98.2276
+      value: 296.098
       objectReference: {fileID: 0}
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
@@ -4662,12 +4667,12 @@ PrefabInstance:
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.6613
+      value: 0.00054157
       objectReference: {fileID: 0}
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -29
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
@@ -5280,12 +5285,12 @@ PrefabInstance:
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -278.1
+      value: -126.40384
       objectReference: {fileID: 0}
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 74.219
+      value: 187.70529
       objectReference: {fileID: 0}
     - target: {fileID: 7678778036498167471, guid: c02d48e24340a8c48aafd68e67c485ee,
         type: 3}
