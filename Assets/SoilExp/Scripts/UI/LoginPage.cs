@@ -24,8 +24,8 @@ public class LoginPage : UIBasePage
 
     void SaveStudentData()
     {
-        ToolManager.Instance.stuName = ipf1.text;
-        ToolManager.Instance.stuNumber = ipf2.text;
+        if(!ipf1.text.Equals("姓名")) ToolManager.Instance.stuName = ipf1.text;
+        if(!ipf2.text.Equals("学号")) ToolManager.Instance.stuNumber = ipf2.text;
         ToolManager.Instance.isLogin = true;
 
     }

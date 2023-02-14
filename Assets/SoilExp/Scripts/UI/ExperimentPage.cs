@@ -109,6 +109,7 @@ public class ExperimentPage : UIBasePage
     {
         HideOperateBtn();
         refreshAction.Invoke();
+        UIController.Open(UIPageId.CardPage);
     }
     
     void SetOperateUIPos(Vector3 equipmentWorldPos,string operateTextContent, Action refreshNextStep)

@@ -78,7 +78,7 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
                 {
                     _virtualCamera.LookAt = hit1.collider.gameObject.transform;
                     // Debug.Log("设置高亮"+ hit1.collider.gameObject.name);
-                    ToolManager.Instance.SetHighlightOn(hit1.collider.gameObject.transform, 20f);
+                    // ToolManager.Instance.SetHighlightOn(hit1.collider.gameObject.transform, 20f);
                 }                
                 
                 

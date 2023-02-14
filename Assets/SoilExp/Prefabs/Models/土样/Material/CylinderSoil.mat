@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CylinderSoil
-  m_Shader: {fileID: -6465566751694194690, guid: f656c1debfb51094d93b8f561be42db4,
+  m_Shader: {fileID: -6465566751694194690, guid: 43d076e17e463254c99b6d217fe43f64,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
