@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: lambert3
-  m_Shader: {fileID: -6465566751694194690, guid: 43d076e17e463254c99b6d217fe43f64,
+  m_Shader: {fileID: -6465566751694194690, guid: e53ee568c6e4eed4ca56fc3854b46338,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -122,6 +122,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.335
     - _GlossyReflections: 1
+    - _Mellic: 1
     - _Metallic: 0.633
     - _Mode: 0
     - _Noise: 50
@@ -129,7 +130,7 @@ Material:
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -141,7 +142,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmmisionColor: {r: 1, g: 1, b: 1, a: 0}
     - _MainColor: {r: 1, g: 0.79716986, b: 0.79716986, a: 0}
-    - _MainTexColor: {r: 1, g: 1, b: 1, a: 0}
+    - _MainTexColor: {r: 0, g: 0, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

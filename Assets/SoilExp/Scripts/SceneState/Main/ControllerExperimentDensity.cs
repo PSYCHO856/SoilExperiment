@@ -188,7 +188,7 @@ public partial class ControllerExperiment
         {
             // soilObj2.SetActive(false);
             soilObj2.GetComponent<ControlDissolve>().StartDisSolve();
-            circleKnifeTrans.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
+            circleKnifeTrans.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
             // circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
         }
     }

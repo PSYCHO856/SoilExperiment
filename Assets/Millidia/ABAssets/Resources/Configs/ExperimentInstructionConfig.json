@@ -19,7 +19,7 @@
         "Id": "1003",
         "StepIndex": "2",
         "Instruction": "3\u3001\u70B9\u51FB\u7535\u5B50\u79E4\uFF0C\u79E4\u53D6\u73AF\u5200\u7684\u8D28\u91CF",
-        "TextOnButton": "\u8D28\u91CF\u4E3Am\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A43.20g",
         "isFinish": false,
         "ObjectInStepId": "1003"
     },
@@ -75,7 +75,7 @@
         "Id": "1010",
         "StepIndex": "9",
         "Instruction": "10\u3001\u70B9\u51FB\u7535\u5B50\u79E4\uFF0C\u79E4\u53D6\u5F53\u524D\u5E26\u571F\u73AF\u5200\u7684\u603B\u8D28\u91CF",
-        "TextOnButton": "\u8D28\u91CF\u4E3AR\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A165.24g",
         "isFinish": false,
         "ObjectInStepId": "1010"
     },
@@ -139,7 +139,7 @@
         "Id": "1018",
         "StepIndex": "17",
         "Instruction": "18\u3001\u6E05\u7406\u73AF\u5200\uFF0C\u5E76\u6D4B\u91CF\u4E0B\u4E00\u4E2A\u571F\u6837\u7684\u5BC6\u5EA6",
-        "TextOnButton": "\u8D28\u91CF\u4E3AQ\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A145.54g",
         "isFinish": false,
         "ObjectInStepId": "1010"
     },
@@ -155,7 +155,7 @@
         "Id": "2002",
         "StepIndex": "1",
         "Instruction": "2\u3001\u5C06\u79F0\u91CF\u76D2\u5206\u522B\u653E\u5230\u7535\u5B50\u79E4\u4E0A\u79F0\u91CD",
-        "TextOnButton": "\u8D28\u91CF\u4E3Aa\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A21.22g",
         "isFinish": false,
         "ObjectInStepId": "3002"
     },
@@ -163,7 +163,7 @@
         "Id": "2003",
         "StepIndex": "2",
         "Instruction": "2\u3001\u5C06\u79F0\u91CF\u76D2\u5206\u522B\u653E\u5230\u7535\u5B50\u79E4\u4E0A\u79F0\u91CD",
-        "TextOnButton": "\u8D28\u91CF\u4E3Ab\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A22.31g",
         "isFinish": false,
         "ObjectInStepId": "3003"
     },
@@ -187,7 +187,7 @@
         "Id": "2006",
         "StepIndex": "5",
         "Instruction": "5\u3001\u518D\u6B21\u79E4\u53D6\u79F0\u91CF\u76D2\u8D28\u91CF",
-        "TextOnButton": "\u8D28\u91CF\u4E3AA\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A45.12g",
         "isFinish": false,
         "ObjectInStepId": "3002"
     },
@@ -195,7 +195,7 @@
         "Id": "2007",
         "StepIndex": "6",
         "Instruction": "5\u3001\u518D\u6B21\u79E4\u53D6\u79F0\u91CF\u76D2\u8D28\u91CF",
-        "TextOnButton": "\u8D28\u91CF\u4E3AB\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A55.31g",
         "isFinish": false,
         "ObjectInStepId": "3003"
     },
@@ -275,7 +275,7 @@
         "Id": "2017",
         "StepIndex": "16",
         "Instruction": "14\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5230\u7535\u5B50\u79E4\u4E0A\u79F0\u91CD",
-        "TextOnButton": "\u8D28\u91CF\u4E3AX\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A39.22g",
         "isFinish": false,
         "ObjectInStepId": "3002"
     },
@@ -283,7 +283,7 @@
         "Id": "2018",
         "StepIndex": "17",
         "Instruction": "14\u3001\u5C06\u79F0\u91CF\u76D2\u653E\u5230\u7535\u5B50\u79E4\u4E0A\u79F0\u91CD",
-        "TextOnButton": "\u8D28\u91CF\u4E3AY\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A46.71g",
         "isFinish": false,
         "ObjectInStepId": "3003"
     },
@@ -371,7 +371,7 @@
         "Id": "3011",
         "StepIndex": "10",
         "Instruction": "8\u3001\u70B9\u52A8\u6D4B\u91CF\u6309\u94AE\uFF0C\u5706\u9525\u81EA\u7531\u843D\u4E0B\uFF0C\u5EF6\u65F65s\uFF0C\u8BFB\u6570\u6307\u793A\u7BA1\uFF0C\u5373\u53EF\u8BFB\u6570",
-        "TextOnButton": "20mm",
+        "TextOnButton": "16.5mm",
         "isFinish": false,
         "ObjectInStepId": "5010"
     },
@@ -403,7 +403,7 @@
         "Id": "4004",
         "StepIndex": "3",
         "Instruction": "4\u3001\u79F0\u53D6\u8D28\u91CF",
-        "TextOnButton": "m2\uFF08\u7CBE\u786E\u52300.01g\uFF09",
+        "TextOnButton": "\u8D28\u91CF\u4E3A26.33g",
         "isFinish": false,
         "ObjectInStepId": "6004"
     }

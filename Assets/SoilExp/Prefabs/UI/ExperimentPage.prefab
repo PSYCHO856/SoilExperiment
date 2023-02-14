@@ -212,7 +212,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &572468229553052705
 GameObject:
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d17b01f69b4928b419ea71e781fb2a96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 772290b9b4b7aef4db6ac7c322cda338, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5028,7 +5028,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4078a1eadcac7b04a88e2f0e2004355e,
+      objectReference: {fileID: 21300000, guid: 216044bcb14368446be7455eb984144b,
         type: 3}
     - target: {fileID: 3388010318428536942, guid: a1f5ef2be00f5d34fad09e598b9a8317,
         type: 3}

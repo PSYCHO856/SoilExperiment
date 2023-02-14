@@ -32,16 +32,16 @@ public partial class ControllerExperiment
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                  isSelect)
         {
-            if (stepsIndex == 1 || stepsIndex == 2)
+            if (stepsIndex == 1 || stepsIndex == 2 || stepsIndex == 5 || stepsIndex == 6 || stepsIndex == 16 || stepsIndex == 17)
             {
                 //第二步 称重显示ui
                 MoveBoxToBalanceEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOptionAndEquipmentReturn
                 ,BoxToBalanceEndHeighOffset);
             }
-            else if (stepsIndex == 5 || stepsIndex == 6 || stepsIndex == 16 || stepsIndex == 17 )
-            {
-                MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOptionAndEquipmentReturn);
-            }
+            // else if (stepsIndex == 5 || stepsIndex == 6 || stepsIndex == 16 || stepsIndex == 17 )
+            // {
+            //     MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOptionAndEquipmentReturn);
+            // }
             else if (stepsIndex == 3 || stepsIndex == 4)
             {
                 MoveShovelToBox(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
