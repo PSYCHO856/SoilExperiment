@@ -42,7 +42,7 @@ public class TypeWriter : MonoBehaviour
 
     public void RecycleOnClose()
     {
-        StopCoroutine(typeText);
+        if(typeText!=null) StopCoroutine(typeText);
         text.text = "";
     }
 }

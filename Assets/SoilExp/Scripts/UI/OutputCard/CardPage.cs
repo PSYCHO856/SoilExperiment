@@ -34,19 +34,19 @@ public class CardPage : UIBasePage
     /// 画图
     /// </summary>
      protected Button BtnClear1;
-     protected Button BtnClear2;
-     // protected Button BtnClearAll1;
+     // protected Button BtnClear2;
+     protected Button BtnClearAll1;
      // protected Button BtnClearAll2;
-     // protected Button BtnCut1;
+     protected Button BtnCut1;
      // protected Button BtnCut2;
 
     [SerializeField] protected GameObject Panel;
     // [SerializeField] protected GameObject AppendixPanel;
 
      protected Transform DrawLine1;
-     protected Transform DrawLine2;
+     // protected Transform DrawLine2;
      protected Transform BG1;
-     protected Transform BG2;
+     // protected Transform BG2;
 
     [SerializeField] protected CardPageMenu cardPageMenu;
     protected GameObject nowInputField;
@@ -99,16 +99,16 @@ public class CardPage : UIBasePage
         //cardPageMenu.card1Page = this;
 
         BtnClear1 = transform.Find("Panel/Scroll View/Viewport/Content/BtnClear1").GetComponent<Button>();
-        BtnClear2 = transform.Find("Panel/Scroll View/Viewport/Content/BtnClear2").GetComponent<Button>();
-        // BtnClearAll1 = transform.Find("Panel/Scroll View/Viewport/Content/BtnClearAll1").GetComponent<Button>();
+        // BtnClear2 = transform.Find("Panel/Scroll View/Viewport/Content/BtnClear2").GetComponent<Button>();
+        BtnClearAll1 = transform.Find("Panel/Scroll View/Viewport/Content/BtnClearAll1").GetComponent<Button>();
         // BtnClearAll2 = transform.Find("Panel/Scroll View/Viewport/Content/BtnClearAll2").GetComponent<Button>();
-        // BtnCut1 = transform.Find("Panel/Scroll View/Viewport/Content/BtnCut1").GetComponent<Button>();
+        BtnCut1 = transform.Find("Panel/Scroll View/Viewport/Content/BtnCut1").GetComponent<Button>();
         // BtnCut2 = transform.Find("Panel/Scroll View/Viewport/Content/BtnCut2").GetComponent<Button>();
 
         DrawLine1 = transform.Find("Panel/Scroll View/Viewport/Content/Mask1/DrawLine");
-        DrawLine2 = transform.Find("Panel/Scroll View/Viewport/Content/Mask2/DrawLine");
+        // DrawLine2 = transform.Find("Panel/Scroll View/Viewport/Content/Mask2/DrawLine");
         BG1 = transform.Find("Panel/Scroll View/Viewport/Content/BG1");
-        BG2 = transform.Find("Panel/Scroll View/Viewport/Content/BG2");
+        // BG2 = transform.Find("Panel/Scroll View/Viewport/Content/BG2");
         
 
         Messenger<GameObject>.AddListener(GameEvent.INPUTFIELD_RECORD, SelectedInputFieldChange);
@@ -134,7 +134,7 @@ public class CardPage : UIBasePage
 
         imgReplaceDic.Clear();
         imgReplaceDic.Add("{Image1}", Application.streamingAssetsPath + "/Image1.jpg");
-        imgReplaceDic.Add("{Image2}", Application.streamingAssetsPath + "/Image2.jpg");
+        // imgReplaceDic.Add("{Image2}", Application.streamingAssetsPath + "/Image2.jpg");
     }
 
 
@@ -157,8 +157,8 @@ public class CardPage : UIBasePage
             wordReplaceDic.Add(key, value);
         }
         //图片字典
-        //imgReplaceDic.Clear();
-        //imgReplaceDic.Add("{Image1}", Application.streamingAssetsPath + "/5.jpg");
+        // imgReplaceDic.Clear();
+        // imgReplaceDic.Add("{Image1}", Application.streamingAssetsPath + "/5.jpg");
 
         //关键字符字典
         toggleReplaceDic.Clear();
@@ -172,6 +172,7 @@ public class CardPage : UIBasePage
                 toggleReplaceDic.Add(key, value);
             }
         }
+        
 
         IOTool.ReplaceToWord(path, outpath, wordReplaceDic, imgReplaceDic, toggleReplaceDic);
 
@@ -280,48 +281,49 @@ public class CardPage : UIBasePage
             DrawLine1.GetComponent<DrawLine>().WithdrawLastLine();
         });
 
-        BtnClear2.onClick.AddListener(delegate {
-            DrawLine2.GetComponent<DrawLine>().WithdrawLastLine();
-
-        });
-
-        // BtnClearAll1.onClick.AddListener(delegate {
-        //     DrawLine1.GetComponent<DrawLine>().ClearAllLines();
+        // BtnClear2.onClick.AddListener(delegate {
+        //     DrawLine2.GetComponent<DrawLine>().WithdrawLastLine();
+        //
         // });
+
+        BtnClearAll1.onClick.AddListener(delegate {
+            DrawLine1.GetComponent<DrawLine>().ClearAllLines();
+        });
         //
         // BtnClearAll2.onClick.AddListener(delegate {
         //     DrawLine2.GetComponent<DrawLine>().ClearAllLines();
         // });
 
-        // BtnCut1.onClick.AddListener(delegate {
-        //     //截屏测试
-        //     //ToolManager.Instance.SaveScreenCapture(new Rect(0, 0, 1920, 1080), Application.streamingAssetsPath + "/5.jpg");
-        //     Transform trans = BG1;
-        //     //Vector3 pos = GameObject.Find("Eyes").GetComponent<Camera>().WorldToScreenPoint(trans.position);
-        //     Camera cameraTrans = GameObject.Find("screenShotEyes").GetComponent<Camera>();
-        //
-        //     //Vector3 v3 = BG1.GetComponent<RectTransform>().anchoredPosition3D;
-        //     //Debug.Log(v3);
-        //
-        //     Vector3 pos = cameraTrans.WorldToScreenPoint(trans.position);
-        //     //Debug.Log("pos " + pos);
-        //
-        //     //获取bg在ui坐标的位置
-        //     if (RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("Canvas").transform as RectTransform, pos,
-        //         cameraTrans,
-        //         //GameObject.Find("Eyes").GetComponent<Camera>(),
-        //         out Vector2 spos))
-        //     {
-        //         //Debug.Log("spos " + spos);
-        //         Rect rect = trans.GetComponent<RectTransform>().rect;
-        //         rect.position = new Vector2(spos.x + Screen.width / 2, spos.y + Screen.height / 2);
-        //         Debug.Log(rect.position + "  " + rect.size);
-        //         if (imgReplaceDic.TryGetValue("{Image1}", out string value))
-        //         {
-        //             ToolManager.Instance.SaveScreenCapture(rect, value);
-        //         }
-        //     }
-        // });
+        BtnCut1.onClick.AddListener(delegate {
+            //截屏测试
+            //ToolManager.Instance.SaveScreenCapture(new Rect(0, 0, 1920, 1080), Application.streamingAssetsPath + "/5.jpg");
+            Transform trans = BG1;
+            //Vector3 pos = GameObject.Find("Eyes").GetComponent<Camera>().WorldToScreenPoint(trans.position);
+            Camera cameraTrans = GameObject.Find("UICamera").GetComponent<Camera>();
+            // Camera cameraTrans = GameObject.Find("screenShotEyes").GetComponent<Camera>();
+        
+            //Vector3 v3 = BG1.GetComponent<RectTransform>().anchoredPosition3D;
+            //Debug.Log(v3);
+        
+            Vector3 pos = cameraTrans.WorldToScreenPoint(trans.position);
+            //Debug.Log("pos " + pos);
+        
+            //获取bg在ui坐标的位置
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(GameObject.Find("UICanvas").transform as RectTransform, pos,
+                cameraTrans,
+                //GameObject.Find("Eyes").GetComponent<Camera>(),
+                out Vector2 spos))
+            {
+                //Debug.Log("spos " + spos);
+                Rect rect = trans.GetComponent<RectTransform>().rect;
+                rect.position = new Vector2(spos.x + Screen.width / 2, spos.y + Screen.height / 2);
+                Debug.Log(rect.position + "  " + rect.size);
+                if (imgReplaceDic.TryGetValue("{Image1}", out string value))
+                {
+                    ToolManager.Instance.SaveScreenCapture(rect, value);
+                }
+            }
+        });
         //
         // BtnCut2.onClick.AddListener(delegate {
         //     //截屏测试
@@ -394,40 +396,7 @@ public class CardPage : UIBasePage
         // Panel.SetActive(false);
         // toolPanel.SetActive(true);
         // BtnCard.gameObject.SetActive(true);
-        SmallSceneControl();
     }
 
-    void SmallSceneControl()
-    {
-        if (smallSceneState)
-        {
-            // cameraHighlightingRenderer.enabled = true;
-            // smallCameraHighlightingRenderer.enabled = false;
-            // myPlayerBehavior.myCamera.enabled = true;
-            // myPlayerBehavior.smallSceneCamera.enabled = false;
-
-            // smallSceneState = false;
-            // ToolManager.Instance.isElevationToolEnable = true;
-        }
-        else
-        {
-            // cameraHighlightingRenderer.enabled = false;
-            // smallCameraHighlightingRenderer.enabled = true;
-            // myPlayerBehavior.myCamera.enabled = false;
-            // myPlayerBehavior.smallSceneCamera.enabled = true;
-
-            // smallSceneState = true;
-            // ToolManager.Instance.isElevationToolEnable = false;
-        }
-    }
-
-    //相机旋转导致WorldToScreenPoint方法出问题
-    void CameraRotateProblem(Vector3 world2ScreenPos)
-    {
-        if (world2ScreenPos.z < 0)
-        {
-
-        }
-    }
 
 }

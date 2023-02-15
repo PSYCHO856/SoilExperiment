@@ -11,7 +11,8 @@ public enum UIPageId
     ExperimentPage,
     CardPage,
     InfoPage,
-    LoginPage
+    LoginPage,
+    IntroductionPage
 }
 
 public class UIController : preProject.Singleton<UIController>
@@ -27,6 +28,7 @@ public class UIController : preProject.Singleton<UIController>
     [SerializeField] private UIBasePage CardPage;
     [SerializeField] private UIBasePage InfoPage;
     [SerializeField] private UIBasePage LoginPage;
+    [SerializeField] private UIBasePage IntroductionPage;
 
     [SerializeField] private SpriteAtlas spriteAtlas;
     //[SerializeField] private UIDefine uiDefine;
@@ -64,6 +66,8 @@ public class UIController : preProject.Singleton<UIController>
             pages.TryAdd(UIPageId.InfoPage, Instantiate(InfoPage, transform));
         if (LoginPage)
             pages.TryAdd(UIPageId.LoginPage, Instantiate(LoginPage, transform));
+        if (IntroductionPage)
+            pages.TryAdd(UIPageId.IntroductionPage, Instantiate(IntroductionPage, transform));
         
         foreach (var page in pages)
         {

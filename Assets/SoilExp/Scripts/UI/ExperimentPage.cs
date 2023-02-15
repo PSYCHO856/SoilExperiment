@@ -9,27 +9,11 @@ public class ExperimentPage : UIBasePage
 {
     public GameObject equipmentInstruction;
     private CanvasGroup equipmentInstructionCG;
-    // public Text equipmentInstructionText;
     public TypeWriter equipmentInstructionTypeWriter;
 
     public Button testBtn;
     public Button instructionCloseBtn;
     public Button operateBtn;
-    
-    public Button homeBtn;
-    public Button settingsBtn;
-    public Button outputFormBtn;
-    public Button helpBtn;
-    public Button quitBtn;
-    
-    public Button closeBtnHelp;
-    public Button closeBtnSettings;
-    public Button quitBtnConfirm;
-    public Button quitBtnCancel;
-    
-    public GameObject helpPanel;
-    public GameObject quitPanel;
-    public GameObject settingsPanel;
 
     private void Awake()
     {
@@ -43,19 +27,6 @@ public class ExperimentPage : UIBasePage
         instructionCloseBtn.onClick.AddListener(OnInstructionClose);
         operateBtn.onClick.AddListener(OnOperate);
         
-        homeBtn.onClick.AddListener(OnHome);
-        settingsBtn.onClick.AddListener(OnSettings);
-        outputFormBtn.onClick.AddListener(() =>
-        {
-            UIController.Open(UIPageId.CardPage);
-        });
-        helpBtn.onClick.AddListener(OnHelp);
-        quitBtn.onClick.AddListener(OnQuit);
-        closeBtnHelp.onClick.AddListener(OnCloseBtnHelp);
-        closeBtnSettings.onClick.AddListener(OnCloseBtnSettings);
-        quitBtnConfirm.onClick.AddListener(OnQuitBtnConfirm);
-        quitBtnCancel.onClick.AddListener(OnQuitBtnCancel);
-
         operateBtnTextTypeWriter = operateBtn.transform.GetChild(0).GetComponent<TypeWriter>();
         operateBtnCG = operateBtn.transform.GetComponent<CanvasGroup>();
         operateBtnCG.alpha = 0;
@@ -74,17 +45,7 @@ public class ExperimentPage : UIBasePage
         equipmentInstructionCG.alpha = 0;
         equipmentInstructionTypeWriter.Run("", equipmentInstructionTypeWriter.text);
 
-        PanelsInit();
-        SetBackScene(new MainSceneState());
-        
         Messenger.Broadcast(GameEvent.ON_STEPS_UPDATE);
-    }
-
-    void PanelsInit()
-    {
-        helpPanel.SetActive(false);
-        quitPanel.SetActive(false);
-        settingsPanel.SetActive(false);
     }
 
     void ShowInstruction(string instruction)
@@ -145,57 +106,4 @@ public class ExperimentPage : UIBasePage
         operateBtnCG.DOFade(0, 0.5f);
     }
 
-
-    #region optionExtraFunction
-    
-    public void SetBackScene(ISceneState backScene)
-    {
-        backSceneState = backScene;
-    }
-    
-    private ISceneState backSceneState;
-    void OnHome()
-    {
-        UIController.Clear();
-
-        SceneStateController.Instance.SetState(backSceneState);           
-    }
-    
-    void OnSettings()
-    {
-        settingsPanel.SetActive(true);
-    }
-    
-    void OnHelp()
-    {
-        helpPanel.SetActive(true);
-    }
-    
-    void OnQuit()
-    {
-        quitPanel.SetActive(true);
-    }
-
-    void OnCloseBtnHelp()
-    {
-        helpPanel.SetActive(false);
-    }
-    
-    void OnCloseBtnSettings()
-    {
-        settingsPanel.SetActive(false);
-    }
-    
-    void OnQuitBtnConfirm()
-    {
-        Application.Quit();
-    }
-    
-    void OnQuitBtnCancel()
-    {
-        quitPanel.SetActive(false);
-    }
-
-    #endregion
-    
 }

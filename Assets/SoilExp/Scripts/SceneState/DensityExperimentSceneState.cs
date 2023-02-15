@@ -20,7 +20,8 @@ public class DensityExperimentSceneState : ISceneState
 
         // PanelManager.Instance.CommonPanelManager.Hide_DisplayTotalPanel();
 
-        UIController.Open(UIPageId.ExperimentPage);
+        UIController.Open(UIPageId.IntroductionPage);
+
     }
 
     public override void StateUpdate()

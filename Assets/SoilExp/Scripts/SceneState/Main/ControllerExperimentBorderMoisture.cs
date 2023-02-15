@@ -246,8 +246,8 @@ public partial class ControllerExperiment
             .Append(selecteTrans.DOMove(new Vector3(position2.x, position2.y + 0.15f, position2.z - plateRadius), moveDuration)
                 .OnComplete(() =>
                 {
-                    // plate1.GetChild(2).GetComponent<ControlDissolve>().BackNormal();//布
-                    plate1.GetChild(2).gameObject.SetActive(true);//布
+                    plate1.GetChild(2).GetComponent<ControlDissolve>().BackNormal();//布
+                    // plate1.GetChild(2).gameObject.SetActive(true);//布
                 }))
             .Append(selecteTrans.DOMove(new Vector3(position2.x, position2.y + plateHeight, position2.z - plateRadius), moveDuration))
             
@@ -258,8 +258,8 @@ public partial class ControllerExperiment
             .Append(selecteTrans.DOMove(new Vector3(position3.x, position3.y + 0.15f, position3.z - plateRadius), moveDuration)
                 .OnComplete(() =>
                 {
-                    // plate2.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
-                    plate2.GetChild(2).gameObject.SetActive(true);//布
+                    plate2.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
+                    // plate2.GetChild(2).gameObject.SetActive(true);//布
                 }))
             .Append(selecteTrans.DOMove(new Vector3(position3.x, position3.y + plateHeight, position3.z - plateRadius), moveDuration))
             
@@ -268,9 +268,9 @@ public partial class ControllerExperiment
             .Append(selecteTrans.DOMove(new Vector3(position3.x, position3.y + 0.15f, position3.z - plateRadius), moveDuration)
                 .OnComplete(() =>
                 {
-                    // plate3.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
-                    plate3.GetChild(2).gameObject.SetActive(true);//布
-                }))//布
+                    plate3.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
+                    // plate3.GetChild(2).gameObject.SetActive(true);//布
+                }))
             .Append(selecteTrans.DORotate(Vector3.zero, moveDuration))
             .Append(selecteTrans.DOMove(position, moveDuration))
             

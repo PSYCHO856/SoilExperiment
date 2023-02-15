@@ -19,7 +19,10 @@ public class ISceneState
     /// <summary>
     /// 状态开始调用
     /// </summary>
-    public virtual void  StateStart() { mCanvas = GameObject.Find("UICanvas").transform; }
+    public virtual void StateStart()
+    {
+        mCanvas = GameObject.Find("UICanvas").transform;
+    }
     /// <summary>
     /// 状态更新调用
     /// </summary>

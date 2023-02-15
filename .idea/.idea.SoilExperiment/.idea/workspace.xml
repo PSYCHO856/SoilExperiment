@@ -6,23 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="91f64cb8-e7e1-477c-8dee-37475bf8865f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlusBundle/URP/HighlightPlus_URP_Pipeline.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentInstructionConfig.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentInstructionConfig.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/Configs/ExperimentInstructionConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/Configs/ExperimentInstructionConfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentEquipmentConfig.xlsx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentEquipmentConfig.xlsx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/~$ExperimentInstructionConfig.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/~$ExperimentInstructionConfig.xlsx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Millidia/Scripts/Core/ConfigInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Millidia/Scripts/Core/ConfigInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BorderPlasticContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BorderPlasticContentExperimentScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph.shadersubgraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph.shadersubgraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/CylinderSoil.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/CylinderSoil.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/MIN1Soil.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/MIN1Soil.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/布/Materials/bu3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/布/Materials/bu3.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/磨砂玻璃/Material/材质.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/磨砂玻璃/Material/材质.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/Material/lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/Material/lambert2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card1 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card4.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/InputField1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/InputField1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Text (Legacy).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Text (Legacy).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/LoginPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/LoginPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/MainPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/MainPage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/ISceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/ISceneState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MoistureExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MoistureExperimentSceneState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/LoginPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/LoginPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/TypeWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/TypeWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/液塑限联合测定试验记录表.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/液塑限联合测定试验记录表.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +59,17 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/IntroductionPage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/UI/CardPage/CardPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentPlasticMoisture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/Tool/IOTool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Millidia/Scripts/ConfigsProxy/ExperimentIntroductionConfigInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/InfoPage.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIBasePage.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/RTool/ToolManager.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MainSceneState.cs" />
@@ -56,23 +77,33 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/Card1Page.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/testScript.cs" />
       <option value="$PROJECT_DIR$/Assets/HighlightPlus/Runtime/Scripts/HighlightManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/MainPage.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentPlasticMoisture.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/Utility/DebuggerWindow.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" />
       <option value="$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/Tool/IOTool.cs" />
       <option value="$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/UI/Utility/DebuggerWindow.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/Utility/GameEvent.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentDensity.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/LoginPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/ISceneState.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MoistureExperimentSceneState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Millidia/Scripts/ConfigsProxy/ExperimentIntroductionConfigInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Millidia/Scripts/Core/ConfigInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/IntroductionPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/TypeWriter.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OptionPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2LMumgjdIKdBEe7jPUI92g1yuEo" />
@@ -140,6 +171,7 @@
       <workItem from="1676292610974" duration="3248000" />
       <workItem from="1676334599924" duration="6642000" />
       <workItem from="1676383640997" duration="6437000" />
+      <workItem from="1676420959946" duration="13962000" />
     </task>
     <servers />
   </component>

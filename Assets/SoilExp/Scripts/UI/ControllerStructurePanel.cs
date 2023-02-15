@@ -29,16 +29,14 @@ public class ControllerStructurePanel : MonoBehaviour
         Messenger.AddListener(GameEvent.ON_STEPS_UPDATE, UpdateSteps);
         Init();
         // expFinishObj.SetActive(false);
-        expFinishObjCG = expFinishObj.GetComponent<CanvasGroup>();
+        // expFinishObjCG = expFinishObj.GetComponent<CanvasGroup>();
         // expFinishObjCG.alpha = 0;
         // finishTween = expFinishObj.transform.DOLocalMove(new Vector2(
         //     expFinishObj.transform.position.x - expFinishObj.GetComponent<RectTransform>().sizeDelta.x,
         //     expFinishObj.transform.position.y), 2f);
-        RectTransform rt = expFinishObj.GetComponent<RectTransform>();
-        finishTween = rt.DOLocalMoveX(
-            rt.anchoredPosition.x-rt.sizeDelta.x, 
-            2f).Pause().SetAutoKill(false);
+
     }
+    
 
     void Init()
     {
@@ -95,7 +93,14 @@ public class ControllerStructurePanel : MonoBehaviour
         else if (ControllerExperiment.Instance.stepsIndex == structureSteps.Count)
         {
             // expFinishObj.SetActive(true);
+            
+            
+            RectTransform rt = expFinishObj.GetComponent<RectTransform>();
+            finishTween = rt.DOLocalMoveX(
+                rt.anchoredPosition.x-rt.sizeDelta.x, 
+                2f).Pause().SetAutoKill(false);
             finishTween.Play();
+            
             // expFinishObjCG.DOFade(1, 0.5f);
             UserHelper.SetHighlightOff();
         }

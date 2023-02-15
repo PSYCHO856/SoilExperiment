@@ -26,6 +26,7 @@ public class ControlDissolve : MonoBehaviour
             }
         }
         if(needInitVanish) gameObject.SetActive(false);
+        // if(needInitVanish) SetDissloveRate(1);
     }
 
     public bool needInitVanish = false;

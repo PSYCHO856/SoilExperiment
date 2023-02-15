@@ -15,8 +15,8 @@ public class BorderPlasticExperimentSceneState : ISceneState
     {
         base.StateStart();
 
+        UIController.Open(UIPageId.IntroductionPage);
 
-        UIController.Open(UIPageId.ExperimentPage);
     }
 
     public override void StateUpdate()

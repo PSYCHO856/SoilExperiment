@@ -88,6 +88,8 @@ public partial class ConfigInfo : APP.Core.MonoSingleton<ConfigInfo> {
         ExperimentInstructionConfigInfo.Datas=ReadConfigs<ExperimentInstructionConfig>();
         ObjectInStepConfigInfo.Datas=ReadConfigs<ObjectInStepConfig>();
         
+        ExperimentIntroductionConfigInfo.Datas=ReadConfigs<ExperimentIntroductionConfig>();
+        
         // Configs = ReadConfigs<Config>("Configs/Configs");
         // Type ty = typeof(ConfigInfo);
         // foreach (var data in Configs.Values)
