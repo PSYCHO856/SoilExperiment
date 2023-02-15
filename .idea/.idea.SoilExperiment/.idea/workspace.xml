@@ -6,41 +6,104 @@
   <component name="ChangeListManager">
     <list default="true" id="91f64cb8-e7e1-477c-8dee-37475bf8865f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentEquipmentConfig.xlsx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentEquipmentConfig.xlsx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/~$ExperimentInstructionConfig.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/~$ExperimentInstructionConfig.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Millidia/Scripts/Core/ConfigInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Millidia/Scripts/Core/ConfigInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HighlightPlusBundle/URP/HighlightPlus_URP_Pipeline.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BorderPlasticContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BorderPlasticContentExperimentScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/FirstLit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/FirstLit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/FirstLit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/FirstLit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/FirstMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/FirstMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/Model.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/Model.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With Metallic Map.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With Metallic Map.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With Metallic Map.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With Metallic Map.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With No Metallic Map.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With No Metallic Map.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With No Metallic Map.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With No Metallic Map.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With Opaque Map.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR With Opaque Map.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/PBR.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/RimPower.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/RimPower.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph With Metallic Map.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph With Metallic Map.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph With No Metallic Map.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph With No Metallic Map.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph With Opaque Map.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph With Opaque Map.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/1/pbr Sub Graph.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2/Dissolve Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2/Dissolve Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2/Dissolve Shader Graph.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2/Dissolve Shader Graph.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2/woood.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/2/woood.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/3/New Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/3/New Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/3/ToGetOrigin Shader Graph.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/3/ToGetOrigin Shader Graph.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/CustomLighting.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/CustomLighting.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures/GradientRamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures/GradientRamp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures/ToonRamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures/ToonRamp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures/ToonRamp2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Ramp Textures/ToonRamp2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/ShadowReceiver.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/ShadowReceiver.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/ShadowReceiver.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/ShadowReceiver.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Toon.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Toon.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Toon.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/Examples/Toon.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/LICENSE.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Additional Lights.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Additional Lights.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Ambient.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Ambient.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Blinn Phong Specular.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Blinn Phong Specular.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Main Light Shadows.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Main Light Shadows.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Main Light.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Main Light.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Mix Fog.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Mix Fog.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Phong Specular.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Phong Specular.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Sample Shadowmask.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Sample Shadowmask.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Subtractive GI.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/SubGraphs/Subtractive GI.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/githubURPshadergraph/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土条/Material/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土条/Material/lambert1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/CylinderSoil.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/CylinderSoil.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/MIN1Soil.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/MIN1Soil.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/布/Materials/bu3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/布/Materials/bu3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/磨砂玻璃/Material/材质.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/磨砂玻璃/Material/材质.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/Material/lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/Material/lambert2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card1 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card1 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/LoginPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/LoginPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/MainPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/MainPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/ControlDissolve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/ISceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/ISceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MoistureExperimentSceneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MoistureExperimentSceneState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/TypeWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/TypeWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/液塑限联合测定试验记录表.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/液塑限联合测定试验记录表.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/称量盒/称量盒.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/称量盒/称量盒.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +122,9 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/IntroductionPage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/UI/CardPage/CardPage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentPlasticMoisture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../GeologicalDisaster/Assets/Scripts/Tool/IOTool.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderPlasticExperimentSceneState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Millidia/Scripts/ConfigsProxy/ExperimentIntroductionConfigInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentPlasticMoisture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -104,6 +163,7 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ExperimentPage.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/OutputCard/CardPage.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" />
+      <option value="$PROJECT_DIR$/Assets/XTool/Smart Screenshot Taker/Editor/AspectRatios.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2LMumgjdIKdBEe7jPUI92g1yuEo" />
@@ -172,6 +232,7 @@
       <workItem from="1676334599924" duration="6642000" />
       <workItem from="1676383640997" duration="6437000" />
       <workItem from="1676420959946" duration="13962000" />
+      <workItem from="1676477541096" duration="2056000" />
     </task>
     <servers />
   </component>
