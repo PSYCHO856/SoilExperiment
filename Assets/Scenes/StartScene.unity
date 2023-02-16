@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c4cb8bb80cc304183d6ffab375f564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allowDebugging: 1
+  _allowDebugging: 0
   _maxLogCount: 50
 --- !u!4 &368432285
 Transform:
@@ -632,4 +632,5 @@ MonoBehaviour:
   CardPage: {fileID: 0}
   InfoPage: {fileID: 0}
   LoginPage: {fileID: 0}
+  IntroductionPage: {fileID: 0}
   spriteAtlas: {fileID: 0}

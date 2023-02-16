@@ -4,35 +4,35 @@ using UnityEngine.UI;
 public class Grid : MaskableGraphic
 {
     /// <summary>
-    /// Íø¸ñÏß¼ä¸ô
+    /// ç½‘æ ¼çº¿é—´éš”
     /// </summary>
     public int gridSpace = 50;
     /// <summary>
-    /// Íø¸ñÏßµÄÏñËØ¿í¶È
+    /// ç½‘æ ¼çº¿çš„åƒç´ å®½åº¦
     /// </summary>
     public float gridLineWidth = 1.0f;
-    //¿ÉÒÔ×Ô¶¨ÒåÍø¸ñÏßÑÕÉ«¡¢Èç½¥±äÉ«µÈ£¬ÕâÀïÎÒÊÇÖ±½ÓÊ¹ÓÃ»ùÀàµÄÑÕÉ«
+    //å¯ä»¥è‡ªå®šä¹‰ç½‘æ ¼çº¿é¢œè‰²ã€å¦‚æ¸å˜è‰²ç­‰ï¼Œè¿™é‡Œæˆ‘æ˜¯ç›´æ¥ä½¿ç”¨åŸºç±»çš„é¢œè‰²
 
     protected override void OnPopulateMesh(VertexHelper vh)
     {
         vh.Clear();
 
-        //È¡ÕûÊı
+        //å–æ•´æ•°
         float width = Mathf.RoundToInt(rectTransform.rect.width);
         float height = Mathf.RoundToInt(rectTransform.rect.height);
         gridSpace = (int)Mathf.Clamp(gridSpace, 0, width);
 
-        //ÏÈ»­Ë®Æ½·½ÏòÉÏµÄÏß£¬´Ó×óµ½ÓÒ»æÖÆ´¹Ö±Ïß¶Î
+        //å…ˆç”»æ°´å¹³æ–¹å‘ä¸Šçš„çº¿ï¼Œä»å·¦åˆ°å³ç»˜åˆ¶å‚ç›´çº¿æ®µ
         for (int i = 0; i < width; i += gridSpace)
         {
-            //ËÄ¸öµã¿ÉÒÔ»æÖÆÒ»¸ö¾ØĞÎÃæÆ¬
+            //å››ä¸ªç‚¹å¯ä»¥ç»˜åˆ¶ä¸€ä¸ªçŸ©å½¢é¢ç‰‡
             var horizontal_A = new Vector2(i, 0);
             var horizontal_B = new Vector2(i, height);
             var horizontal_C = new Vector2(i + gridLineWidth, height);
             var horizontal_D = new Vector2(i + gridLineWidth, 0);
             vh.AddUIVertexQuad(GetRectangleQuad(color, horizontal_A, horizontal_B, horizontal_C, horizontal_D));
         }
-        //×îºó»­´¹Ö±·½ÏòÉÏµÄÏß£¬´ÓÏÂµ½ÉÏ»æÖÆË®Æ½Ïß¶Î
+        //æœ€åç”»å‚ç›´æ–¹å‘ä¸Šçš„çº¿ï¼Œä»ä¸‹åˆ°ä¸Šç»˜åˆ¶æ°´å¹³çº¿æ®µ
         for (int i = 0; i < height; i += gridSpace)
         {
             var vertical_A = new Vector2(0, i);
@@ -43,7 +43,7 @@ public class Grid : MaskableGraphic
         }
     }
 
-    //µÃµ½Ò»¸ö¾ØĞÎÃæÆ¬
+    //å¾—åˆ°ä¸€ä¸ªçŸ©å½¢é¢ç‰‡
     private UIVertex[] GetRectangleQuad(Color color, params Vector2[] points)
     {
         UIVertex[] vertexs = new UIVertex[points.Length];
@@ -54,7 +54,7 @@ public class Grid : MaskableGraphic
         return vertexs;
     }
 
-    //µÃµ½Ò»¸ö¶¥µãĞÅÏ¢
+    //å¾—åˆ°ä¸€ä¸ªé¡¶ç‚¹ä¿¡æ¯
     private UIVertex GetUIVertex(Vector2 point, Color color)
     {
         UIVertex vertex = new UIVertex
