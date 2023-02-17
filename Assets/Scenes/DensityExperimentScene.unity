@@ -994,6 +994,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5435612062065861406, guid: ca9252ec820ffb044b2ddc21455781ef,
         type: 3}
+    - target: {fileID: 2935852849567227334, guid: 5039309597a60824d9b3daf02a8e0d08,
+        type: 3}
+      propertyPath: IntroductionPage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2935852849567227335, guid: 5039309597a60824d9b3daf02a8e0d08,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3617,6 +3622,9 @@ MonoBehaviour:
   - {fileID: 1169990218}
   - {fileID: 1578454286}
   - {fileID: 1819710109}
+  plate1: {fileID: 0}
+  plate2: {fileID: 0}
+  plate3: {fileID: 0}
   ObjectsWithAnime:
   - {fileID: 8517005502083155317}
   bakingBoxDoor: {fileID: 0}

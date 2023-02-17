@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: wood
-  m_Shader: {fileID: -6465566751694194690, guid: f656c1debfb51094d93b8f561be42db4,
+  m_Shader: {fileID: -6465566751694194690, guid: 43d076e17e463254c99b6d217fe43f64,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -137,7 +137,6 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Mellic: 0
     - _Metallic: 0
     - _Mode: 0
     - _Noise: 50

@@ -9,6 +9,7 @@ public class IntroductionPage : UIBasePage
 {
     Image expPreviewImg;
     Button startExpBtn;
+    Button returnBtn;
     public Text introductionText;
     Text nameText;
 
@@ -17,7 +18,9 @@ public class IntroductionPage : UIBasePage
             expPreviewImg = GameObject.Find("expPreviewImg").GetComponent<Image>();
 
             startExpBtn = GameObject.Find("startExpBtn").GetComponent<Button>();
-            startExpBtn.onClick.AddListener(OnClose);
+            returnBtn = GameObject.Find("returnBtn").GetComponent<Button>();
+            startExpBtn.onClick.AddListener(LoadScene);
+            returnBtn.onClick.AddListener(base.OnClose);
 
             // introductionText = transform.Find("introductionText").GetComponent<Text>();
             nameText = GameObject.Find("nameText").GetComponent<Text>();
@@ -37,10 +40,25 @@ public class IntroductionPage : UIBasePage
 
     }
 
-    public override void OnClose()
+    public void LoadScene()
     {
-        base.OnClose();
-        UIController.Open(UIPageId.ExperimentPage);
+        gameObject.SetActive(false);
+        switch (ToolManager.Instance.sceneNumber)
+        {
+            case 0:
+                SceneStateController.Instance.SetState(new DensityExperimentSceneState());
+                break;
+            case 1:
+                SceneStateController.Instance.SetState(new MoistureExperimentSceneState());
+                break;
+            case 2:
+                SceneStateController.Instance.SetState(new BorderMoistureExperimentSceneState());
+                break;
+            case 3:
+                SceneStateController.Instance.SetState(new BorderPlasticExperimentSceneState());
+                break;
+        }
+        
     }
     
     ExperimentIntroductionConfig nowData = null;

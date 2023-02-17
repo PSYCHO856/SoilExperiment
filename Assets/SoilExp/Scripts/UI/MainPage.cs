@@ -15,26 +15,26 @@ public class MainPage : UIBasePage
     {
         btnDensity.onClick.AddListener(() =>
         {
-            SceneStateController.Instance.SetState(new DensityExperimentSceneState());
             ToolManager.Instance.sceneNumber = 0;
+            UIController.Open(UIPageId.IntroductionPage);
         });
         
         btnMoisture.onClick.AddListener(() =>
         {
-            SceneStateController.Instance.SetState(new MoistureExperimentSceneState());
             ToolManager.Instance.sceneNumber = 1;
+            UIController.Open(UIPageId.IntroductionPage);
         });
         
         btnBorderMoisture.onClick.AddListener(() =>
         {
-            SceneStateController.Instance.SetState(new BorderMoistureExperimentSceneState());
             ToolManager.Instance.sceneNumber = 2;
+            UIController.Open(UIPageId.IntroductionPage);
         });
         
         btnBorderPlastic.onClick.AddListener(() =>
         {
-            SceneStateController.Instance.SetState(new BorderPlasticExperimentSceneState());
             ToolManager.Instance.sceneNumber = 3;
+            UIController.Open(UIPageId.IntroductionPage);
         });
     }
 

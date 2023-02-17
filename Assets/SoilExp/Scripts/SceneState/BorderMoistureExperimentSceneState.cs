@@ -19,7 +19,7 @@ public class BorderMoistureExperimentSceneState : ISceneState
         // PanelManager.Instance.MainPanelManager.MainMenuPanel.Hide_DisplayUI(true);
 
         // PanelManager.Instance.CommonPanelManager.Hide_DisplayTotalPanel();
-        UIController.Open(UIPageId.IntroductionPage);
+        UIController.Open(UIPageId.ExperimentPage);
 
     }
 

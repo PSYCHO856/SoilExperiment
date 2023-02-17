@@ -2811,6 +2811,10 @@ MonoBehaviour:
   equipments:
   - {fileID: 497224367}
   - {fileID: 463278890}
+  plate1: {fileID: 0}
+  plate2: {fileID: 0}
+  plate3: {fileID: 0}
+  ObjectsWithAnime: []
   bakingBoxDoor: {fileID: 7822572535603786642}
   dryBoxAnimator: {fileID: 279535201}
   BoxToBalanceEndHeighOffset: 0.115
@@ -4695,6 +4699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935852849567227334, guid: 5039309597a60824d9b3daf02a8e0d08,
+        type: 3}
+      propertyPath: IntroductionPage
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2935852849567227335, guid: 5039309597a60824d9b3daf02a8e0d08,
         type: 3}

@@ -58,13 +58,13 @@ public class ControllerStructurePanel : MonoBehaviour
     public Scrollbar scrollbar;
     void UpdateSteps()
     {
+
         if (ControllerExperiment.Instance.stepsIndex < structureSteps.Count)
         {
             currentStepsIndex = ControllerExperiment.Instance.stepsIndex;
             // structureTextString.Append(structureSteps[currentStepsIndex] + "\n");
             // structureText.text = structureTextString.ToString();
             // structureText.text = structureSteps[currentStepsIndex];
-
             if (structureSteps[currentStepsIndex].Equals(typeWriter.text.text)) return;
             
             switch (ToolManager.Instance.sceneNumber)

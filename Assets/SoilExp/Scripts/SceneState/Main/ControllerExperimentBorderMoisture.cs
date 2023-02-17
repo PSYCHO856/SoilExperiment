@@ -15,48 +15,60 @@ public partial class ControllerExperiment
             isSelect = true;
             selectedTrans = hit1.collider.transform;
             RefreshSuggestGobj(currentStepEquipment[1]);
+            
+            if (stepsIndex == 0)
+            {
+                ObjectsWithAnime[0].GetComponent<Animation>().Play();
+                DOTween.Sequence() // 返回一个新的Sequence
+                    .AppendInterval(40f)
+                    .AppendCallback(MoveEquipmentCallback);
+                
+                isSelect = false;
+                Invoke("DeselectAllGobj",0.5f);
+            }
+
         }
         //当前步骤中两个物体 选中第二个时
         else if (currentStepEquipment.Count == 2 &&
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                  isSelect)
         {
-            if (stepsIndex == 0)
-            {
-                MoveShovelToSieve(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
-            }
-            else if (stepsIndex == 1)
-            {
-                plate1 = hit1.collider.transform;
-                AddSoilToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
-            }
-            else if (stepsIndex == 2)
-            {
-                plate2 = hit1.collider.transform;
-                AddSoilToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
-            }
-            else if (stepsIndex == 3)
-            {
-                plate3 = hit1.collider.transform;
-                AddSoilToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
-            }
-            else if (stepsIndex == 4)
-            {
-                AddWaterToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
-            }
-            else if (stepsIndex == 5)
+            // if (stepsIndex == 0)
+            // {
+            //     // MoveShovelToSieve(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
+            // }
+            // else if (stepsIndex == 1)
+            // {
+            //     // plate1 = hit1.collider.transform;
+            //     // AddSoilToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
+            // }
+            // else if (stepsIndex == 2)
+            // {
+            //     // plate2 = hit1.collider.transform;
+            //     // AddSoilToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
+            // }
+            // else if (stepsIndex == 3)
+            // {
+            //     // plate3 = hit1.collider.transform;
+            //     // AddSoilToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
+            // }
+            // else if (stepsIndex == 4)
+            // {
+            //     // AddWaterToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
+            // }
+            if (stepsIndex == 1)
             {
                 UseTIAOKnifeToPlate1(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
-            else if (stepsIndex == 6)
+            else if (stepsIndex == 2)
             {
                 UseTIAOKnifeToPlate2(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
-            else if (stepsIndex == 7)
+            else if (stepsIndex == 3)
             {
                 AddSoilToCup(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
-            else if (stepsIndex == 8)
+            else if (stepsIndex == 4)
             {
                 MoveCupToUnityEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }
@@ -77,11 +89,11 @@ public partial class ControllerExperiment
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[0].name))
         {
 
-            if (stepsIndex == 9)
+            if (stepsIndex == 5)
             {
                 HighUnityEquipment(hit1.collider.transform);
             }
-            if (stepsIndex == 10)
+            if (stepsIndex == 6)
             {
                 UnityEquipmentActive(hit1.collider.transform);
             }
@@ -182,9 +194,9 @@ public partial class ControllerExperiment
             .AppendCallback(callback);
     }
 
-    private Transform plate1;
-    private Transform plate2;
-    private Transform plate3;
+    public Transform plate1;
+    public Transform plate2;
+    public Transform plate3;
     void AddWaterToPlate(Transform selecteTrans, Transform targetTrans, TweenCallback callback = null)
     {
         Transform cylinder = selecteTrans;

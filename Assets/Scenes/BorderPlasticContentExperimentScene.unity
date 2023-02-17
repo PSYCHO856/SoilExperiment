@@ -1271,7 +1271,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507038227}
-  m_LocalRotation: {x: 0.24953164, y: 0.6589796, z: -0.24723649, w: 0.665097}
+  m_LocalRotation: {x: 0.24953166, y: 0.6589796, z: -0.24723649, w: 0.665097}
   m_LocalPosition: {x: -5.182, y: 1.416, z: 0.304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2012,6 +2012,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5435612062065861406, guid: bdd10f1e99aec2c48a8a52b5026065f5,
         type: 3}
+    - target: {fileID: 2935852849567227334, guid: 5039309597a60824d9b3daf02a8e0d08,
+        type: 3}
+      propertyPath: IntroductionPage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2935852849567227335, guid: 5039309597a60824d9b3daf02a8e0d08,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3177,6 +3182,10 @@ MonoBehaviour:
   guaKnifeMoveDistanceZ: 0.1
   testStepIndex: 1
   equipments: []
+  plate1: {fileID: 0}
+  plate2: {fileID: 0}
+  plate3: {fileID: 0}
+  ObjectsWithAnime: []
   bakingBoxDoor: {fileID: 7822572535603786642}
   dryBoxAnimator: {fileID: 0}
   BoxToBalanceEndHeighOffset: 0
@@ -5530,7 +5539,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4011160484370746264}
-  m_LocalRotation: {x: 0.35126814, y: -0.004325658, z: 0.0016229153, w: 0.93626356}
+  m_LocalRotation: {x: 0.35126817, y: -0.004325658, z: 0.0016229302, w: 0.93626356}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
