@@ -58,10 +58,10 @@ public partial class ControllerExperiment : preProject.Singleton<ControllerExper
     //移动分解
     void Update()
     {
-        // if (Input.GetMouseButtonDown(1))
-        // {
-        //     CheckStep(testStepIndex);
-        // }
+        if (Input.GetMouseButtonDown(1))
+        {
+            CheckStep(testStepIndex);
+        }
         
         if(Input.GetMouseButtonDown(0) /*&& !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()*/)
         {

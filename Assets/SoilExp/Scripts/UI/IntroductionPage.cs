@@ -28,8 +28,9 @@ public class IntroductionPage : UIBasePage
     {
         base.OnOpen();
         ReadExcelData();
-        
-        // expPreviewImg.sprite=
+        // Application.streamingAssetsPath + "/Image1.jpg"
+        expPreviewImg.sprite = Resources.Load<Sprite>("ScreenShot/" + nowData.previewImageName) as Sprite;
+        // expPreviewImg.SetNativeSize();
         introductionText.text = nowData.Instruction;
         nameText.text = nowData.Name;
 

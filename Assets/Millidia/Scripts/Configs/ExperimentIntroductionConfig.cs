@@ -12,5 +12,9 @@ public class ExperimentIntroductionConfig: ConfigBase
         /// 场景id
         /// </summary>
         public int sceneId;
+        /// <summary>
+        /// 缩略图id
+        /// </summary>
+        public string previewImageName;
 }
 

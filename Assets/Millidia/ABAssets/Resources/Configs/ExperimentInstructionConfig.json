@@ -290,42 +290,42 @@
     {
         "Id": "3001",
         "StepIndex": "0",
-        "Instruction": "1\u3001\u53D6\u98CE\u5E72\u571F\u6837\uFF0C\u8FC70.5mm\u7684\u7B5B200g",
+        "Instruction": "1\u3001\u53D6\u98CE\u5E72\u571F\u6837\uFF0C\u8FC70.5mm\u7684\u7B5B200g\uFF0C\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D\uFF0C\u4F9D\u636E\u7ECF\u9A8C\uFF0C\u6DFB\u52A0\u4E0D\u540C\u7684\u6C34\uFF0C\u4F7F\u5176\u8FBE\u5230\u8BD5\u9A8C\u6240\u9700\u542B\u6C34\u91CF",
         "TextOnButton": "",
         "isFinish": false,
         "ObjectInStepId": "5001"
     },
     {
         "Id": "3002",
-        "StepIndex": "1",
-        "Instruction": "2\u3001\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D",
+        "StepIndex": "",
+        "Instruction": "",
         "TextOnButton": "",
         "isFinish": false,
-        "ObjectInStepId": "5002"
+        "ObjectInStepId": ""
     },
     {
         "Id": "3003",
-        "StepIndex": "2",
-        "Instruction": "2\u3001\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D",
+        "StepIndex": "",
+        "Instruction": "",
         "TextOnButton": "",
         "isFinish": false,
-        "ObjectInStepId": "5003"
+        "ObjectInStepId": ""
     },
     {
         "Id": "3004",
-        "StepIndex": "3",
-        "Instruction": "2\u3001\u5C06\u571F\u6837\u5206\u5F00\u653E\u5165\u4E09\u4E2A\u76DB\u571F\u76BF\u4E2D",
+        "StepIndex": "",
+        "Instruction": "",
         "TextOnButton": "",
         "isFinish": false,
-        "ObjectInStepId": "5004"
+        "ObjectInStepId": ""
     },
     {
         "Id": "3005",
-        "StepIndex": "4",
-        "Instruction": "3\u3001\u4F9D\u636E\u7ECF\u9A8C\uFF0C\u6DFB\u52A0\u4E0D\u540C\u7684\u6C34\uFF0C\u4F7F\u5176\u8FBE\u5230\u8BD5\u9A8C\u6240\u9700\u542B\u6C34\u91CF",
+        "StepIndex": "",
+        "Instruction": "",
         "TextOnButton": "",
         "isFinish": false,
-        "ObjectInStepId": "5005"
+        "ObjectInStepId": ""
     },
     {
         "Id": "3006",

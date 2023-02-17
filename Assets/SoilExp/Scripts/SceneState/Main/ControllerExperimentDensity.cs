@@ -55,21 +55,44 @@ public partial class ControllerExperiment
             ;
         ReturnOriginPos(targetTrans.gameObject, 4.5f, true);
     }
-
-    void MoveCircleKnifeToSoil(Transform selecteTrans, Transform targetTrans)
+    
+    
+    void MoveCircleKnifeToSoil(Transform selecteTrans/*, Transform targetTrans*/)
     {
         if (!selecteTrans) return;
+        Transform targetTrans = null;
+        foreach (var gobj in sceneEquipmentObjects)
+        {
+            if (stepsIndex == 4)
+            {
+                if (gobj.name.Equals("土样"))
+                {
+                    targetTrans = gobj.transform;
+                    break;
+                }
+            }
+            if (stepsIndex == 12)
+            {
+                if (gobj.name.Equals("土样2"))
+                {
+                    targetTrans = gobj.transform;
+                    break;
+                }
+            }
+
+        }
+        if(targetTrans==null) return;
 
         var position = selecteTrans.position;
         var position1 = targetTrans.position;
         float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
         float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y;
-        float moveDuration = 0.4f;
+        float moveDuration = 0.5f;
         DOTween.Sequence() // 返回一个新的Sequence
-            .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.4f, position.z),
+            .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z),
                 moveDuration)) // 添加动画到队列中
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.4f, position1.z), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(180, 0, 0), moveDuration))
+            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), 0.7f))
+            .Append(selecteTrans.DORotate(new Vector3(180, 0, 0), 0.6f))
             .Append(selecteTrans.DOMove(
                 new Vector3(position1.x, position1.y + (selectedTransHeight + targetTransHeight) / 2, position1.z),
                 moveDuration))
@@ -78,6 +101,7 @@ public partial class ControllerExperiment
 
     void MoveCircleKnifeInSoil(Transform selecteTrans)
     {
+        Debug.Log("MoveCircleKnifeInSoil");
         var position = selecteTrans.position;
         float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
         float moveDuration = 0.4f;
@@ -90,6 +114,7 @@ public partial class ControllerExperiment
         //(selectedTransHeight + targetTransHeight)/2
     }
 
+    public List<GameObject> ObjectsWithAnime;
     void MoveXIAOKnifeToSoil(Transform selecteTrans, Transform targetTrans)
     {
         if (!selecteTrans) return;
@@ -101,7 +126,53 @@ public partial class ControllerExperiment
 
         float targetTransRadius = targetTrans.GetComponent<BoxCollider>().size.z * targetTrans.localScale.z / 2;
 
+        ObjectsWithAnime[0].GetComponent<Animation>().Play();
+        
+         float moveDuration = 0.5f;
+         DOTween.Sequence() // 返回一个新的Sequence
+             // .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z),
+             //     moveDuration)) // 添加动画到队列中
+             // .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
+             // .Append(selecteTrans.DORotate(new Vector3(45, 90, 0), moveDuration))
+             // .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
+             //     position1.y + targetTransHeight + 0.01f, position1.z + targetTransRadius), moveDuration))
+             // .AppendInterval(0.5f)
+             // .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
+             //     position1.y + targetTransHeight - 0.01f, position1.z + targetTransRadius), moveDuration))
+             .AppendInterval(2f)
+             .AppendCallback(XIAOKnifeCallback)
+             .Append(circleKnifeTrans.DOMove(
+                 new Vector3(circleKnifeTrans.position.x, circleKnifeTrans.position.y - 0.05f,
+                     circleKnifeTrans.position.z), moveDuration))
+        
+        ;
 
+        ReturnOriginPos(selecteTrans.gameObject, 3.5f, true);
+    }
+    
+    void MoveXIAOKnifeToSoil2(Transform selecteTrans/*, Transform targetTrans*/)
+    {
+        if (!selecteTrans) return;
+        
+        Transform targetTrans = null;
+        foreach (var gobj in sceneEquipmentObjects)
+        {
+                if (gobj.name.Equals("土样2"))
+                {
+                    targetTrans = gobj.transform;
+                    break;
+                }
+        }
+        if(targetTrans==null) return;
+        
+        var position = selecteTrans.position;
+        var position1 = targetTrans.position;
+        float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
+        float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y / 2;
+
+        float targetTransRadius = targetTrans.GetComponent<BoxCollider>().size.z * targetTrans.localScale.z / 2;
+
+        
         float moveDuration = 0.5f;
         DOTween.Sequence() // 返回一个新的Sequence
             .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z),
@@ -113,11 +184,12 @@ public partial class ControllerExperiment
             .AppendInterval(0.5f)
             .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
                 position1.y + targetTransHeight - 0.01f, position1.z + targetTransRadius), moveDuration))
+            .AppendInterval(2f)
             .AppendCallback(XIAOKnifeCallback)
             .Append(circleKnifeTrans.DOMove(
                 new Vector3(circleKnifeTrans.position.x, circleKnifeTrans.position.y - 0.05f,
                     circleKnifeTrans.position.z), moveDuration))
-
+        
             ;
 
         ReturnOriginPos(selecteTrans.gameObject, 3.5f, true);
@@ -180,16 +252,12 @@ public partial class ControllerExperiment
         if (stepsIndex == 6)
         {
             soilObj.GetComponent<ControlDissolve>().StartDisSolve();
-            // soilObj.SetActive(false);
-            // circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
             circleKnifeTrans.GetChild(1).GetComponent<ControlDissolve>().BackNormal();
         }
         else
         {
-            // soilObj2.SetActive(false);
             soilObj2.GetComponent<ControlDissolve>().StartDisSolve();
             circleKnifeTrans.GetChild(2).GetComponent<ControlDissolve>().BackNormal();
-            // circleKnifeTrans.GetChild(1).gameObject.SetActive(true);
         }
     }
 
@@ -203,6 +271,23 @@ public partial class ControllerExperiment
             isSelect = true;
             selectedTrans = hit1.collider.transform;
             RefreshSuggestGobj(currentStepEquipment[1]);
+            
+            if (stepsIndex == 4 || stepsIndex == 12)
+            {
+                MoveCircleKnifeToSoil(selectedTrans);
+                isSelect = false;
+                Invoke("DeselectAllGobj",0.5f);
+            }
+            else if (stepsIndex == 6 /*|| stepsIndex == 14*/)
+            {
+                MoveXIAOKnifeToSoil(selectedTrans, hit1.collider.transform);
+                isSelect = false;
+                Invoke("DeselectAllGobj",0.5f);
+            }
+            else if (/*stepsIndex == 6 || */stepsIndex == 14)
+            {
+                MoveXIAOKnifeToSoil2(selectedTrans);
+            }
         }
         //当前步骤中两个物体 选中第二个时
         else if (currentStepEquipment.Count == 2 &&
@@ -214,14 +299,11 @@ public partial class ControllerExperiment
                 //第三步 环刀刷凡士林 有特殊动画
                 BrushCircleKnife(selectedTrans, hit1.collider.transform);
             }
-            else if (stepsIndex == 4 || stepsIndex == 12)
-            {
-                MoveCircleKnifeToSoil(selectedTrans, hit1.collider.transform);
-            }
-            else if (stepsIndex == 6 || stepsIndex == 14)
-            {
-                MoveXIAOKnifeToSoil(selectedTrans, hit1.collider.transform);
-            }
+            // else if (stepsIndex == 4 || stepsIndex == 12)
+            // {
+            //     MoveCircleKnifeToSoil(selectedTrans, hit1.collider.transform);
+            // }
+
             else if (stepsIndex == 7 || stepsIndex == 15)
             {
                 MoveGUAKnifeToSoil(selectedTrans, hit1.collider.transform);
@@ -244,7 +326,6 @@ public partial class ControllerExperiment
                 circleKnifeTrans.GetChild(1).GetComponent<ControlDissolve>().StartDisSolve();
                 // circleKnifeTrans.GetChild(1).gameObject.SetActive(false);
             }
-
             if (stepsIndex == 5 || stepsIndex == 13)
             {
                 //第五步 环刀插进土里
