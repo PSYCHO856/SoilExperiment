@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using DG.Tweening;
 /// <summary>
 /// 设置页面
 /// </summary>
@@ -10,7 +11,14 @@ public class MUIQuestion: MUIBase {
     public QuestionGroup questionGroup;
     public GameObject obj_tg;//生成题目的单元
     private Dictionary<string, QuestionConfig> nowJosn=new Dictionary<string, QuestionConfig>();
-    private string _searchID="401";
+    private string _searchID="";
+    public Button btnClose;
+
+    public override void OnAwake()
+    {
+        base.OnAwake();
+        btnClose.onClick.AddListener(OnClose);
+    }
 
     void CreatQ(QuestionConfig nowQ) {
         questionGroup.Init(nowQ);
@@ -20,6 +28,11 @@ public class MUIQuestion: MUIBase {
     ///打开界面1
     /// </summary>
     public override void Open(params object[] parms) {
+        
+        cg = GetComponent<CanvasGroup>();
+        cg.alpha = 0;
+        cg.DOFade(1, 1f);
+        
         base.Open();
         _searchID=EquipmentConfigInfo.Datas[parms[1].ToString()].answerID;
         var ansList=
@@ -80,5 +93,17 @@ public class MUIQuestion: MUIBase {
         if(myParam.Count>0){
             MessageCenter.Instance.BoradCastMessage(EMsg.Guide_Finish,(int)myParam[0]);
         }
+    }
+
+    private CanvasGroup cg;
+    float closeDuration = 0.5f;
+    void MyClose()
+    {
+        gameObject.SetActive(false);
+    }
+    public virtual void OnClose()
+    {
+        cg.DOFade(0, closeDuration);
+        Invoke("MyClose",closeDuration);
     }
 }

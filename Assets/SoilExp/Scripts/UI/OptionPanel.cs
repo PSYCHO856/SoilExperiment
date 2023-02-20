@@ -10,6 +10,7 @@ public class OptionPanel : MonoBehaviour
     public Button homeBtn;
     public Button settingsBtn;
     public Button outputFormBtn;
+    public Button expQuestionBtn;
     public Button helpBtn;
     public Button quitBtn;
     
@@ -37,6 +38,10 @@ public class OptionPanel : MonoBehaviour
         closeBtnSettings.onClick.AddListener(OnCloseBtnSettings);
         quitBtnConfirm.onClick.AddListener(OnQuitBtnConfirm);
         quitBtnCancel.onClick.AddListener(OnQuitBtnCancel);
+        expQuestionBtn.onClick.AddListener(() =>
+        {
+            MUIMgr.Instance.OpenUI(EMUI.MUI_Question, null, ToolManager.Instance.sceneNumber);
+        });
         
     }
     // PanelsInit();
@@ -96,6 +101,6 @@ public class OptionPanel : MonoBehaviour
     {
         quitPanel.SetActive(false);
     }
-
+    
     #endregion
 }

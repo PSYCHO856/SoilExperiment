@@ -1286,6 +1286,8 @@ GameObject:
   - component: {fileID: 883089719505745437}
   - component: {fileID: 5435612062065861406}
   - component: {fileID: 1165301306602242609}
+  - component: {fileID: 2006542678888459300}
+  - component: {fileID: 2956182619901423443}
   m_Layer: 5
   m_Name: Card2
   m_TagString: Untagged
@@ -1356,6 +1358,44 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!222 &2006542678888459300
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883089719505745436}
+  m_CullTransparentMesh: 1
+--- !u!114 &2956182619901423443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883089719505745436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.69803923}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &883089719614067145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6022,6 +6062,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883089719614067150}
     m_Modifications:
+    - target: {fileID: 8010807041054901811, guid: 80d2d0f2f601aec4c9c73c9320cf7ac4,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 8010807041191398774, guid: 80d2d0f2f601aec4c9c73c9320cf7ac4,
         type: 3}
       propertyPath: m_Name
@@ -6914,6 +6959,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883089719614067150}
     m_Modifications:
+    - target: {fileID: 8010807041054901811, guid: 80d2d0f2f601aec4c9c73c9320cf7ac4,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 8010807041191398774, guid: 80d2d0f2f601aec4c9c73c9320cf7ac4,
         type: 3}
       propertyPath: m_Name
