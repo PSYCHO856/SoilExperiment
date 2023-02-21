@@ -6,10 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="91f64cb8-e7e1-477c-8dee-37475bf8865f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/GUIs/Main/MUI_Question.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/GUIs/Main/MUI_Question.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/盛土.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/盛土.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DensityExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/Soil1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/Soil1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/Soil2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/Soil2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/Soil2Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/Soil2Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/lambert1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/lambert1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/环刀.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Material/环刀.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Voronoi1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Voronoi1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Voronoi2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/Voronoi2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块1.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块1.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块2.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/土样/土块2.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentDensity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentDensity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +40,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.5/Tests/Runtime/Shared/051-TestGenerics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentPlasticMoisture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@12.1.7/Runtime/Volume/VolumeProfile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,9 +75,7 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/Output/IOTool.cs" />
       <option value="$PROJECT_DIR$/Assets/XTool/Smart Screenshot Taker/Editor/AspectRatios.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/CutSoil.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentDensity.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/MoistureExperimentSceneState.cs" />
@@ -79,6 +89,8 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/AnimeSoil3.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentDensity.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2LMumgjdIKdBEe7jPUI92g1yuEo" />
@@ -152,7 +164,7 @@
       <workItem from="1676595183377" duration="15276000" />
       <workItem from="1676853082540" duration="2390000" />
       <workItem from="1676872113317" duration="4003000" />
-      <workItem from="1676941209976" duration="9174000" />
+      <workItem from="1676941209976" duration="13971000" />
     </task>
     <servers />
   </component>

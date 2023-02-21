@@ -154,43 +154,53 @@ public partial class ControllerExperiment
     {
         if (!selecteTrans) return;
         
-        Transform targetTrans = null;
-        foreach (var gobj in sceneEquipmentObjects)
-        {
-                if (gobj.name.Equals("土样2"))
-                {
-                    targetTrans = gobj.transform;
-                    break;
-                }
-        }
-        if(targetTrans==null) return;
-        
-        var position = selecteTrans.position;
-        var position1 = targetTrans.position;
-        float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
-        float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y / 2;
-
-        float targetTransRadius = targetTrans.GetComponent<BoxCollider>().size.z * targetTrans.localScale.z / 2;
-
-        
+        ObjectsWithAnime[1].GetComponent<Animation>().Play();
         float moveDuration = 0.5f;
         DOTween.Sequence() // 返回一个新的Sequence
-            .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z),
-                moveDuration)) // 添加动画到队列中
-            .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
-            .Append(selecteTrans.DORotate(new Vector3(45, 90, 0), moveDuration))
-            .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
-                position1.y + targetTransHeight + 0.01f, position1.z + targetTransRadius), moveDuration))
-            .AppendInterval(0.5f)
-            .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
-                position1.y + targetTransHeight - 0.01f, position1.z + targetTransRadius), moveDuration))
             .AppendInterval(2f)
             .AppendCallback(XIAOKnifeCallback)
             .Append(circleKnifeTrans.DOMove(
                 new Vector3(circleKnifeTrans.position.x, circleKnifeTrans.position.y - 0.05f,
-                    circleKnifeTrans.position.z), moveDuration))
+                    circleKnifeTrans.position.z), moveDuration));
         
-            ;
+        
+        // Transform targetTrans = null;
+        // foreach (var gobj in sceneEquipmentObjects)
+        // {
+        //         if (gobj.name.Equals("土样2"))
+        //         {
+        //             targetTrans = gobj.transform;
+        //             break;
+        //         }
+        // }
+        // if(targetTrans==null) return;
+        //
+        // var position = selecteTrans.position;
+        // var position1 = targetTrans.position;
+        // float selectedTransHeight = selecteTrans.GetComponent<BoxCollider>().size.y * selecteTrans.localScale.y;
+        // float targetTransHeight = targetTrans.GetComponent<BoxCollider>().size.y * targetTrans.localScale.y / 2;
+        //
+        // float targetTransRadius = targetTrans.GetComponent<BoxCollider>().size.z * targetTrans.localScale.z / 2;
+        //
+        //
+        // float moveDuration = 0.5f;
+        // DOTween.Sequence() // 返回一个新的Sequence
+        //     .Append(selecteTrans.DOMove(new Vector3(position.x, position.y + 0.2f, position.z),
+        //         moveDuration)) // 添加动画到队列中
+        //     .Append(selecteTrans.DOMove(new Vector3(position1.x, position.y + 0.2f, position1.z), moveDuration))
+        //     .Append(selecteTrans.DORotate(new Vector3(45, 90, 0), moveDuration))
+        //     .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
+        //         position1.y + targetTransHeight + 0.01f, position1.z + targetTransRadius), moveDuration))
+        //     .AppendInterval(0.5f)
+        //     .Append(selecteTrans.DOMove(new Vector3(position1.x + xiaoKnifeMoveOffsetX,
+        //         position1.y + targetTransHeight - 0.01f, position1.z + targetTransRadius), moveDuration))
+        //     .AppendInterval(2f)
+        //     .AppendCallback(XIAOKnifeCallback)
+        //     .Append(circleKnifeTrans.DOMove(
+        //         new Vector3(circleKnifeTrans.position.x, circleKnifeTrans.position.y - 0.05f,
+        //             circleKnifeTrans.position.z), moveDuration))
+        //
+        //     ;
 
         ReturnOriginPos(selecteTrans.gameObject, 3.5f, true);
     }
@@ -262,6 +272,8 @@ public partial class ControllerExperiment
     }
 
 
+    public GameObject XiaoKnife1;
+    public GameObject XiaoKnife2;
     void DensityStepsJudge()
     {
         //当前步骤中两个物体 选中了第一个时
@@ -281,12 +293,18 @@ public partial class ControllerExperiment
             else if (stepsIndex == 6 /*|| stepsIndex == 14*/)
             {
                 MoveXIAOKnifeToSoil(selectedTrans, hit1.collider.transform);
+                XiaoKnife2.SetActive(false);
+                XiaoKnife1.SetActive(true);
                 isSelect = false;
                 Invoke("DeselectAllGobj",0.5f);
             }
             else if (/*stepsIndex == 6 || */stepsIndex == 14)
             {
                 MoveXIAOKnifeToSoil2(selectedTrans);
+                XiaoKnife1.SetActive(false);
+                XiaoKnife2.SetActive(true);
+                isSelect = false;
+                Invoke("DeselectAllGobj",0.5f);
             }
         }
         //当前步骤中两个物体 选中第二个时
