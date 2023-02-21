@@ -6,24 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="91f64cb8-e7e1-477c-8dee-37475bf8865f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoilExperiment/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Animation.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Animation.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Animation.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentInstructionConfig.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InProject/Excels/ExperimentInstructionConfig.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/Configs/ExperimentInstructionConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/Configs/ExperimentInstructionConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BorderMoistureContentExperimentScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/GUIs/Main/MUI_Question.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Millidia/ABAssets/Resources/GUIs/Main/MUI_Question.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MoistureContentExperimentScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/称量盒/称量盒.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/称量盒/称量盒.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/CINEMA_4D__2_.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/CINEMA_4D__2_.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/Material/lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/Models/细筛/Material/lambert2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Card3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/ExperimentPage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Option.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Prefabs/UI/Option.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/AnimeSoil3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/AnimeSoil3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ConfirmBtnClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ConfirmBtnClick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SoilExp/Sprites/UI/LUI/1.主界面/map bottom_btn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SoilExp/Sprites/UI/LUI/1.主界面/map bottom_btn.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +65,6 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/CutSoil.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentDensity.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ControllerStructurePanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperiment.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/DensityExperimentSceneState.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/BorderMoistureExperimentSceneState.cs" />
@@ -92,6 +78,7 @@
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/UI/ConfirmBtnClick.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/AnimeSoil3.cs" />
       <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentMoisture.cs" />
+      <option value="$PROJECT_DIR$/Assets/SoilExp/Scripts/SceneState/Main/ControllerExperimentBorderMoisture.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2LMumgjdIKdBEe7jPUI92g1yuEo" />
@@ -165,7 +152,7 @@
       <workItem from="1676595183377" duration="15276000" />
       <workItem from="1676853082540" duration="2390000" />
       <workItem from="1676872113317" duration="4003000" />
-      <workItem from="1676941209976" duration="5492000" />
+      <workItem from="1676941209976" duration="9174000" />
     </task>
     <servers />
   </component>

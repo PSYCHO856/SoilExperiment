@@ -33,10 +33,10 @@ public partial class ControllerExperiment
                  hit1.collider.gameObject.name.Equals(currentStepEquipment[1].name) &&
                  isSelect)
         {
-            // if (stepsIndex == 0)
-            // {
-            //     // MoveShovelToSieve(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
-            // }
+            if (stepsIndex == 0)
+            {
+                // MoveShovelToSieve(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
+            }
             // else if (stepsIndex == 1)
             // {
             //     // plate1 = hit1.collider.transform;
@@ -56,7 +56,7 @@ public partial class ControllerExperiment
             // {
             //     // AddWaterToPlate(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             // }
-            if (stepsIndex == 1)
+            else if (stepsIndex == 1)
             {
                 UseTIAOKnifeToPlate1(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             }

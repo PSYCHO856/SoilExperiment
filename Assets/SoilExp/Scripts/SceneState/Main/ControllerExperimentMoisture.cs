@@ -50,6 +50,10 @@ public partial class ControllerExperiment
             // {
             //     MoveShovelToBox(selectedTrans, hit1.collider.transform, MoveEquipmentCallback);
             // }
+            else if (stepsIndex == 3/* || stepsIndex == 4*/)
+            {
+                
+            }
             else if(stepsIndex == 6)
             {
                 // hit1.collider.transform.GetChild(1).gameObject.SetActive(false);
@@ -64,12 +68,12 @@ public partial class ControllerExperiment
             }
             else if(stepsIndex == 7 || stepsIndex == 8)
             {
-                PutBoxesInBakingBox(selectedTrans, hit1.collider.transform, stepsIndex - 8, MoveEquipmentCallback);
+                PutBoxesInBakingBox(selectedTrans, hit1.collider.transform, stepsIndex - 7, MoveEquipmentCallback);
             }
             else if(stepsIndex == 11 || stepsIndex == 12)
             {
-                PutBoxesInDryBox(selectedTrans, hit1.collider.transform, stepsIndex - 8, MoveEquipmentCallback);
-                if (stepsIndex == 12)
+                PutBoxesInDryBox(selectedTrans, hit1.collider.transform, stepsIndex - 7, MoveEquipmentCallback);
+                if (stepsIndex == 11)
                 {
                     OpenDryBoxTop();
                 }
@@ -168,9 +172,15 @@ public partial class ControllerExperiment
                         ObjectsWithAnime[0].GetComponent<Animation>().Play();
                         DOTween.Sequence() // 返回一个新的Sequence
                             .AppendInterval(20f)
+                            
+                            .AppendCallback(() =>
+                            {
+                                isSelect = false;
+                                Invoke("DeselectAllGobj",0.5f);
+                            })
+                            .AppendInterval(0.5f)
                             .AppendCallback(MoveEquipmentCallback);
-                        isSelect = false;
-                        Invoke("DeselectAllGobj",0.5f);
+
                         
         
     }

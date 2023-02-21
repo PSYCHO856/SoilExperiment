@@ -6903,6 +6903,7 @@ GameObject:
   - component: {fileID: 2584524938490263717}
   - component: {fileID: 4696279292229661232}
   - component: {fileID: 7683091710270795904}
+  - component: {fileID: 7683091710270795905}
   m_Layer: 0
   m_Name: "\u5706\u67F1\u4F53_1"
   m_TagString: Untagged
@@ -8028,6 +8029,7 @@ GameObject:
   - component: {fileID: 5879726792449648290}
   - component: {fileID: 5879726792449648288}
   - component: {fileID: 5879726792449648289}
+  - component: {fileID: 5879726792449648292}
   m_Layer: 0
   m_Name: "\u5706\u67F1\u4F53_3"
   m_TagString: Untagged
@@ -8035,6 +8037,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5879726792449648292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879726792449648291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2011a998f540114baef4aac19e57316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Root: {fileID: 0}
+  needInitVanish: 0
 --- !u!33 &5879726792507683461
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8677,6 +8693,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7683091710270795905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621228387386838200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2011a998f540114baef4aac19e57316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Root: {fileID: 0}
+  needInitVanish: 0
 --- !u!33 &7743336966205715925
 MeshFilter:
   m_ObjectHideFlags: 0
