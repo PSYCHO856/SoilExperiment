@@ -9,4 +9,10 @@ public class ConfirmBtnClick : MonoBehaviour
     {
         transform.parent.gameObject.GetComponent<CanvasGroup>().DOFade(0, 1f);
     }
+
+    public void BtnExpQuestionClick()
+    {
+        btnClick();
+        MUIMgr.Instance.OpenUI(EMUI.MUI_Question, null, ToolManager.Instance.sceneNumber);
+    }
 }

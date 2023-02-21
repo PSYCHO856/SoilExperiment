@@ -21,10 +21,4 @@ public class AnimeSoil3 : MonoBehaviour
         anime2.Play();
     }
     
-    public void Anime3Play()
-    {
-        anime3.gameObject.SetActive(true);
-
-        anime3.Play();
-    }
 }
