@@ -1271,7 +1271,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507038227}
-  m_LocalRotation: {x: 0.24953166, y: 0.6589796, z: -0.24723649, w: 0.665097}
+  m_LocalRotation: {x: 0.24953164, y: 0.6589796, z: -0.24723649, w: 0.665097}
   m_LocalPosition: {x: -5.182, y: 1.416, z: 0.304}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3186,9 +3186,12 @@ MonoBehaviour:
   plate2: {fileID: 0}
   plate3: {fileID: 0}
   ObjectsWithAnime: []
+  XiaoKnife1: {fileID: 0}
+  XiaoKnife2: {fileID: 0}
   bakingBoxDoor: {fileID: 7822572535603786642}
   dryBoxAnimator: {fileID: 0}
   BoxToBalanceEndHeighOffset: 0
+  BoxToBalanceEndHeighOffset4: 0.117
   SoilCylinderEndPos: {x: -4.541, y: 0.783, z: 0.046}
 --- !u!4 &1018493564
 Transform:
@@ -5539,7 +5542,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4011160484370746264}
-  m_LocalRotation: {x: 0.35126817, y: -0.004325658, z: 0.0016229302, w: 0.93626356}
+  m_LocalRotation: {x: 0.35126814, y: -0.004325658, z: 0.0016229153, w: 0.93626356}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

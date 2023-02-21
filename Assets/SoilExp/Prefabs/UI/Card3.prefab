@@ -3393,7 +3393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4662,7 +4662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5094,7 +5094,7 @@ PrefabInstance:
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 105.9852
+      value: 203.69
       objectReference: {fileID: 0}
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -5104,7 +5104,7 @@ PrefabInstance:
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 48.852722
+      value: -0.00012207
       objectReference: {fileID: 0}
     - target: {fileID: 1223788105834214824, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -5125,6 +5125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "\u03C9=(\u6E7F\u91CD-\u5E72\u91CD)\n/\u5E72\u91CD"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770479834690949032, guid: 3e2bd27c32411dc48a846408a5f8b866,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2bd27c32411dc48a846408a5f8b866, type: 3}
@@ -5774,7 +5779,7 @@ PrefabInstance:
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50.7929
+      value: 203.69
       objectReference: {fileID: 0}
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -5784,7 +5789,7 @@ PrefabInstance:
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 76.448975
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 923151922748756438, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -5810,6 +5815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "IP=\u03C9L-\u03C9P\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770479834690949032, guid: 3e2bd27c32411dc48a846408a5f8b866,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7770479834690949032, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -6484,7 +6494,7 @@ PrefabInstance:
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50.7929
+      value: 203.69
       objectReference: {fileID: 0}
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -6494,7 +6504,7 @@ PrefabInstance:
     - target: {fileID: 772302375102685510, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 76.449
+      value: 0.000022888
       objectReference: {fileID: 0}
     - target: {fileID: 923151922748756438, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}
@@ -6520,6 +6530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "IL=(\u03C9-\u03C9P)\n/IP"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770479834690949032, guid: 3e2bd27c32411dc48a846408a5f8b866,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 7770479834690949032, guid: 3e2bd27c32411dc48a846408a5f8b866,
         type: 3}

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public partial class ControllerExperiment
 {
+    public float BoxToBalanceEndHeighOffset4 = 0.14f;
     void BorderPlasticStepsJudge()
     {
         //当前步骤中两个物体 选中了第一个时
@@ -31,7 +32,9 @@ public partial class ControllerExperiment
             }
             else if (stepsIndex == 3)
             {
-                MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOption);
+                MoveBoxToBalanceEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOption
+                ,BoxToBalanceEndHeighOffset4);
+                // MoveEquipment(selectedTrans, hit1.collider.transform, MoveEquipmentCallbackWithUIOption);
             }
             else
             {
